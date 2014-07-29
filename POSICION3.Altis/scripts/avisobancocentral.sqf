@@ -1,0 +1,1 @@
+[[1,format["%1 CIVIL DENTRO DE LA CUPULA DEL BANCO CENTRAL", name player]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;

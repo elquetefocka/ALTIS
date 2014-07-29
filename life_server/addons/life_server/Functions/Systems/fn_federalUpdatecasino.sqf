@@ -1,5 +1,5 @@
 /*
-	File: fn_federalUpdate.sqf
+	File: fn_federalUpdatecasino.sqf //creamos copia ejemplo para funcion casino
 	Author: Bryan "Tonic" Boardwine
 	
 	Description:

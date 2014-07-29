@@ -24,7 +24,7 @@ _ownerID = owner _ownerID;
 */
 _query = switch(_side) do {
 	case west: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='%1'",_uid];};
-	case civilian: {_returnCount = 9; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear, civPosition, alive FROM players WHERE playerid='%1'",_uid];};
+	case civilian: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear, alive, civPosition FROM players WHERE playerid='%1'",_uid];};
 	case independent: {_returnCount = 8; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, med_licenses, mediclevel FROM players WHERE playerid='%1'",_uid];};
 	case east: {_returnCount = 9;  format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, copeast_licenses, copeastlevel, copeast_gear FROM players WHERE playerid='%1'",_uid];};
 };
@@ -59,9 +59,10 @@ _new = [(_queryResult select 6)] call DB_fnc_mresToArray;
 if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
 _queryResult set[6,_new];
 
-_new = [(_queryResult select 9)] call DB_fnc_mresToArray;
+//supuestamente esta es la variable donde engancha el posicionamiento
+_new = [(_queryResult select 11)] call DB_fnc_mresToArray;
 if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
-_queryResult set[9,_new];
+_queryResult set[11,_new];
 
 //Convert tinyint to boolean
 _old = _queryResult select 6;

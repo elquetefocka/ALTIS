@@ -37,9 +37,14 @@ life_corpse setVariable["name",nil,TRUE];
 [[life_corpse],"life_fnc_corpse",true,false] spawn life_fnc_MP;
 hideBody life_corpse;
 
+
+if (playerSide == civilian) then
+{
+    life_is_alive = false;
+};
+
 player setVariable["Revive",nil,TRUE];
 player setVariable["name",nil,TRUE];
 player setVariable["Reviving",nil,TRUE];
 [] call life_fnc_hudUpdate; //Request update of hud.
 [] call life_fnc_setUniformTexture;
-life_is_alive = true;

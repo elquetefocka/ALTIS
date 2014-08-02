@@ -5,7 +5,7 @@
 	Description:
 	Initializes the civilian.
 */
-private["_spawnPos","_playerPosition"];
+private["_spawnPos"];
 waitUntil {!(isNull (findDisplay 46))};
 _playerPosition = civ_position;
 diag_log format ["%1",_playerPosition]; //For debugging
@@ -26,7 +26,7 @@ else
 				} 
 					else 
 						{
-						player setPos _playerPosition;
+						player setPos civ_position;
 						hint format["Your character is still alive. You have been placed at your last saved position."];
 						};	
 	life_is_alive = true;

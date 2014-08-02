@@ -8,6 +8,8 @@
 private["_spCfg","_sp","_ctrl"];
 disableSerialization;
 
+diag_log format["<KINO> SPAWNMENU: life_respawned: %1", life_respawned];
+
 if(life_is_arrested) exitWith {
 	[] call life_fnc_respawned;
 };

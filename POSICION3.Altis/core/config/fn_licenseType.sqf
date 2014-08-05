@@ -51,7 +51,7 @@ switch (_mode) do
 			case "caireast": {_var = "license_copeast_air"}; //Cop Pilot License cost
 			case "pasaporteesp": {_var = "license_civ_pasaporteesp"}; 
 			case "pasaportemaroc": {_var = "license_civ_pasaportemaroc"}; 
-			case "rubi": {_var = "license_civ_rubi"}; 
+			case "rubiu": {_var = "license_civ_rubiu"}; 
 			case "geos": {_var = "license_cop_geos"}; 
 			case "geoseast": {_var = "license_copeast_geos"}; 
 			default {_var = ""};
@@ -97,7 +97,7 @@ switch (_mode) do
 			case "license_copeast_air": {_var = "caireast"}; //Cop Pilot License cost
 			case "license_civ_pasaporteesp": {_var = "pasaporteesp"}; 
 			case "license_civ_pasaportemaroc": {_var = "pasaportemaroc"};
-			case "license_cop_rubi": {_var = "rubi"}; 
+			case "license_cop_rubiu": {_var = "rubiu"}; 
 			case "license_cop_geos": {_var = "geos"}; 
 			case "license_cop_geoseast": {_var = "geoseast"};
 			

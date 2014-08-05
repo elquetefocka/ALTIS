@@ -352,6 +352,7 @@ class Life_Client_Core
 		class doorAnimate {};
 		class fedCamDisplay {};
 		class seizeObjects {}; //incautar objetos
+		class copOpener {};
 	};
 	
 	class Copeast

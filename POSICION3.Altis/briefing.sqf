@@ -391,16 +391,16 @@ player createDiarySubject ["controles","Controles"];
 
 				Cadena de Mando de la policia:<br/>
 				1. Jefe<br/>
-				2. Jefe Adjuntobr/>
-				3. Superintendente<br/>
-				4. Capitan<br/>
-				5. teniente<br/>
-				6. Sargento<br/>
-				7. Oficial Superior de Patrulla<br/>
-				8. Oficial de patrulla<br/>
-				9. Cadete<br/><br/>
+				2. Comisario</>
+				3. Capitan<br/>
+				4. Teniente<br/>
+				5. Alferez<br/>
+				6. Brigada<br/>
+				7. Sargento<br/>
+				8. Cabo<br/>
+				9. Novato<br/><br/>
 
-				policias en juego que no están inscritos / aceptado en el SPD son el nivel más bajo y no tienen voz y voto en las operaciones policiales.<br/><br/>
+				Los G.E.O.S son una unidad especial y no tiene porque tener un nivel especifico. Se les nombrara segun sus dotes.<br/><br/>
 				"
 		]
 	];
@@ -448,7 +448,7 @@ player createDiarySubject ["controles","Controles"];
 				"
 				1. Estar en una banda no es ilegal. Sólo cuando se cometen crímenes ilegales.<br/>
 				2. Al estar en una zona de pandillas no es ilegal. Sólo al participar en actividades ilegales.<br/>
-				3. Las bandas pueden mantener y controlar las zonas de pandillas. Otras bandas pueden atacar a una banda de control para competir por el control de una zona de pandillas.<br/>
+				3. Las bandas pueden mantener y controlar las zonas de pandillas. Otras bandas pueden atacar a una banda de control para competir por el control de una zona de bandas.<br/>
 				4. Para declarar la guerra a otra pandilla, el líder debe dar cuenta de ello en el mundial y todos los miembros de las bandas de ambas pandillas debe ser notificado. Para una guerra de bandas más largo plazo, la declaración debe hacerse en los foros.<br/>
 				"
 		]
@@ -461,8 +461,10 @@ player createDiarySubject ["controles","Controles"];
 
 				1. Ifrit<br/>
 				2. Speedboat<br/>
-				3. Hunter<br/>
-				4. Police Offroad<br/>
+				3. Hemmet<br/>
+				4. Karts fuera de pista.
+				5. Cualquier Vehiculo de la policia<br/>
+				6. Cualquier Vehiculo Serv.112<br/>
 				"
 		]
 	];
@@ -489,11 +491,8 @@ player createDiarySubject ["controles","Controles"];
 			"Objetos ilegales",
 				"
 				Los siguientes artículos son ilegales de poseer:<br/><br/>
-				1. Tortugas<br/>
-				2. Cocaina<br/>
-				3. Heroina<br/>
-				4. Cannabis<br/>
-				5. Marijuana<br/><br/>
+				1. Cualquier droga<br/>
+				2. Cualquier Explosivo<br/><br/>
 				"
 		]
 	];
@@ -509,11 +508,16 @@ player createDiarySubject ["controles","Controles"];
 				U: Abrir y cerrar coches<br/>
 				F: Sirena de la policia(si eres poli)<br/>
 				T: Maletero del vehiculo<br/>
+				Nº2: Picar.<br/>
+				Nº3: Pala.<br/>
+				Nº6: Nitro.<br/>
 				Left Shift + R: Arrestar (Solo policia)<br/>
 				Left Shift + G: Dejar Incosciente / stunear (Solo civil, usar para robar)<br/>
 				Left Windows: Interacción clave principal que se utiliza para recoger objetos / dinero, interactuando con los coches (reparación, etc) y para los policias de interactuar con la población civil. Se puede recuperarse a una sola tecla como H pulsando ESC-> Configurar-> Controles-> Personalizar-> Usar Acción 10<br/>
 				Left Shift + L: Activa las luces de sirena de policia (como policia).<br/>
 				Left Shift + O : Secuestro.<br/>
+				Left Control + H : Guardar Pistola.<br/>
+				
 				Left Shift + 3 : Te rindes osea, levantas las manos.<br/><br/>
 				"
 		]

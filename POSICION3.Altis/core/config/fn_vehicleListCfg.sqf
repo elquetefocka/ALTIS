@@ -276,6 +276,18 @@ switch (_shop) do
 		];	
 	};
 	
+	case "civ_truck_3":
+	{
+		_return =
+		[
+			["C_Van_01_box_F",75000],
+			["I_Truck_02_transport_F",90000],
+			["I_Truck_02_covered_F",120000],
+			["B_Truck_01_transport_F",420000],
+			["B_Truck_01_box_F",620000]
+		];	
+	};
+	
 	case "reb_v_1":
 	{
 		_return =

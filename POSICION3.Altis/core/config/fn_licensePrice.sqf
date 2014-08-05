@@ -46,7 +46,7 @@ switch (_type) do
 	case "caireast": {15000}; //Cop Pilot License costç
 	case "pasaporteesp": {20000};
 	case "pasaportemaroc": {20000};
-	case "rubi": {20000};
+	case "rubiu": {20000};
 	case "geos": {20000};
 	case "geoseast": {20000};
 };

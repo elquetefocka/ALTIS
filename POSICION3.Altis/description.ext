@@ -95,11 +95,18 @@ class CfgSounds
 	};
 	
 	class bombarm
-  {
-    name = "bombarm";
-    sound[] = {"\sounds\bombarm.ogg", 1.0, 1};
-    titles[] = {};
-  }; 
+	{
+		name = "bombarm";
+		sound[] = {"\sounds\bombarm.ogg", 1.0, 1};
+		titles[] = {};
+	}; 
+	
+	class alarmevoiture
+	{
+		name = "alarmevoiture";
+		sound[] = {"\sounds\alarmevoiture.ogg", 1, 1};
+		titles[] = {};
+	};
 };
 
 class CfgDebriefing

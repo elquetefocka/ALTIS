@@ -47,6 +47,7 @@ if(count (actionKeys "User10") != 0 && {(inputAction "User10" > 0)}) exitWith {
 
 switch (_code) do
 {
+	/*
 	//Space key for Jumping
 	case 57:
 	{
@@ -58,6 +59,16 @@ switch (_code) do
 			_handled = true;
 		};
 	};
+	*/
+	
+	// O, police gate opener
+    case 57:
+	{
+		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player)) then {
+			[] call life_fnc_copOpener;
+		};
+	};
+	
 	
 	case 4:
 	{
@@ -256,7 +267,7 @@ switch (_code) do
                 _val = missionNameSpace getVariable _x;
                 if(_val > 0 ) then
                 {
-                    if( _str == "pickaxe" || _str == "pico" ) then
+                    if( _str == "pickaxe" || _str == "pickaxe" ) then
                     {
                         [] spawn life_fnc_pickAxeUse;
                     };
@@ -264,6 +275,26 @@ switch (_code) do
             } foreach life_inv_items;
         }
     };
+	
+	
+	 case 4:
+    {    
+        if((!life_action_inUse) && (vehicle player == player) ) then
+        {
+            {
+                _str = [_x] call life_fnc_varToStr;
+                _val = missionNameSpace getVariable _x;
+                if(_val > 0 ) then
+                {
+                    if( _str == "pala" || _str == "pala" ) then
+                    {
+                        [] spawn life_fnc_shovelUse;
+                    };
+                };
+            } foreach life_inv_items;
+        }
+    };
+	
 	
 	//U Key
 	case 22:

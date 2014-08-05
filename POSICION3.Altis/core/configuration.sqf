@@ -264,7 +264,7 @@ life_licenses =
 	["license_civ_pasaportemaroc","civ"],
 	["license_cop_geos","cop"],
 	["license_copeast_geos","copeast"],
-	["license_civ_rubi","civ"]
+	["license_civ_rubiu","civ"]
 	
 	
 ];

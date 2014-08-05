@@ -133,6 +133,13 @@ switch (true) do
 		[] spawn life_fnc_pickAxeUse;
 	};
 	
+	case (_item == "pickaxe"):
+	{
+		[] spawn life_fnc_shovelUse;
+	};
+	
+	
+	
 	case (_item == "kidney"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then

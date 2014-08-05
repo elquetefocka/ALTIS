@@ -19,10 +19,12 @@ if(count _houseCfg == 0) exitWith {};
 _action = [
 	format["Estas seguro que quieres vender tu casa? Esta se vendera por: <t color='#8cff9b'>$%1</t>",
 	[(_houseCfg select 0)] call life_fnc_numberText,
+	(round((_houseCfg select 0)/2)) call life_fnc_numberText,
 	(_houseCfg select 1)],"Sell House","Sell","Cancel"
 ] call BIS_fnc_guiMessage;
 
 if(_action) then {
+	
 	_house setVariable["house_sold",true,true];
 	[[_house],"TON_fnc_sellHouse",false,false] spawn life_fnc_MP;
 	_house setVariable["locked",false,true];
@@ -30,7 +32,8 @@ if(_action) then {
 	_house setVariable["containers",nil,true];
 	deleteMarkerLocal format["house_%1",_house getVariable "uid"];
 	_house setVariable["uid",nil,true];
-
+	
+	[] call SOCK_fnc_updateRequest; //call our silent sync.
 	life_atmcash = life_atmcash + (round((_houseCfg select 0)/2));
 	_index = life_vehicles find _house;
 	if(_index != -1) then {

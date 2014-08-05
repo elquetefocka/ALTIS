@@ -75,7 +75,8 @@ switch (_filter) do
 	case 4:
 	{
 		[
-			["B_Carryall_oucamo",nil,2500]
+			["B_Carryall_oucamo",nil,2500],
+			["I_UAV_01_backpack_F","UAV Vigilancia",50000]
 		];
 	};
 };

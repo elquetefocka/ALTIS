@@ -22,7 +22,6 @@ switch (_mode) do
 			case "gun": {_var = "license_civ_gun"}; //Firearm/gun license cost
 			case "dive": {_var = "license_civ_dive"}; //Diving license cost
 			case "cair": {_var = "license_cop_air"}; //Cop Pilot License cost
-			case "swat": {_var = "license_cop_swat"}; //Swat License cost
 			case "cg": {_var = "license_cop_cg"}; //Coast guard license cost
 			case "heroin": {_var = "license_civ_heroin"}; //Heroin processing license cost
 			case "marijuana": {_var = "license_civ_marijuana"}; //Marijuana processing license cost
@@ -52,6 +51,9 @@ switch (_mode) do
 			case "caireast": {_var = "license_copeast_air"}; //Cop Pilot License cost
 			case "pasaporteesp": {_var = "license_civ_pasaporteesp"}; 
 			case "pasaportemaroc": {_var = "license_civ_pasaportemaroc"}; 
+			case "rubi": {_var = "license_civ_rubi"}; 
+			case "geos": {_var = "license_cop_geos"}; 
+			case "geoseast": {_var = "license_copeast_geos"}; 
 			default {_var = ""};
 		};
 	};
@@ -66,7 +68,6 @@ switch (_mode) do
 			case "license_civ_gun": {_var = "gun"}; //Firearm/gun license cost
 			case "license_civ_dive": {_var = "dive"}; //Diving license cost
 			case "license_cop_air": {_var = "cair"}; //Cop Pilot License cost
-			case "license_cop_swat": {_var = "swat"}; //Swat License cost
 			case "license_cop_cg": {_var = "cg"}; //Coast guard license cost
 			case "license_civ_heroin": {_var = "heroin"}; //Heroin processing license cost
 			case "license_civ_marijuana": {_var = "marijuana"}; //Marijuana processing license cost
@@ -94,8 +95,12 @@ switch (_mode) do
 			case "license_civ_aceroinoxidable": {_var = "aceroinoxidable"}; //aceroinoxidable License
 			case "license_civ_pmc": {_var = "pmc"}; //sidra License
 			case "license_copeast_air": {_var = "caireast"}; //Cop Pilot License cost
-			case "pasaporteesp": {_var = "license_civ_pasaporteesp"}; 
-			case "pasaportemaroc": {_var = "license_civ_pasaportemaroc"}; 
+			case "license_civ_pasaporteesp": {_var = "pasaporteesp"}; 
+			case "license_civ_pasaportemaroc": {_var = "pasaportemaroc"};
+			case "license_cop_rubi": {_var = "rubi"}; 
+			case "license_cop_geos": {_var = "geos"}; 
+			case "license_cop_geoseast": {_var = "geoseast"};
+			
 			default {_var = ""};
 		};
 	};

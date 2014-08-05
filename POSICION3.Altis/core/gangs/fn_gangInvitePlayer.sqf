@@ -24,9 +24,9 @@ _action = [
 
 if(_action) then {
 	[[profileName,grpPlayer],"life_fnc_gangInvite",_unit,false] spawn life_fnc_MP;
-	_members = _group getVariable "gang_members";
+	_members = grpPlayer getVariable "gang_members";
 	_members set[count _members,getPlayerUID _unit];
-	_group setVariable["gang_members",_members,true];
+	grpPlayer setVariable["gang_members",_members,true];
 	hint format["You have sent a invite to your gang to %1",_unit getVariable["realname",name _unit]];
 } else {
 	hint "Invitation Cancelled";

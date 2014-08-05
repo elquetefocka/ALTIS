@@ -58,7 +58,6 @@ switch (_var) do
 	case "life_inv_froglegs": {"Patas de rana"};
 	case "life_inv_sidra": {"Sidra"};
 	case "life_inv_cerveza": {"Cerveza"};
-	case "life_inv_esteel": {"Acero"};
 	case "life_inv_lupulo": {"Lupulo"};
 	case "life_inv_malta": {"Malta"};
 	case "life_inv_tabaco": {"Tabaco"};
@@ -85,7 +84,10 @@ switch (_var) do
 	case "life_inv_zipties": {"Bridas"};
 	case "life_inv_madera": {"Madera"};
 	case "life_inv_carbon": {"Carbon"};
-	
+	case "life_inv_rubiu": {"Rubi en Bruto"};
+	case "life_inv_rubip": {"Rubi Pulido"};
+	case "life_inv_speedbomb": {"Bomba Lapa"};
+	case "life_inv_nitro": {"Nitro"};
 	
 	
 	
@@ -98,7 +100,6 @@ switch (_var) do
 	case "license_civ_boat": {"Licencia Barco"};
 	case "license_civ_gun": {"Licencia de Armas"};
 	case "license_cop_air": {"Licencia de Piloto"};
-	case "license_cop_swat": {"Licencia UEI"};
 	case "license_cop_cg": {"Guarda Costa"};
 	case "license_civ_rebel": {"Entrenamiento Rebelde"};
 	case "license_civ_truck": {"Licencia Camionero"};
@@ -125,4 +126,8 @@ switch (_var) do
 	case "license_civ_pmc": {"Entrenamiento PMC"};
 	case "license_civ_pasaporteesp": {"Pasaporte España"};
 	case "license_civ_pasaportemaroc": {"Pasaporte Marruecos"};
+	case "license_civ_rubi": {"Licencia Rubies"};
+	case "license_civ_rubi": {"Licencia Rubies"};
+	case "license_cop_geos": {"Licencia G.E.O"};
+	case "license_cop_geoseast": {"Licencia G.E.O"};
 };

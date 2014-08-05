@@ -21,6 +21,16 @@ if((__GETC__(life_adminlevel) < 1)) then
 	ctrlShow[3020,false];
 	ctrlShow[3021,false];
 };
+if((__GETC__(life_coplevel) < 1)) then
+{
+	ctrlShow[3023,false];
+	
+};
+if((__GETC__(life_copeastlevel) < 1)) then
+{
+	ctrlShow[3023,false];
+	
+};
 {
 	if(alive _x && _x != player) then
 	{
@@ -29,6 +39,7 @@ if((__GETC__(life_adminlevel) < 1)) then
 			case west: {_type = "Cop"};
 			case civilian: {_type = "Civ"};
 			case independent: {_type = "Med"};
+			case east: {_type = "copeast"};
 		};
 		_units lbAdd format["%1 (%2)",_x getVariable["realname",name _x],_type];
 		_units lbSetData [(lbSize _units)-1,str(_x)];

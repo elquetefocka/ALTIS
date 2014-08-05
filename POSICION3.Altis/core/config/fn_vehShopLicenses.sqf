@@ -22,6 +22,9 @@ switch (life_veh_shop select 0) do
 	case "civ_car_3": {_ret = license_civ_driver;};
 	case "civ_car_4": {_ret = license_civ_driver;};
 	case "civ_car_5": {_ret = license_civ_driver;};
+	case "civ_car_6": {_ret = license_civ_driver;};
+	case "civ_car_7": {_ret = license_civ_driver;};
+	case "civ_car_8": {_ret = license_civ_driver;};
 	case "civ_sol": {_ret = license_civ_driver;};
 	case "civ_ship_1": {_ret = license_civ_boat;};
 	case "civ_ship_2": {_ret = license_civ_boat;};
@@ -58,6 +61,10 @@ switch (life_veh_shop select 0) do
 	case "medic_air_1": {_ret = true;};
 	case "fed_air": {_ret = true;};
 	case "taxi_1": {_ret = license_civ_taxi;};
+	case "taxi_2": {_ret = license_civ_taxi;};
+	case "taxi_3": {_ret = license_civ_taxi;};
+	case "taxi_4": {_ret = license_civ_taxi;};
+	case "taxi_5": {_ret = license_civ_taxi;};
 	case "civ_plane_1": {_ret = license_civ_avion;};
 	case "cop_ship_1":  
 	{
@@ -70,6 +77,18 @@ switch (life_veh_shop select 0) do
 			_ret = true;
 		};
 	};
+	case "cop_ship_2":  
+	{
+		if(_veh == "B_Boat_Armed_01_minigun_F") then
+		{
+			_ret = license_cop_cg;
+		}
+			else
+		{
+			_ret = true;
+		};
+	};
+	
 };
 
 _ret;

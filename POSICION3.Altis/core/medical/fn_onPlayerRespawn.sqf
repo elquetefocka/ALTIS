@@ -19,6 +19,8 @@ _containers = nearestObjects[getPosATL _corpse,["WeaponHolderSimulated"],5]; //F
 _unit setVariable["restrained",FALSE,TRUE];
 _unit setVariable["Escorting",FALSE,TRUE];
 _unit setVariable["transporting",FALSE,TRUE]; //Again why the fuck am I setting this? Can anyone tell me?
+_unit setVariable["steam64id",(getPlayerUID player),true]; //Reset the UID.
+_unit setVariable["realname",profileName,true]; //Reset the players name.
 _unit setVariable["missingOrgan",FALSE,TRUE]; //I DONT KNOW WHY SOMETIMES THEY ARE CAPS or not
 _unit setVariable["hasOrgan",FALSE,TRUE]; 
 _unit enableFatigue false;
@@ -40,3 +42,4 @@ player playMoveNow "amovppnemstpsraswrfldnon";
 
 [] call life_fnc_setupActions;
 [[_unit,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
+[] call life_fnc_setUniformTexture;

@@ -6,14 +6,12 @@
 	Does something with inserting... Don't have time for
 	descriptions... Need to write it...
 */
-private["_uid","_name","_side","_money","_bank","_licenses","_handler","_thread","_queryResult","_query","_alias","_pos_x","_pos_y"];
+private["_uid","_name","_side","_money","_bank","_licenses","_handler","_thread","_queryResult","_query","_alias"];
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
 _name = [_this,1,"",[""]] call BIS_fnc_param;
 _money = [_this,2,0,[""]] call BIS_fnc_param;
 _bank = [_this,3,2500,[""]] call BIS_fnc_param;
 _returnToSender = [_this,4,ObjNull,[ObjNull]] call BIS_fnc_param;
-_pos_x = [_this,9,"0",[""]] call BIS_fnc_param;
-_pos_y = [_this,10,"0",[""]] call BIS_fnc_param;
 
 //Error checks
 if((_uid == "") OR (_name == "")) exitWith {systemChat "Bad UID or name";}; //Let the client be 'lost' in 'transaction'
@@ -42,7 +40,7 @@ _money = [_money] call DB_fnc_numberSafe;
 _bank = [_bank] call DB_fnc_numberSafe;
 
 //Prepare the query statement..
-_query = format["INSERT INTO players (playerid, name, cash, bankacc, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear, adac_gear, adac_licenses, civPosition) VALUES('%1', '%2', '%3', '%4', '%5','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
+_query = format["INSERT INTO players (playerid, name, cash, bankacc, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, copeast_gear, copeast_licenses, civPosition) VALUES('%1', '%2', '%3', '%4', '%5','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
 	_uid,
 	_name,
 	_money,

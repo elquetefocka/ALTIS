@@ -16,8 +16,8 @@ _colorIndex = lbValue[2304,(lbCurSel 2304)];
 
 //Series of checks (YAY!)
 if(_basePrice < 0) exitWith {}; //Bad price entry
-if(life_cash < _basePrice) exitWith {hint format["You do not have enough cash to purchase this vehicle.\n\nAmount Lacking: $%1",[_basePrice - life_cash] call life_fnc_numberText];};
-if(!([_className] call life_fnc_vehShopLicenses) && _className != "B_MRAP_01_hmg_F") exitWith {hint "You do not have the required license!"};
+if(life_cash < _basePrice) exitWith {hint format["No tienes tanto efectivo para comprar este vehiculo.\n\nCantidad Restante: $%1",[_basePrice - life_cash] call life_fnc_numberText];};
+if(!([_className] call life_fnc_vehShopLicenses) && _className != "B_MRAP_01_hmg_F") exitWith {hint "No tienes la licencia requerida!"};
 
 _spawnPoints = life_veh_shop select 1;
 _spawnPoint = "";
@@ -35,9 +35,9 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 };
 
 
-if(_spawnPoint == "") exitWith {hint "There is a vehicle currently blocking the spawn point(s)";};
+if(_spawnPoint == "") exitWith {hint "Hay un vehiculo bloqueando el punto de spawn";};
 life_cash = life_cash - _basePrice;
-hint format["You bought a %1 for $%2",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
+hint format["Compraste %1 for $%2",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
 
 //Spawn the vehicle and prep it.
 if((life_veh_shop select 0) == "med_air_hs") then {

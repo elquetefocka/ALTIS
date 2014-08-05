@@ -16,7 +16,8 @@ life_versionInfo = "Altis Life RPG v3.1.4";
 [] execVM "addons\R3F_ARTY_AND_LOG\init.sqf"; 
 //[] execVM "scripts\anticheat.sqf";
 [] execVM "scripts\safezone.sqf";
-[] execVM "fusionsmenu\admin\loop.sqf";
+[] execVM "scripts\mensajes.sqf";
+
 
 StartProgress = true;
 _igiload = execVM "IgiLoad\IgiLoadInit.sqf";

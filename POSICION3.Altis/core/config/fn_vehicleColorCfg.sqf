@@ -20,8 +20,8 @@ switch (_vehicle) do
 			[_path + "heli_transport_02_1_ion_co.paa","civ",_path + "heli_transport_02_2_ion_co.paa",_path + "heli_transport_02_3_ion_co.paa"],
 			[_path + "heli_transport_02_1_dahoman_co.paa","civ",_path + "heli_transport_02_2_dahoman_co.paa",_path + "heli_transport_02_3_dahoman_co.paa"]
 		];
-	};
 	
+	};
 	case "C_Hatchback_01_sport_F":
 	{
 		_path = "\a3\soft_f_gamma\Hatchback_01\data\";
@@ -35,7 +35,7 @@ switch (_vehicle) do
 			[_path + "hatchback_01_ext_sport06_co.paa","civ"],
 			["textures\hatch_guardia_civil_v1.paa","cop"],
 			["textures\monster.jpeg","donador_1"],
-			["textures\hatchback_taxi.paa","taxi_1"],
+			["textures\hatchback_taxi.jpg","taxi_1"],
 			["textures\hatchback_marocaine.jpg","copeast"]
 		];
 	};

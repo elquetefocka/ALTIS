@@ -16,16 +16,16 @@ _chance = random(100);
 if (_chance < 50) then 
 {	
 	_victim setVariable["zipTie",true,true];
-	[[format["%1 Has turned to a life of kidnapping!",name _attacker]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+	[[format["%1 Ha dado vuelta a una vida de secuestro!",name _attacker]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 	[[getPlayerUID _attacker,name _attacker,"207"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 	titleText["You were tied with cable ties!","PLAIN"];
 }
 else
 {
 	_victim setVariable ["zipTie",false,true];
-	[[format["%1 was seen trying to kidnap someone!",name _attacker]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+	[[format["%1 fue visto tratando de secuestrar a alguien!",name _attacker]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 	[[getPlayerUID _attacker,name _attacker,"207A"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
-	titleText["Jemand hat versucht dich zu kdinappen!","PLAIN"];
+	titleText["Alguien trato de secuestrale!","PLAIN"];
 };
 	
 while {_victim getVariable "zipTie"} do

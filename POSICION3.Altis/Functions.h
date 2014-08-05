@@ -49,32 +49,18 @@ class Life_Client_Core
 	{
 		file = "core\admin";
 		class admininfo {};
-		class admininfo_Extended {};
 		class adminid {};
 		class admingetID {};
-		
 		class adminMenu {};
 		class adminQuery {};
-		
-		class adminKick {};
-		class adminBan {};
-		
-		class adminMenu_Extended {};
-		class adminQuery_Extended {};
-		
-		class adminGodMode {};
-		class adminAddMoney {};	
-		class adminSpawnVehicle {};
-		class adminInstaHealth {};
-		
-		class adminTpTo {};
+		class adminSpectate {};
+		class adminTeleport {};
 		class adminTpHere {};
-		
-		class adminRestrain {};
-		class adminUnrestrain {};
-		
-		class adminAuthentificate {};
-		class adminCheckAuth {};
+		class adminDebugCon {};
+		class adminCompensate {};
+		class adminGodMode {};
+		class adminFreeze {};
+		class adminMarkers {};
 	};
 	
 	class Medical_System
@@ -122,6 +108,7 @@ class Life_Client_Core
 		class impoundAction {};
 		class impoundAction112 {};
 		class pulloutAction {};
+		class pulloutActionCiv {};
 		class putInCar {};
 		class stopEscorting {};
 		class restrainAction {};
@@ -167,6 +154,7 @@ class Life_Client_Core
 		class takeOrgans {};
 		class CookFrogAction {};
 		class CookHermitLSD {};
+		class activateNitro {};
 	};
 	
 	class Housing
@@ -435,6 +423,11 @@ class Life_Client_Core
 		class bier {};
 		class mauer {};
 		class shovelUse {};
+		class drinkbeer {};
+		class drinksidra {};
+		class speedBomb {};
+		class nitro {};
+		
 		
 	};
 	

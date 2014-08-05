@@ -11,12 +11,12 @@ createDialog "Life_Clothing";
 disableSerialization;
 
 //Cop / Civ Pre Check
-if((_this select 3) in ["bruce","dive","reb","kart"] && playerSide != civilian) exitWith {hint "You need to be a civilian to use this store!"; closeDialog 0;};
-if((_this select 3) == "reb" && !license_civ_rebel) exitWith {hint "You don't have rebel training yet!"; closeDialog 0;};
-if((_this select 3) in ["cop"] && playerSide != west) exitWith {hint "You need to be a cop to use this store!"; closeDialog 0;};
-if((_this select 3) in ["copeast"] && playerSide != east) exitWith {hint "You need to be a cop to use this store!"; closeDialog 0;};
+if((_this select 3) in ["bruce","dive","reb","kart"] && playerSide != civilian) exitWith {hint "Necesitas ser civil para usar esta tienda!"; closeDialog 0;};
+if((_this select 3) == "reb" && !license_civ_rebel) exitWith {hint "No tienes el entrenamiento Rebelde!"; closeDialog 0;};
+if((_this select 3) in ["cop"] && playerSide != west) exitWith {hint "Necesitas ser policia para usar esta tienda!"; closeDialog 0;};
+if((_this select 3) in ["copeast"] && playerSide != east) exitWith {hint "Necesitas ser policia para usar esta tienda!"; closeDialog 0;};
 if((_this select 3) == "pmc" && !license_civ_pmc) exitWith {hint "No tiene la formación pmc aún!"; closeDialog 0;};
-if((_this select 3) in ["dive"] && !license_civ_dive) exitWith { hint "You need a Diving license to use this shop!"; closeDialog 0;};
+if((_this select 3) in ["dive"] && !license_civ_dive) exitWith { hint "Necesitas la licencia de buceo para usar esta tienda!"; closeDialog 0;};
 
 life_clothing_store = _this select 3;
 

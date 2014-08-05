@@ -18,13 +18,14 @@ _success = false; //Kraken Clean-up: set _success to false at the start of the s
 
 _cops = { (isPlayer _x) && (side (group _x) == west) } count playableUnits;
 if (_cops < 1) exitWith {
-hint format ["El arsenal militar no puede ser robado por que hay %1 policia online.", _cops];};
+hint format ["El ministerio de agricultura no puede ser robado por que hay %1 policia online.", _cops];};
 if(vehicle player != _robber) exitWith { hint "Necesitas salir de tu vehiculo!"; }; //If the player is in a vehicle, kill the script execution with a message to the player | Kraken CLeanup - Moved to above the other conditions 
 if (alive _robber && {currentWeapon _robber != ""} && {_funds > 0}) then {//Conditions met, open if | Kraken Cleanup - as Kris added the vehicle condition, it doesn't need to be in here!
-hint format ["Robando dinero del arsenal!Espera %1 sec.",_timer];
+hint format ["Robando dinero del ministerio de agricultura!Espera %1 sec.",_timer];
 _shop switchMove "AmovPercMstpSsurWnonDnon";//Making a shop owner surrender
 _shop removeAction _action;//Deleting the action,so it won't be spammed
-[[2,"El arsenal esta siendo robado!!"],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+[[2,"El arsenal esta siendo robado!!"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+[[2,"El arsenal esta siendo robado!!"],"life_fnc_broadcast",east,false] spawn life_fnc_MP;
 while {true} do{ //Kraken Clean-Up: changed to while true do:
 
 		hintsilent format ["%1 segundos restantes. Estate a menos de 10 metros de el asaltado!",_timer];
@@ -55,5 +56,5 @@ hint format["Has robado $%1",_funds]; //Give them a nice message
 _shop switchMove "";//Reseting the shop owner
 _funds = 0;
 sleep 3600;//Cooldown between the robberies
-_action = _shop addAction["Robar el Arsenal",life_fnc_robarsenal];//Adding action for the robbery
+_action = _shop addAction["Robar el ministerio de agricultura",life_fnc_robarsenal];//Adding action for the robbery
 };//Close the if statement

@@ -16,6 +16,7 @@ _uiDisp = uiNamespace getVariable "life_timer";
 _timer = _uiDisp displayCtrl 38301;
 _time = time + (2 * 60);
 //_markerpos = getMarkerPos _robber;
+_timero = 120;
 
 _cops = { (isPlayer _x) && (side (group _x) == west) } count playableUnits;
 if (_cops < 1) exitWith {
@@ -23,11 +24,12 @@ hint format ["El casino no puede ser robado por que hay %1 policia(s) online.", 
 if(vehicle player != _robber) exitWith { hint "Necesitas salir de tu vehiculo!"; }; //If the player is in a vehicle, kill the script execution with a message to the player | Kraken CLeanup - Moved to above the other conditions 
 if (alive _robber && {currentWeapon _robber != ""} && {_funds > 0}) then {//Conditions met, open if | Kraken Cleanup - as Kris added the vehicle condition, it doesn't need to be in here!
 //hintSilent format["Necesitas esta a 10m!\n\nTiempo Restante:\n %1\n\nDistancia: %2m",_countDown,round(player distance _markerpos)];
-hint format ["Robando el Casino!Por favor espere %1 seg.",_timer];
+hint format ["Robando el Casino!Por favor espere %1 seg.",_timero];
 _shop switchMove "AmovPercMstpSsurWnonDnon";//Making a shop owner surrender
 _shop removeAction _action;//Deleting the action,so it won't be spammed
 //[[2,"El Casino esta siendo atracado!!"],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 [[2,format["$$$ %1 ESTA ROBANDO EL CASINO $$$", name _robber]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+[[2,format["$$$ %1 ESTA ROBANDO EL CASINO $$$", name _robber]],"life_fnc_broadcast",east,false] spawn life_fnc_MP;
 [[getPlayerUID _robber,name _robber,"489"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;//Add the robber to the wanted list,thanks to DimitryYuri
 while {true} do {
 	if(isNull _uiDisp) then {
@@ -52,4 +54,4 @@ _shop switchMove "";//Reseting the shop owner
 _funds = 0;
 sleep 18000;//Cooldown between the robberies
 _action = _shop addAction["Robar el casino",life_fnc_casino];//Adding action for the robbery
-};//Close the if statement
+//Close the if statement

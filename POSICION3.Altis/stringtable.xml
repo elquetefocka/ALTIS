@@ -33,11 +33,68 @@
 		</Key>
 	</Package>
 	<Package name="Admin_Menu">
-		<Key ID="STR_Admin_Title">
-			<Original>Admin Menu</Original>
+			<Key ID="STR_Admin_Spectate">
+			<Original>Espectar</Original>
 		</Key>
-		<Key ID="STR_Admin_GetID">
-			<Original>Obtener ID</Original>
+		<Key ID="STR_Admin_Teleport">
+			<Original>Teleport</Original>
+		</Key>
+		<Key ID="STR_Admin_TpHere">
+			<Original>TP Aqui</Original>
+		</Key>
+		<Key ID="STR_Admin_Debug">
+			<Original>Debug</Original>
+		</Key>
+		<Key ID="STR_Admin_Compensate">
+			<Original>Dinero</Original>
+		</Key>
+		<Key ID="STR_Admin_God">
+			<Original>Modo-Dios</Original>
+		</Key>
+		<Key ID="STR_Admin_Freeze">
+			<Original>congelar</Original>
+		</Key>
+		<Key ID="STR_Admin_Markers">
+			<Original>Markers</Original>
+		</Key>
+		<Key ID="STR_ANOTF_CompWarn">
+			<Original>Esta a punto de darte a ti mismo $%1 para compensar a otro jugadorr &lt;br/&gt;&lt;br/&gt;Deberas dar el dinero a la persona que quieres compensar manualmente.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_Success">
+			<Original>Te has añadido $%1 en tu cuenta.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_Fail">
+			<Original>No puede por encima de 999999.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_Amount">
+			<Original>Por favor Por favor indica la cantidad a compensar.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_Frozen">
+			<Original>You have disabled %1's input.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_Unfrozen">
+			<Original>You have enabled %1's input.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_Error">
+			<Original>You can't do that dumbass.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_ErrorLevel">
+			<Original>Tu nivel de Admin no es suficiente.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_MDisabled">
+			<Original>Markers Disabled.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_MEnabled">
+			<Original>Markers Enabled.</Original>
+		</Key>
+		<Key ID="STR_NOTF_ActionCancel">
+			<Original>Accion Cancelada</Original>
+		</Key>
+		<Key ID="STR_Global_Yes">
+			<Original>Si</Original>
+		</Key>
+		<Key ID="STR_Global_No">
+			<Original>No</Original>
 		</Key>
 	</Package>
 	<Package name="ATM_Menu">
@@ -67,14 +124,17 @@
 		<Key ID="STR_CELL_TextToSend">
 			<Original>Enviar Mensaje a:</Original>
 		</Key>
+		<Key ID="STR_CELL_TextToCivil">
+			<Original>Civiles:</Original>
+		</Key>
 		<Key ID="STR_CELL_TextMSGBtn">
-			<Original>ENVIAR SMS:</Original>
+			<Original>enviar a:</Original>
 		</Key>
 		<Key ID="STR_CELL_TextPolice">
-			<Original>Policia WEST</Original>
+			<Original>Guardia Civil</Original>
 		</Key>
 		<Key ID="STR_CELL_TextPoliceeast">
-			<Original>Policia EAST</Original>
+			<Original>Policia Maroc</Original>
 		</Key>
 		<Key ID="STR_CELL_TextAdmins">
 			<Original>Admins SMS</Original>
@@ -83,13 +143,10 @@
 			<Original>Admin mensaje</Original>
 		</Key>
 		<Key ID="STR_CELL_AdminMSGAll">
-			<Original>Admin Todos</Original>
+			<Original>Admin a Todos</Original>
 		</Key>
 		<Key ID="STR_CELL_EMSRequest">
 			<Original>SOS Socorro</Original>
-		</Key>
-		<Key ID="STR_CELL_TextToCivil">
-			<Original>SMS CIVIL</Original>
 		</Key>
 	</Package>
 	<Package name="Chop_Shop">
@@ -99,10 +156,10 @@
 	</Package>
 	<Package name="Gang_Menu">
 		<Key ID="STR_Gang_Title">
-			<Original>Gestion de pandilla</Original>
+			<Original>Gestion de banda</Original>
 		</Key>
 		<Key ID="STR_Gang_Title2">
-			<Original>Gestion de Pandilla - pandillas actuales</Original>
+			<Original>Gestion de banda - bandas actuales</Original>
 		</Key>
 		<Key ID="STR_Gang_Join">
 			<Original>Unirse</Original>
@@ -120,13 +177,13 @@
 			<Original>Asignar lider</Original>
 		</Key>
 		<Key ID="STR_Gang_PriceTxt">
-			<Original>Para crear una Pandilla esta costara $%1</Original>
+			<Original>Para crear una banda esta costara $%1</Original>
 		</Key>
 		<Key ID="STR_Gang_Create">
 			<Original>crear</Original>
 		</Key>
 		<Key ID="STR_Gang_YGN">
-			<Original>Nombre de tu pandilla</Original>
+			<Original>Nombre de tu banda</Original>
 		</Key>
 		<Key ID="STR_Gang_MainMenu">
 			<Original>No estas en una banda actualmente, que es lo que quieres hacer?</Original>
@@ -213,7 +270,7 @@
 			<Original>Estado monetario</Original>
 		</Key>
 		<Key ID="STR_PM_MyGang">
-			<Original>Mi pandilla</Original>
+			<Original>Mi banda</Original>
 		</Key>
 		<Key ID="STR_PM_WantedList">
 			<Original>Lista de buscados</Original>
@@ -228,7 +285,7 @@
 			<Original>Admin Menu</Original>
 		</Key>
 		<Key ID="STR_PM_SyncData">
-			<Original>Sincronizar</Original>
+			<Original>Sicronizar</Original>
 		</Key>
 	</Package>
 	<Package name="Settings_Menu">
@@ -420,6 +477,12 @@
 		<Key ID="STR_NOTF_HS_Healed">
 			<Original>Has sido curado.</Original>
 		</Key>
+		<Key ID="STR_NOTF_Frozen">
+			<Original>You have been frozen by an administrator</Original>
+		</Key>
+		<Key ID="STR_NOTF_Unfrozen">
+			<Original>You have been unfrozen by an administrator</Original>
+		</Key>
 		<Key ID="STR_NOTF_BeingImpounded">
 			<Original>%1 tu %2 esta siendo embargado por la policia.</Original>
 		</Key>
@@ -470,6 +533,21 @@
 		</Key>
 		<Key ID="STR_NOTF_OutOfFuel">
 			<Original>Vehiculo vacio de gasolina</Original>
+		</Key>
+		<Key ID="STR_MISC_StPubIntox">
+			<Original>%1 has passed out drunk in public!</Original>
+		</Key>
+		<Key ID="STR_MISC_AlreadyDrinking">
+			<Original>Ya está bebiendo algo de licor</Original>
+		</Key>
+		<Key ID="STR_MISC_WestIndNoNo">
+			<Original>No beber en servicio</Original>
+		</Key>
+		<Key ID="STR_MISC_DrunkBlackOut">
+			<Original>Usted se ha desmayado</Original>
+		</Key>
+		<Key ID="STR_MISC_DrunkBlackOut1">
+			<Original>¿Qué demonios me pasó a mí?</Original>
 		</Key>
 	</Package>
 	<Package name="Life_Items">
@@ -529,7 +607,7 @@
 			<Original>Menu interaccion jugador</Original>
 		</Key>
 		<Key ID="STR_pInAct_PutInCar">
-			<Original>Montar en vehiculo</Original>
+			<Original>Al vehiculo</Original>
 		</Key>
 		<Key ID="STR_pInAct_Unrestrain">
 			<Original>des-arrestado</Original>
@@ -576,16 +654,16 @@
 			<Original>registrar</Original>
 		</Key>
 		<Key ID="STR_vInAct_SearchVehicle">
-			<Original>Buscar vehiculo</Original>
+			<Original>Papeles</Original>
 		</Key>
 		<Key ID="STR_vInAct_PullOut">
 			<Original>sacar jugadores</Original>
 		</Key>
 		<Key ID="STR_vInAct_Impound">
-			<Original>embargar vehiculos</Original>
+			<Original>Al garaje</Original>
 		</Key>
-		<Key ID="STR_vInAct_Impound123">
-			<Original>Enviar Garage</Original>
+		<Key ID="STR_vInAct_Impound112">
+			<Original>embargar</Original>
 		</Key>
 		<Key ID="STR_vInAct_DeviceMine">
 			<Original>Recolectar con maquina</Original>

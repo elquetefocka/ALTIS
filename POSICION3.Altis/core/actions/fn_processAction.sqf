@@ -24,6 +24,7 @@ _itemInfo = switch (_type) do
 	case "caparazon": {["caparazon","figuradehueso",350,"Tratando el Hueso"]};
 	case "heroin": {["heroinu","heroinp",1720,"Procesando Heroina"]};
 	case "tabaco": {["tabaco","cigarrillos",350,"procesando cigarrillos"]};
+	case "rubiu": {["rubiu","rubip",350,"procesando Rubies"]};
 	default {[]};
 };
 

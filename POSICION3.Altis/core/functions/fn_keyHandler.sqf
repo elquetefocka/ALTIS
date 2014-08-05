@@ -30,6 +30,21 @@ if(life_action_inUse) exitWith {
 	_handled;
 };
 
+//Hotfix for Interaction key not being able to be bound on some operation systems.
+if(count (actionKeys "User10") != 0 && {(inputAction "User10" > 0)}) exitWith {
+	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
+	if(!life_action_inUse) then {
+		[] spawn 
+		{
+			private["_handle"];
+			_handle = [] spawn life_fnc_actionKeyHandler;
+			waitUntil {scriptDone _handle};
+			life_action_inUse = false;
+		};
+	};
+	true;
+};
+
 switch (_code) do
 {
 	//Space key for Jumping
@@ -60,6 +75,14 @@ switch (_code) do
 					[] spawn life_fnc_surrender;
 				};
 			};
+		};
+	};
+	
+	//6 Nitro
+	case 7:
+	{
+		if(!_alt && !_ctrlKey) then {
+			[] spawn life_fnc_activateNitro;
 		};
 	};
 	
@@ -260,12 +283,12 @@ switch (_code) do
 					if(_locked == 0) then {
 						_veh setVariable[format["bis_disabled_Door_%1",_door],1,true];
 						_veh animate [format["door_%1_rot",_door],0];
-						systemChat "You have locked that door.";
+						systemChat "Has cerrado el pestillo.";
 						player say3D "door_lock";
 					} else {
 						_veh setVariable[format["bis_disabled_Door_%1",_door],0,true];
 						_veh animate [format["door_%1_rot",_door],1];
-						systemChat "You have unlocked that door.";
+						systemChat "Has abierto el pestillo.";
 						player say3D "door_unlock";
 					};
 				};

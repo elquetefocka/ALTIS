@@ -24,7 +24,8 @@ if (alive _robber && {currentWeapon _robber != ""} && {_funds > 0}) then {//Cond
 hint format ["Robando recaudacion de la iglesia!Espera %1 sec.",_timer];
 _shop switchMove "AmovPercMstpSsurWnonDnon";//Making a shop owner surrender
 _shop removeAction _action;//Deleting the action,so it won't be spammed
-[[2,"La Iglesia esta siendo atracada!!"],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+[[2,"La Iglesia esta siendo atracada!!"],"life_fnc_broadcast",east,false] spawn life_fnc_MP;
+[[2,"La Iglesia esta siendo atracada!!"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 while {true} do{ //Kraken Clean-Up: changed to while true do:
 
 		hintsilent format ["%1 segundos restantes. Estate a menos de 10 metros de el asaltado!",_timer];

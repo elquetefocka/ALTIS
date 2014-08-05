@@ -37,6 +37,9 @@ life_removeWanted = false;
 life_mauer = ObjNull;
 life_action_gather = false; // controla las zonas recolectacion
 life_is_alive = false;
+life_god = false; //Add this
+life_frozen = false; //And this
+life_markers = false; //Finally this
 
 
 //Revive constant variables.
@@ -102,6 +105,7 @@ __CONST__(life_impound_boat,25000);
 __CONST__(life_impound_air,35000);
 life_istazed = false;
 life_my_gang = ObjNull;
+
 
 life_vehicles = [];
 bank_robber = [];
@@ -183,11 +187,9 @@ life_inv_items =
 	"life_inv_defusekit",
 	"life_inv_storagesmall",
 	"life_inv_storagebig",
-	"life_inv_labkit",
 	"life_inv_cerveza",
 	"life_inv_barricade",
 	"life_inv_barrier",
-	"life_inv_bdp",
 	"life_inv_sidra",
 	"life_inv_shovel",
 	"life_inv_tabaco",
@@ -205,16 +207,18 @@ life_inv_items =
     "life_inv_mauer",
 	"life_inv_cono",
 	"life_inv_barrera",
-	"life_inv_bier",
 	"life_inv_lupulo",
 	"life_inv_malta",
-	"life_inv_hopfen",
 	"life_inv_acero",
 	"life_inv_aceroinoxidable",
 	"life_inv_kidney",
 	"life_inv_zipties",
 	"life_inv_madera",
-	"life_inv_carbon"
+	"life_inv_carbon",
+	"life_inv_rubiu",
+	"life_inv_rubip",
+	"life_inv_speedbomb",
+	"life_inv_nitro"
 	
 ];
 
@@ -231,7 +235,6 @@ life_licenses =
 	["license_civ_boat","civ"],
 	["license_civ_gun","civ"],
 	["license_cop_air","cop"],
-	["license_cop_swat","cop"],
 	["license_cop_cg","cop"],
 	["license_civ_rebel","civ"],
 	["license_civ_truck","civ"],
@@ -258,7 +261,10 @@ life_licenses =
 	["license_civ_pmc","civ"],
 	["license_copeast_air","copeast"],
 	["license_civ_pasaporteesp","civ"],
-	["license_civ_pasaportemaroc","civ"]
+	["license_civ_pasaportemaroc","civ"],
+	["license_cop_geos","cop"],
+	["license_copeast_geos","copeast"],
+	["license_civ_rubi","civ"]
 	
 	
 ];
@@ -333,7 +339,10 @@ sell_array =
 	["zipties",500],
 	["madera",500],
 	["carbon",500],
-	["cerveza",1500]
+	["cerveza",1500],
+	["rubip",7000],
+	["speedbomb",500000],
+	["nitro",15000]
 ];
 __CONST__(sell_array,sell_array);
 
@@ -355,6 +364,7 @@ buy_array =
 	["tbacon",75],
 	["lockpick",150],
 	["pickaxe",1200],
+	["pala",5000],
 	["redgull",1500],
 	["fuelF",850],
 	["peach",68],
@@ -365,7 +375,6 @@ buy_array =
 	["storagesmall",75000],
 	["storagebig",150000],
 	["cigarrillos",800],
-	["labkit",5050],
 	["carbon",2500],
 	["cono",75],
 	["mauer",5000],
@@ -373,7 +382,9 @@ buy_array =
 	["barrier",500],
 	["barricade",1000],
 	["barrera",500],
-	["zipties",1000]
+	["zipties",1000],
+	["speedbomb",700000],
+	["nitro",15000]
 ];
 __CONST__(buy_array,buy_array);
 

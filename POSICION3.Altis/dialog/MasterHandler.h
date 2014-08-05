@@ -25,5 +25,4 @@
 #include "vehicleShop.h"
 #include "settings.h"
 #include "federalReserve.h"
-#include "extended_admin_menu.hpp"
-#include "admin_pw.hpp" //Admin password
+#include "compensate.hpp"

@@ -6,9 +6,14 @@
 	Initializes the civilian.
 */
 private["_spawnPos"];
+civ_spawn_1 = nearestObjects[getMarkerPos  "civ_spawn_1", ["Land_i_Shop_01_V1_F","Land_i_Shop_02_V1_F","Land_i_Shop_03_V1_F","Land_i_Stone_HouseBig_V1_F"],250];
+civ_spawn_2 = nearestObjects[getMarkerPos  "civ_spawn_2", ["Land_i_Shop_01_V1_F","Land_i_Shop_02_V1_F","Land_i_Shop_03_V1_F","Land_i_Stone_HouseBig_V1_F"],250];
+civ_spawn_3 = nearestObjects[getMarkerPos  "civ_spawn_3", ["Land_i_Shop_01_V1_F","Land_i_Shop_02_V1_F","Land_i_Shop_03_V1_F","Land_i_Stone_HouseBig_V1_F"],250];
+civ_spawn_4 = nearestObjects[getMarkerPos  "civ_spawn_4", ["Land_i_Shop_01_V1_F","Land_i_Shop_02_V1_F","Land_i_Shop_03_V1_F","Land_i_Stone_HouseBig_V1_F"],250];
+civ_spawn_5 = nearestObjects[getMarkerPos  "civ_spawn_4", ["Land_i_Shop_01_V1_F","Land_i_Shop_02_V1_F","Land_i_Shop_03_V1_F","Land_i_Stone_HouseBig_V1_F"],250];
+civ_spawn_6 = nearestObjects[getMarkerPos  "civ_spawn_4", ["Land_i_Shop_01_V1_F","Land_i_Shop_02_V1_F","Land_i_Shop_03_V1_F","Land_i_Stone_HouseBig_V1_F"],250];
 waitUntil {!(isNull (findDisplay 46))};
-_playerPosition = civ_position;
-diag_log format ["%1",_playerPosition]; //For debugging
+
 
 if (!life_is_alive) then
 {
@@ -27,7 +32,7 @@ else
 					else 
 						{
 						player setPos civ_position;
-						hint format["Your character is still alive. You have been placed at your last saved position."];
+						hint format["Tu personaje estaba vivo. Has sido situado en tu ultima posicion."];
 						};	
 	life_is_alive = true;
 }; 
@@ -37,6 +42,6 @@ player addRating 9999999;
 [] execVM "welcome.sqf";
  
  
- if ((uniform player) == "U_NikosBody")  then {
-player setObjectTextureGlobal [0, "textures\U_NikosBody.jpg"];
+ if ((uniform player) == "U_C_Poloshirt_stripped")  then {
+player setObjectTextureGlobal [0, "textures\U_C_Poloshirt_stripped.jpg"];
 };

@@ -53,19 +53,19 @@ while {true} do
 //Kill the UI display and check for various states
 5 cutText ["","PLAIN"];
 player playActionNow "stop";
-if(_target getVariable ["Reviving",ObjNull] != player) exitWith {hint "Someone else is already reviving this person"};
+if(_target getVariable ["Reviving",ObjNull] != player) exitWith {hint "Alguien mas ya está reviviendo esta persona"};
 _target setVariable["Reviving",NIL,TRUE];
 if(!alive player OR life_istazed) exitWith {life_action_inUse = false;};
-if(_target getVariable["Revive",FALSE]) exitWith {hint "This person either respawned or was already revived."};
+if(_target getVariable["Revive",FALSE]) exitWith {hint "Esta persona ya ha respawneado o ya fue restablecido."};
 if((player getVariable["restrained",false])) exitWith {life_action_inUse = false;};
-if(!isNil "_badDistance") exitWith {titleText["You got to far away from the target.","PLAIN"]; life_action_inUse = false;};
+if(!isNil "_badDistance") exitWith {titleText["Estas lejos del herido.","PLAIN"]; life_action_inUse = false;};
 if(life_interrupted) exitWith {life_interrupted = false; titleText["Action cancelled","PLAIN"]; life_action_inUse = false;};
 
 life_atmcash = life_atmcash + (call life_revive_fee);
 life_action_inUse = false;
 _target setVariable["Revive",TRUE,TRUE];
 [[profileName],"life_fnc_revived",_target,FALSE] spawn life_fnc_MP;
-titleText[format["You have revived %1 and received $%2 for your services.",_targetName,[(call life_revive_fee)] call life_fnc_numberText],"PLAIN"];
+titleText[format["Has revivido %1 y recibiste $%2 por tus servicios.",_targetName,[(call life_revive_fee)] call life_fnc_numberText],"PLAIN"];
 
 sleep 0.6;
 player reveal _target;

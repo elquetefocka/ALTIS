@@ -21,9 +21,9 @@ switch (_className) do
 	case "C_Van_01_transport_F": {100};
 	case "I_G_Van_01_transport_F": {100};
 	case "C_Van_01_box_F": {150};
-	case "C_Boat_Civil_01_F": {85};
-	case "C_Boat_Civil_01_police_F": {85};
-	case "C_Boat_Civil_01_rescue_F": {85};
+	case "C_Boat_Civil_01_F": {150};
+	case "C_Boat_Civil_01_police_F": {150};
+	case "C_Boat_Civil_01_rescue_F": {150};
 	case "B_Truck_01_box_F": {450};
 	case "B_Truck_01_transport_F": {325};
 	case "B_MRAP_01_F": {65};
@@ -32,7 +32,7 @@ switch (_className) do
 	case "B_Heli_Light_01_F": {90};
 	case "O_Heli_Light_02_unarmed_F": {210};
 	case "I_Heli_Transport_02_F": {450};
-	case "C_Rubberboat": {45};
+	case "C_Rubberboat": {100};
 	case "O_Boat_Armed_01_hmg_F": {175};
 	case "B_Boat_Armed_01_minigun_F": {175};
 	case "I_Boat_Armed_01_minigun_F": {175};
@@ -44,5 +44,7 @@ switch (_className) do
 	case "Land_CargoBox_V1_F": {5000};
 	case "Box_IND_Grenades_F": {350};
 	case "B_supplyCrate_F": {700};
+	case "B_SDV_01_F": {50};
+	case "O_SDV_01_F": {50};
 	default {-1};
 };

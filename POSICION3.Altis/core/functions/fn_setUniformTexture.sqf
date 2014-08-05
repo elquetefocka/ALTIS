@@ -13,5 +13,5 @@ switch(playerSide) do
 	
 	case east: {player setObjectTextureGlobal [0,"textures\gendarmes.jpg"];};
 	
-	case civilian: {player setObjectTextureGlobal [0,"textures\U_NikosBody.jpg"];};
+	case civilian: {player setObjectTextureGlobal [0,"textures\U_C_Poloshirt_stripped.jpg"];};
 };

@@ -8,7 +8,7 @@
 _fnc_scriptName = "Player Synchronization";
 private["_exit"];
 if(isNil "life_session_time") then {life_session_time = false;};
-if(life_session_time) exitWith {hint "You have already used the sync option, you can only use this feature once every 5 minutes.";};
+if(life_session_time) exitWith {hint "Ya has utilizado la opción de sincronización, sólo se puede utilizar esta función una vez cada 5 minutos.";};
 
 switch (typeName life_fnc_MP_packet) do
 {
@@ -23,10 +23,10 @@ switch (typeName life_fnc_MP_packet) do
 	default {_exit = true;};
 };
 
-if(!isNil "_exit") exitWith {hint "Because of some cheater corrupting the BIS MP Framework they have stopped you from enjoying our mission.\n\nYou can try this again in a minute if you feel it is a mistake.";};
+if(!isNil "_exit") exitWith {hint "Debido a algún tramposo corrompiendo el Marco BIS MP que te han dejado de disfrutar de nuestra misión.\n\nPuedes intentarlo de nuevo en un minuto si usted siente que es un error.";};
 
 [] call SOCK_fnc_updateRequest;
-hint "Syncing player information to the server.\n\nPlease wait up to 20 seconds before leaving.";
+hint "Sincronizando la informacion del jugador a el server.\n\nPor favor espera 20 segundos antes de abandonar.";
 [] spawn
 {
 	life_session_time = true;

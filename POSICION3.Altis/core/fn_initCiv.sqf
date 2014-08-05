@@ -32,7 +32,7 @@ else
 					else 
 						{
 						player setPos civ_position;
-						hint format["Tu personaje estaba vivo. Has sido situado en tu ultima posicion."];
+						//hint format["Tu personaje estaba vivo. Has sido situado en tu ultima posicion."];
 						};	
 	life_is_alive = true;
 }; 

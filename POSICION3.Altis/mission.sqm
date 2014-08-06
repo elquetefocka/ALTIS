@@ -2355,7 +2355,7 @@ class Mission
 				};
 				class Item9
 				{
-					position[]={7922.333,2.951632,10388.922};
+					position[]={10244.125,126.41872,19093.621};
 					azimut=-639.31946;
 					special="NONE";
 					id=113;
@@ -2847,8 +2847,8 @@ class Mission
 				};
 				class Item51
 				{
-					position[]={7302.3994,173.55945,13976.163};
-					azimut=-550.43506;
+					position[]={9587.4775,127.61749,15075.268};
+					azimut=-767.09534;
 					offsetY=-0.1;
 					special="NONE";
 					id=155;
@@ -26278,7 +26278,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=313;
+		items=314;
 		class Item0
 		{
 			position[]={14499.848,10.291064,5871.5342};
@@ -26604,7 +26604,7 @@ class Mission
 		};
 		class Item40
 		{
-			position[]={7923.3799,3.5515966,10392.326};
+			position[]={10245.172,126.9567,19097.025};
 			name="Dealer_1";
 			text="Narcotraficante";
 			type="mil_dot";
@@ -27388,12 +27388,12 @@ class Mission
 		};
 		class Item136
 		{
-			position[]={7304.3677,173.56688,13976.105};
+			position[]={9585.8711,127.43111,15074.138};
 			name="Dealer_1_1";
 			text="Narcotraficante";
 			type="mil_dot";
 			colorName="ColorOrange";
-			angle=-216.16377;
+			angle=-432.82495;
 		};
 		class Item137
 		{
@@ -28245,7 +28245,7 @@ class Mission
 		};
 		class Item239
 		{
-			position[]={7922.7646,2.3440492,10383.716};
+			position[]={10244.557,125.78256,19088.416};
 			name="NORDM_2_1_3";
 			text="ZONA SIN RDM";
 			markerType="ELLIPSE";
@@ -28271,7 +28271,7 @@ class Mission
 		};
 		class Item241
 		{
-			position[]={7306.0278,174.0239,13978.054};
+			position[]={9585.6982,127.41103,15071.579};
 			name="NORDM_2_1_5";
 			text="ZONA SIN RDM";
 			markerType="ELLIPSE";
@@ -28280,7 +28280,7 @@ class Mission
 			fillName="FDiagonal";
 			a=500;
 			b=500;
-			angle=-426.57169;
+			angle=-643.23212;
 		};
 		class Item242
 		{
@@ -28931,6 +28931,17 @@ class Mission
 			colorName="ColorRed";
 			angle=45.402924;
 		};
+		class Item313
+		{
+			position[]={17044.121,52.25745,16659.9};
+			name="FRONTERA";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			a=1800;
+			b=20;
+			angle=292.20029;
+		};
 	};
 	class Sensors
 	{
@@ -29184,7 +29195,7 @@ class Mission
 		};
 		class Item13
 		{
-			position[]={7923.0127,2.8193395,10388.339};
+			position[]={10244.805,126.3812,19093.037};
 			a=500;
 			b=500;
 			angle=-1082.6746;
@@ -29224,10 +29235,10 @@ class Mission
 		};
 		class Item15
 		{
-			position[]={7302.8184,173.28964,13974.718};
+			position[]={9586.2813,127.47868,15076.171};
 			a=500;
 			b=500;
-			angle=-1221.8097;
+			angle=-1438.4709;
 			activationBy="ANY";
 			repeating=1;
 			interruptable=1;

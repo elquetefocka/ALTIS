@@ -21,3 +21,5 @@
 		[_x,_index] spawn life_fnc_colorVehicle;
 	};
 } foreach (allMissionObjects "Air");
+
+

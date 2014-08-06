@@ -13,7 +13,7 @@ if((isNull _attacker)||(isNull _victim)) exitWith {};
 
 _chance = random(100);
 
-if (_chance < 50) then 
+if (_chance < 100) then 
 {	
 	_victim setVariable["zipTie",true,true];
 	[[format["%1 Ha dado vuelta a una vida de secuestro!",name _attacker]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;

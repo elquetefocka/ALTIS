@@ -156,6 +156,8 @@ switch (_vehicle) do
 			case 2: {_color = "Digi Green"};
 			case 3: {_color = "Desert Digi"};
 			case 4: {_color = "EMS White"};
+			case 5: {_color = "Orca Policia"};
+			case 6: {_color = "Rebel Orca"};
 		};
 	};
 	

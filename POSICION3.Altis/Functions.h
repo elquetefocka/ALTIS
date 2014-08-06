@@ -11,7 +11,7 @@ class Socket_Reciever
 		class syncData {};
 	};
 };
-/*
+
 class SpyGlass
 {
 	tag = "SPY";
@@ -28,7 +28,8 @@ class SpyGlass
 		class initSpy {preInit=1;};
 	};
 };
-*/
+
+		
 class Life_Client_Core
 {
 	tag = "life";
@@ -116,6 +117,7 @@ class Life_Client_Core
 		class searchAction {};
 		class searchVehAction {};
 		class unrestrain {};
+		class unrestrainciv {};
 		class pickupItem {};
 		class pickupMoney {};
 		class ticketAction {};

@@ -64,7 +64,7 @@ switch (_code) do
 	// O, police gate opener
     case 7:
 	{
-		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) OR (playerSide == east) && (vehicle player != player)) then {
+		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) || (playerSide == east) && (vehicle player != player)) then {
 			[] call life_fnc_copOpener;
 		};
 	};
@@ -87,6 +87,24 @@ switch (_code) do
 				};
 			};
 		};
+	};
+	
+	//Shift+O Zipties ( Civilians can restrain )
+	case 24:
+	{
+		if(_shift) then {_handled = true;};
+		if(_shift && playerSide == civilian && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent,west,east]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
+	{
+	if([false,"zipties",1] call life_fnc_handleInv) then
+    {
+		[] call life_fnc_restrainAction;
+		hint "Le atastes, usa la tecla de windows para mas opciones";
+	}
+		else
+	{
+		hint "No tienes bridas!";
+	};
+	};
 	};
 	
 	//6 Nitro
@@ -141,11 +159,11 @@ switch (_code) do
 	case 19:
 	{
 		if(_shift) then {_handled = true;};
-		if(_shift && playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
+		if(_shift && playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent,east]) && alive cursorTarget && cursorTarget distance player < 5.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
 		{
 			[] call life_fnc_restrainAction;
 		};
-		if(_shift && playerSide == east && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
+		if(_shift && playerSide == east && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent,west]) && alive cursorTarget && cursorTarget distance player < 5.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
 		{
 			[] call life_fnc_restrainActioncopeast;
 		};

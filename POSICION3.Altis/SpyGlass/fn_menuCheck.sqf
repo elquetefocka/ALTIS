@@ -1,7 +1,7 @@
 /*
 	File: fn_menuCheck.sqf
 	Author: Bryan "Tonic" Boardwine
-
+	
 	Description:
 	Checks for known cheat menus and closes them then reports them to the server.
 */
@@ -64,7 +64,7 @@
 	Hey you know what I had a feeling from the picture awhile ago it was the controllers display but because it was so mangled I couldn't really tell..
 	At least you can spell my name correct unlike that retard extasy hosting who is all butt hurt because griffin released a pbo hider so now he can't 
 	sell darky's old pbo hider and make money from it or take credit bahahahaha.
-
+	
 	Before I conclude this small conversation I have embedded in my code be sure to look at fn_payLoad.sqf, if you guys would stop with the copy-pasting and 
 	actually figure out something you could disable spyglass 4 different ways and then make me stop being lazy to patch out those 4 methods.
 	Until next time JME.

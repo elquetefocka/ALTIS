@@ -64,7 +64,7 @@ switch (_code) do
 	// O, police gate opener
     case 57:
 	{
-		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player)) then {
+		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) OR (playerSide == west) && (vehicle player != player)) then {
 			[] call life_fnc_copOpener;
 		};
 	};

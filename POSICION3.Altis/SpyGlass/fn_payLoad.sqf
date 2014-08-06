@@ -1,7 +1,7 @@
 /*
 	File: fn_payLoad.sqf
 	Author: Bryan "Tonic" Boardwine
-
+	
 	Description:
 	This is the payload that is sent to the client and forces them
 	to initialize key functions.
@@ -80,13 +80,15 @@ if(_onUnload != "[""onUnload"",_this,""RscDisplayInventory"",'IGUI'] call compil
 	["SpyGlass",false,false] call BIS_fnc_endMission;
 };
 
-
+	
 //Launch our workers
 [] call SPY_fnc_menuCheck;
 [] spawn SPY_fnc_cmdMenuCheck;
 [] spawn SPY_fnc_variableCheck;
 
 //Create a no-recoil hack check.
+//Reminder to Tonic, dafuq?
+/*
 [] spawn {
 	while {true} do {
 		if((unitRecoilCoefficient player) < 1) then {
@@ -98,3 +100,4 @@ if(_onUnload != "[""onUnload"",_this,""RscDisplayInventory"",'IGUI'] call compil
 		sleep 1.5;
 	};
 };
+*/

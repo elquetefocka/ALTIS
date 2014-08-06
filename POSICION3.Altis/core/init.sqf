@@ -101,7 +101,7 @@ life_fnc_moveIn = compileFinal
 "
 	player moveInCargo (_this select 0);
 ";
-
+[] execVM "core\fn_addKey.sqf";///here
 [] execVM "core\init_survival.sqf";
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.

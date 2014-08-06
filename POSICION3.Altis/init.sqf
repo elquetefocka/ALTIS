@@ -17,6 +17,8 @@ life_versionInfo = "Altis Life RPG v3.1.4";
 //[] execVM "scripts\anticheat.sqf";
 [] execVM "scripts\safezone.sqf";
 [] execVM "scripts\mensajes.sqf";
+[] execVM "scripts\bancocentral.sqf";
+
 
 
 StartProgress = true;

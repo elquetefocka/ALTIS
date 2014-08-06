@@ -133,7 +133,7 @@ switch (true) do
 		[] spawn life_fnc_pickAxeUse;
 	};
 	
-	case (_item == "pickaxe"):
+	case (_item == "pala"):
 	{
 		[] spawn life_fnc_shovelUse;
 	};

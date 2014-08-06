@@ -27,7 +27,7 @@ waitUntil {(!isNil {clientGangLeader})};
 diag_log "::recibidos funciones de servidor.";
 0 cutText ["A la espera de que el servidor esté listo...","BLACK FADED"];
 0 cutFadeOut 99999999;
-diag_log "::Life Client:: Waiting for the server to be ready..";
+diag_log "::Life Client:: A la espera de que el servidor esté listo..";
 waitUntil{!isNil "life_server_isReady"};
 waitUntil{(life_server_isReady OR !isNil "life_server_extDB_notLoaded")};
 if(!isNil "life_server_extDB_notLoaded") exitWith {

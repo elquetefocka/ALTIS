@@ -3,7 +3,7 @@
 */
 private["_vault"];
 _vault = _this select 0;
-if(!(_vault getVariable["safe_open",false])) exitWith {hint "The vault is already locked?"};
+if(!(_vault getVariable["safe_open",false])) exitWith {hint "La cajafuerte está bloqueada?"};
 
 life_action_inUse = true;
 

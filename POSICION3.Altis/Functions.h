@@ -428,7 +428,8 @@ class Life_Client_Core
 		class drinksidra {};
 		class speedBomb {};
 		class nitro {};
-		
+		class bancocentralalarma {};
+		class alarmacoche {};
 		
 	};
 	

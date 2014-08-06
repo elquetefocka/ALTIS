@@ -12,16 +12,16 @@
 	option is presented.
 */
 private["_appleZones","_peachZones","_heroinZones","_cocaineZones","_weedZones","_frogZones","_woodZones","_hopfenZones","_malzZones","_tabacoZones"];
-_appleZones = ["apple_1","apple_2","apple_3","apple_4"];
-_peachZones = ["peaches_1","peaches_2","peaches_3","peaches_4"];
+_appleZones = ["apple_1","apple_2","apple_3","apple_4","apple_5","apple_6"];
+_peachZones = ["peaches_1","peaches_2","peaches_3","peaches_4","peaches_5","peaches_6"];
 _heroinZones = ["heroin_1"];
 _cocaineZones = ["cocaine_1"];
 _weedZones = ["weed_1"];
 _frogZones = ["frog_swamp1"];
-_woodZones = ["wood_1","wood_2","wood_3"];
-_malzZones = ["malz_1"];
-_hopfenZones = ["hopfen_1"];
-_tabacoZones = ["tabaco_1","tabaco_2"];
+_woodZones = ["wood_1","wood_2","wood_3","wood_4","wood_5"];
+_malzZones = ["malz_1","malz_2"];
+_hopfenZones = ["hopfen_1","hopfen_2"];
+_tabacoZones = ["tabaco_1","tabaco_2","tabaco_2","tabaco_3","tabaco_4"];
 
 {
 	_zone = createTrigger ["EmptyDetector",(getMarkerPos _x)];

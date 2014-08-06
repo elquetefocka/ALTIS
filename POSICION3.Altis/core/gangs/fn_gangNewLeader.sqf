@@ -8,10 +8,10 @@
 private["_unit","_unitID","_members","_action","_index"];
 disableSerialization;
 
-if((lbCurSel 2621) == -1) exitWith {hint "You need to select a person first!"};
+if((lbCurSel 2621) == -1) exitWith {hint "Es necesario seleccionar una persona primero!"};
 _unit = call compile format["%1",getSelData(2621)];
 if(isNull _unit) exitWith {}; //Bad unit?
-if(_unit == player) exitWith {hint "You are already the leader!"};
+if(_unit == player) exitWith {hint "Usted es ya el líder!"};
 
 _action = [
 	format["Estas transfiriendo el liderazgo a %1<br/>Mediante la transferencia de liderazgo que ya no tendrá el control de la banda a menos que la propiedad se transfiere de nuevo.",_unit getVariable ["realname",name _unit]],

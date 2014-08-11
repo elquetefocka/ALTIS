@@ -52,6 +52,7 @@ switch (_mode) do
 			case "spikeStrip": {"life_inv_spikeStrip"};
 			case "goldbar": {"life_inv_goldbar"};
 			case "blastingcharge": {"life_inv_blastingcharge"};
+			case "blastingchargecasino": {"life_inv_blastingchargecasino"};
 			case "boltcutter": {"life_inv_boltcutter"};
 			case "defusekit": {"life_inv_defusekit"};
 			case "storagesmall": {"life_inv_storagesmall"};
@@ -134,6 +135,7 @@ switch (_mode) do
 			case "life_inv_spikeStrip": {"spikeStrip"};
 			case "life_inv_goldbar": {"goldbar"};
 			case "life_inv_blastingcharge": {"blastingcharge"};
+			case "life_inv_blastingchargecasino": {"blastingchargecasino"};
 			case "life_inv_boltcutter": {"boltcutter"};
 			case "life_inv_defusekit": {"defusekit"};
 			case "life_inv_storagesmall": {"storagesmall"};

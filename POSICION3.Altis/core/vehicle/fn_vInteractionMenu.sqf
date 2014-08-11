@@ -129,7 +129,7 @@ if(playerSide == independent) then {
 };
 
 //Check that you are near a place to impound ºmetalcry1º.
-if(!((player distance (getMarkerPos "deposito_1") < 30) OR  (player distance (getMarkerPos "deposito_2") < 30) OR (player distance (getMarkerPos "deposito_3") < 30) OR (player distance (getMarkerPos "deposito_4") < 30) OR  (player distance (getMarkerPos "deposito_5") < 30) OR  (player distance (getMarkerPos "deposito_6") < 30))) then 
+if(!((player distance (getMarkerPos "deposito_1") < 30) OR  (player distance (getMarkerPos "deposito_2") < 30) OR (player distance (getMarkerPos "deposito_3") < 30) OR (player distance (getMarkerPos "deposito_4") < 50) OR  (player distance (getMarkerPos "deposito_5") < 30) OR  (player distance (getMarkerPos "deposito_6") < 30))) then 
 {
 	_Btn8 ctrlEnable false;
 };

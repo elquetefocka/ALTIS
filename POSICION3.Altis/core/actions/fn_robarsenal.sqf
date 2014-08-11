@@ -25,7 +25,7 @@ hint format ["Robando dinero del ministerio de agricultura!Espera %1 sec.",_time
 _shop switchMove "AmovPercMstpSsurWnonDnon";//Making a shop owner surrender
 _shop removeAction _action;//Deleting the action,so it won't be spammed
 [[2,"El arsenal esta siendo robado!!"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
-[[2,"El arsenal esta siendo robado!!"],"life_fnc_broadcast",east,false] spawn life_fnc_MP;
+//[[2,"El arsenal esta siendo robado!!"],"life_fnc_broadcast",east,false] spawn life_fnc_MP;
 while {true} do{ //Kraken Clean-Up: changed to while true do:
 
 		hintsilent format ["%1 segundos restantes. Estate a menos de 10 metros de el asaltado!",_timer];

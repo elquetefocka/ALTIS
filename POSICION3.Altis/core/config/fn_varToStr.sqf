@@ -48,7 +48,8 @@ switch (_var) do
 	case "life_inv_cokep": {"Cocaina Procesada"};
 	case "life_inv_spikeStrip": {"Pinchos"};
 	case "life_inv_goldbar": {"Barras de Oro"};
-	case "life_inv_blastingcharge": {"Carga Explosiva"};
+	case "life_inv_blastingcharge": {"Carga para Banco"};
+	case "life_inv_blastingchargecasino": {"Carga para Casino"};
 	case "life_inv_boltcutter": {"Cizalla"};
 	case "life_inv_defusekit": {"Kit desactivacion de Bombas"};
 	case "life_inv_storagesmall": {"Caja Almacenamiento Pequeña"};
@@ -121,7 +122,6 @@ switch (_var) do
 	case "license_civ_taxi": {"Licencia taxi"};
 	case "license_civ_sidra": {"Licencia destilar sidra"};
 	case "license_civ_cerveza": {"Licencia Cerveza license"};
-	case "license_civ_processmastery": {"Licencia Procesar Rapido"};
 	case "license_civ_aceroinoxidable": {"Licencia Acero Inoxidable"};
 	case "license_civ_pmc": {"Entrenamiento PMC"};
 	case "license_civ_pasaporteesp": {"Pasaporte España"};

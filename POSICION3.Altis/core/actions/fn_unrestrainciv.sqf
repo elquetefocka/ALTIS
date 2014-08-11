@@ -9,12 +9,14 @@ _unit setVariable["restrained",FALSE,TRUE];
 _unit setVariable["Escorting",FALSE,TRUE];
 _unit setVariable["transporting",FALSE,TRUE];
 
-
+while {true} do {
 if(life_inv_lockpick < 1) exitWith { hint "No tienes ganzuas."; };
 life_inv_lockpick = life_inv_lockpick - 1;
 
 
 detach _unit;
+};
+
 hint "Los has liberado";
 
 [[0,format["%1 fue des-arrestado por %2",_unit getVariable["realname",name _unit], profileName]],"life_fnc_broadcast",west,FALSE] call life_fnc_MP;

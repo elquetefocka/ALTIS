@@ -938,7 +938,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"No eres policia!"};
-			case (!license_civ_donador): {"Donador nivel 2!"};
+			case (!license_civ_donador2): {"Donador nivel 2!"};
 			default
 			{
 				["Donador LVL2",
@@ -987,7 +987,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"No eres policia!"};
-			case (!license_civ_donador): {"Donador nivel 3!"};
+			case (!license_civ_donador3): {"Donador nivel 3!"};
 			default
 			{
 				["Donador LVL3",
@@ -1057,7 +1057,7 @@ switch(_shop) do
 	};
 	// //////////////////////////////////////////////////////////////////////////////// COPEAST/////////////////////////////////
 	
-	case "cop_basico":
+	case "copeast_basico":
 	{
 		switch(true) do
 		{

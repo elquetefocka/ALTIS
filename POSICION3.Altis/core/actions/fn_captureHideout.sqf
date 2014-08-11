@@ -82,7 +82,7 @@ _flagTexture = [
 		"\A3\Data_F\Flags\flag_fd_orange_CO.paa"
 	] call BIS_fnc_selectRandom;
 _this select 0 setFlagTexture _flagTexture;
-[[[0,1],format["%1 y su banda: %2 - tomo el control de un escodite",name player,(group player) getVariable "gang_name" ]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[[0,1],format["%1 y su banda: %2 - tomo el control de un escondite",name player,(group player) getVariable "gang_name" ]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 // CREATE MARKER AT MAP BY Pictureclass
  
 _markername = str(getPos _hideout);

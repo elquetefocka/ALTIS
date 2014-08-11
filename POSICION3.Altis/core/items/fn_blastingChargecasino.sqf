@@ -7,25 +7,23 @@
 private["_vault","_handle"];
 _vault = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _vault) exitWith {}; //Bad object
-_cops = { (isPlayer _x) && (side (group _x) == west) } count playableUnits;
-if (_cops < 5) exitWith {
 if(typeOf _vault != "Land_CargoBox_V1_F") exitWith {hint "Esto solo se puede utilizar en una cajafuerte."};
-if(_vault getVariable["chargeplaced",false]) exitWith {hint "Ya existe una carga colocada en esta cajafuerte."};
-if(_vault getVariable["safe_open",false]) exitWith {hint "La cajafuerte ya está abierta."};
-if(!([false,"blastingcharge",1] call life_fnc_handleInv)) exitWith {}; //Error?
+if(_vault getVariable["chargeplacedcasino",false]) exitWith {hint "Ya existe una carga colocada en esta cajafuerte."};
+if(_vault getVariable["safe_opencasino",false]) exitWith {hint "La cajafuerte ya está abierta."};
+if(!([false,"blastingchargecasino",1] call life_fnc_handleInv)) exitWith {}; //Error?
 
-_vault setVariable["chargeplaced",true,true];
-[[1,"Un carga explosiva se ha colocado en la caja fuerte del banco central, tiene hasta que la cuenta atras termine para desactivarla!"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+_vault setVariable["chargeplacedcasino",true,true];
+[[1,"Un carga explosiva se ha colocado en la caja fuerte del casino, tiene hasta que la cuenta atras termine para desactivarla!"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 hint "El tiempo esta corriendo¡ Mantenga a los policias lejos de esta caja fuerte¡";
-_handle = [] spawn life_fnc_demoChargeTimer;
-[[],"life_fnc_demoChargeTimer",west,false] spawn life_fnc_MP;
+_handle = [] spawn life_fnc_demoChargeTimercasino;
+[[],"life_fnc_demoChargeTimercasino",west,false] spawn life_fnc_MP;
 
 waitUntil {scriptDone _handle};
 sleep 0.9;
-if(!(fed_bank getVariable["chargeplaced",false])) exitWith {hint "La carga ha sido desactivada!"};
+if(!(casino_1 getVariable["chargeplacedcasino",false])) exitWith {hint "La carga ha sido desactivada!"};
 
-_bomb = "Bo_GBU12_LGB_MI10" createVehicle [getPosATL fed_bank select 0, getPosATL fed_bank select 1, (getPosATL fed_bank select 2)+0.5];
-fed_bank setVariable["chargeplaced",false,true];
-fed_bank setVariable["safe_open",true,true];
+_bomb = "Bo_GBU12_LGB_MI10" createVehicle [getPosATL casino_1 select 0, getPosATL casino_1 select 1, (getPosATL casino_1 select 2)+0.5];
+casino_1 setVariable["chargeplacedcasino",false,true];
+casino_1 setVariable["safe_opencasino",true,true];
 
 hint "La caja fuerte ha sido abierta";

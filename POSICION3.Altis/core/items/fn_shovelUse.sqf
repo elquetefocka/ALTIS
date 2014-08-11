@@ -33,7 +33,7 @@ switch (true) do
 life_action_inUse = true;
 for "_i" from 0 to 2 do
 {
-	player say3D "pala";
+	//player say3D "pala";
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 	waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 	sleep 2.5;

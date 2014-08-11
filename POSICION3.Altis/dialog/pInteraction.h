@@ -25,9 +25,9 @@ class pInteraction_Menu
 			idc = -1;
 			colorBackground[] = {0,0,0,0.7};
 			x = BGX;
-			y = BGY + (11 / 250);
+			y = BGY + (11 / 300);
 			w = BGW;
-			h = 0.6 - (22 / 250);
+			h = 0.6 - (22 / 300);
 		};
 		
 		class Title : life_RscTitle
@@ -51,7 +51,7 @@ class pInteraction_Menu
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
 			x = BGX;
-			y = 0.8 - (1 / 52);
+			y = 1.5 - (1 / 52);
 			w = (6.25 / 40);
 			h = (1 / 25);
 			
@@ -169,9 +169,9 @@ class vInteraction_Menu
 			idc = -1;
 			colorBackground[] = {0,0,0,0.7};
 			x = BGX;
-			y = BGY + (11 / 250);
+			y = BGY + (11 / 300);
 			w = BGW;
-			h = 0.45 - (22 / 250);
+			h = 0.45 - (22 / 300);
 		};
 		
 		class Title : life_RscTitle
@@ -195,7 +195,7 @@ class vInteraction_Menu
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
 			x = BGX;
-			y = 0.65 - (1 / 25);
+			y = 0.65 - (1 / 52);
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};

@@ -47,7 +47,7 @@ _tabacoZones = ["tabaco_1","tabaco_2","tabaco_2","tabaco_3","tabaco_4"];
 //Create frog zones
 {
 	_zone = createTrigger ["EmptyDetector",(getMarkerPos _x)];
-	_zone setTriggerArea[25,25,0,false];
+	_zone setTriggerArea[50,50,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
 	_zone setTriggerStatements["player in thislist","LIFE_Action_Frogs = player addAction['Coger rana',life_fnc_CatchFrogAction,'',0,false,false,'','!life_action_gather'];","player removeAction LIFE_Action_Frogs;"];
 } foreach _frogZones;
@@ -57,7 +57,7 @@ _tabacoZones = ["tabaco_1","tabaco_2","tabaco_2","tabaco_3","tabaco_4"];
 	_zone = createTrigger ["EmptyDetector",(getMarkerPos _x)];
 	_zone setTriggerArea[25,25,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
-	_zone setTriggerStatements["player in thislist","LIFE_Action_Apples = player addAction['Coger manana',life_fnc_gatherApples,'',0,false,false,'','!life_action_gather'];","player removeAction LIFE_Action_Apples;"];
+	_zone setTriggerStatements["player in thislist","LIFE_Action_Apples = player addAction['Coger manzanas',life_fnc_gatherApples,'',0,false,false,'','!life_action_gather'];","player removeAction LIFE_Action_Apples;"];
 } foreach _appleZones;
 
 //Create peach zones

@@ -40,7 +40,6 @@ switch (_type) do
 	case "taxi" : {1500000};
 	case "sidra": {150000};
 	case "cerveza": {25000};
-	case "processmastery": {3000000};
 	case "aceroinoxidable": {150000};
 	case "pmc": {6500000};
 	case "caireast": {15000}; //Cop Pilot License costç

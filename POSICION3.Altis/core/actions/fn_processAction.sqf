@@ -83,7 +83,7 @@ if(_hasLicense) then
 }
 	else
 {
-	if(life_cash < _cost) exitWith {hint format["You need $%1 to process without a license!",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+	if(life_cash < _cost) exitWith {hint format["Necesitas $%1 para procesar sin licencia!",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 	
 	while{true} do
 	{
@@ -95,12 +95,12 @@ if(_hasLicense) then
 		if(player distance _vendor > 10) exitWith {};
 	};
 	
-	if(player distance _vendor > 10) exitWith {hint "You need to stay within 10m to process."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-	if(life_cash < _cost) exitWith {hint format["You need $%1 to process  without a license!",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+	if(player distance _vendor > 10) exitWith {hint "Necesitas estar a menos de 10m para procesar."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+	if(life_cash < _cost) exitWith {hint format["Necesitas $%1 para procesar sin licencia!",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
 	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
 	5 cutText ["","PLAIN"];
-	titleText[format["You have processed %1 into %2 for $%3",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
+	titleText[format["Has procesado %1 a %2 por $%3",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
 	life_cash = life_cash - _cost;
 	life_is_processing = false;
 };	

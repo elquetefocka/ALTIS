@@ -104,6 +104,7 @@ client_session_list = [];
 [] spawn TON_fnc_initHouses;
 
 //Lockup the dome
+////////////////////////////////////////////////////////////////////////////////BANCO CENTRAL
 private["_dome","_rsb"];
 _dome = nearestObject [[15473.15,15705.463,-0.018241169],"Land_Dome_Big_F"];
 _rsb = nearestObject [[15473.15,15705.463,-0.018241169],"Land_Research_house_V1_F"];
@@ -112,5 +113,18 @@ for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,t
 _rsb setVariable["bis_disabled_Door_1",1,true];
 _rsb allowDamage false;
 _dome allowDamage false;
+
+/////////////////////////////////////////////////// CASINO
+
+private["_domecasino","_rsbcasino"];
+_domecasino = nearestObject [[5477.9092,15002.27,29.29999],"Land_Dome_Big_F"];
+_rsbcasino = nearestObject [[5477.9092,15002.27,29.29999],"Land_Research_house_V1_F"];
+
+for "_i" from 1 to 3 do {_domecasino setVariable[format["bis_disabled_Door_%1",_i],1,true]; _domecasino animate [format["Door_%1_rot",_i],0];};
+_rsbcasino setVariable["bis_disabled_Door_1",1,true];
+_rsbcasino allowDamage false;
+_domecasino allowDamage false;
+
+///////////////////////////////////////////////////
 life_server_isReady = true;
 publicVariable "life_server_isReady";

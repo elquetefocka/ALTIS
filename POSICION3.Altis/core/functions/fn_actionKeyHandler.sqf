@@ -22,9 +22,12 @@ if(isNull _curTarget) exitWith {
 	};
 };
 
-if(_curTarget isKindOf "House_F" && {player distance _curTarget < 12} OR ((nearestObject [[15473.15,15705.463,-0.018241169],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[15473.15,15705.463,-0.018241169],"Land_Research_house_V1_F"]) == _curTarget)) exitWith {
+if(_curTarget isKindOf "House_F" && {player distance _curTarget < 30} OR ((nearestObject [[15473.15,15705.463,-0.018241169],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[5477.9092,15002.27,29.29999],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[15473.15,15705.463,-0.018241169],"Land_Research_house_V1_F"]) == _curTarget OR (nearestObject [[5477.9092,15002.27,29.29999],"Land_Research_house_V1_F"]) == _curTarget)) exitWith {
 	[_curTarget] call life_fnc_houseMenu;
 };
+
+//5477.9092,27.299999,15002.27
+//[5477.9092,15002.27,29.29999]
 
 if(dialog) exitWith {}; //Don't bother when a dialog is open.
 if(vehicle player != player) exitWith {}; //He's in a vehicle, cancel!
@@ -42,12 +45,10 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,inde
 	if(((playerSide == blufor  && {(call life_revive_cops)}) || playerSide == opfor || playerSide == independent) && {"Medikit" in (items player)}) then {
 		[_curTarget] call life_fnc_revivePlayer;
 	};
-	if((playerSide == west) && {"Medikit" in (items player)}) then {
+	if((playerSide == west) || (playerSide == east) && {"Medikit" in (items player)}) then {
 		[_curTarget] call life_fnc_revivePlayer;
 	};
-	if((playerSide == east) && {"Medikit" in (items player)}) then {
-		[_curTarget] call life_fnc_revivePlayer;
-	};
+	
 };
 
 

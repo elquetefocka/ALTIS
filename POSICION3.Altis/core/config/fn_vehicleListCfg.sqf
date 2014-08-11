@@ -654,6 +654,8 @@ switch (_shop) do
 		if(__GETC__(life_coplevel) > 2) then
 		{
 			_return set[count _return,
+			["O_Heli_Light_02_unarmed_F",150000]];
+			_return set[count _return,
 			["B_Heli_Transport_01_F",200000]];
 			_return set[count _return,
 			["I_Heli_light_03_unarmed_F",200000]];
@@ -668,6 +670,8 @@ switch (_shop) do
 		if(__GETC__(life_coplevel) > 2) then
 		{
 			_return set[count _return,
+			["O_Heli_Light_02_unarmed_F",150000]];
+			_return set[count _return,
 			["B_Heli_Transport_01_F",200000]];
 			_return set[count _return,
 			["I_Heli_light_03_unarmed_F",200000]];
@@ -680,6 +684,9 @@ switch (_shop) do
 		["B_Heli_Light_01_F",200000]];
 		if(__GETC__(life_coplevel) > 2) then
 		{
+		
+			_return set[count _return,
+			["O_Heli_Light_02_unarmed_F",150000]];
 			_return set[count _return,
 			["B_Heli_Transport_01_F",200000]];
 			_return set[count _return,
@@ -695,6 +702,8 @@ switch (_shop) do
 		if(__GETC__(life_coplevel) > 2) then
 		{
 			_return set[count _return,
+			["O_Heli_Light_02_unarmed_F",150000]];
+			_return set[count _return,
 			["B_Heli_Transport_01_F",200000]];
 			_return set[count _return,
 			["I_Heli_light_03_unarmed_F",200000]];
@@ -707,6 +716,8 @@ switch (_shop) do
 		["B_Heli_Light_01_F",200000]];
 		if(__GETC__(life_coplevel) > 2) then
 		{
+			_return set[count _return,
+			["O_Heli_Light_02_unarmed_F",150000]];
 			_return set[count _return,
 			["B_Heli_Transport_01_F",200000]];
 			_return set[count _return,

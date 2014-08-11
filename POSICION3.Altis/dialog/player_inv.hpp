@@ -289,6 +289,31 @@ class playerSettings {
 			h = (1 / 25);
 		};
 		
+		/*class ButtonSalir : Life_RscButtonMenu {
+			idc = 7887;
+			text = "SALIR";
+			onButtonClick = "[] call life_fnc_salir;";
+			x = 0.42 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.845 - (1 / 25);
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		*/
+		
+		
+		class ButtonSalir: RscButton
+		{
+			idc = 7887;
+			text = "SALIR DE LA PARTIDA"; //--- ToDo: Localize;
+			onButtonClick = "[] call life_fnc_salir;";
+			x = 0.422656 * safezoneW + safezoneX;
+			y = 0.731 * safezoneH + safezoneY;
+			w = 0.154687 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+			
+		
+		
 		class ButtonAdminMenu : Life_RscButtonMenu {
 			idc = 2021;
 			text = "$STR_PM_AdminMenu";
@@ -298,6 +323,8 @@ class playerSettings {
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
+		
+		
 		
 		class ButtonSyncData : life_RscButtonMenu {
 			idc = -1;

@@ -1,6 +1,6 @@
 private ["_eh1","_inArea","_zone1","_dis","_Started"];
 
-_zone1 = getMarkerPos "zona_bancocentral";
+_zone1 = getMarkerPos "zona_casino";
 
 _dis = 40;                          
 

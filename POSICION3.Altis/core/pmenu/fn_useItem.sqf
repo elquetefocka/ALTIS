@@ -32,6 +32,12 @@ switch (true) do
 		[cursorTarget] spawn life_fnc_blastingCharge;
 	};
 	
+	case (_item == "blastingchargecasino"): {
+		player reveal casino_1;
+		(group player) reveal casino_1;
+		[cursorTarget] spawn life_fnc_blastingchargecasino;
+	};
+	
 	case (_item == "defusekit"): {
 		[cursorTarget] spawn life_fnc_defuseKit;
 	};

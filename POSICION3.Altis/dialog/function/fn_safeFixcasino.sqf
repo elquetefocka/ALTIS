@@ -3,7 +3,7 @@
 */
 private["_vault"];
 _vault = _this select 0;
-if(!(_vault getVariable["safe_open",false])) exitWith {hint "La cajafuerte está bloqueada?"};
+if(!(_vault getVariable["safe_opencasino",false])) exitWith {hint "La cajafuerte está bloqueada?"};
 
 life_action_inUse = true;
 
@@ -46,5 +46,5 @@ if(life_interrupted) exitWith {life_interrupted = false; titleText["Accion cance
 
 life_action_inUse = false;
 
-_vault setVariable["safe_open",false,true];
+_vault setVariable["safe_opencasino",false,true];
 hint "La caja fuerte ahoraesta asegurada.";

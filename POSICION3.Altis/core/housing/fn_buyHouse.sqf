@@ -29,7 +29,7 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if(_action) then {
-
+	[] call SOCK_fnc_updateRequest;
 	[[_uid,_house],"TON_fnc_addHouse",false,false] spawn life_fnc_MP;
 	_house setVariable["house_owner",[_uid,profileName],true];
 	_house setVariable["locked",true,true];

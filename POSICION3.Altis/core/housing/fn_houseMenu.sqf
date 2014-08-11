@@ -40,8 +40,7 @@ _Btn7 ctrlShow false;
 
 life_pInact_curTarget = _curTarget;
 if(_curTarget isKindOf "House_F" && playerSide == west) exitWith {
-	if((nearestObject [[15473.15,15705.463,-0.018241169],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[15473.15,15705.463,-0.018241169],"Land_Research_house_V1_F"]) == _curTarget) then {
-		
+if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _curTarget OR	(nearestObject [[5477.9092,15002.27,29.29999],"Land_Dome_Big_F"]) == _curTarget	OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _curTarget OR (nearestObject [[5477.9092,15002.27,29.29999],"Land_Research_house_V1_F"]) == _curTarget) then {		
 		_Btn1 ctrlSetText "Reparar puerta";
 		_Btn1 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_repairDoor; closeDialog 0;";
 		_Btn1 ctrlShow true;

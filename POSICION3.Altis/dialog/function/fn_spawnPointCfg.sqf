@@ -26,7 +26,7 @@ switch (_side) do
 	case east:
 	{
 		_return = [
-			["copeast_spawn_1","Pirgos HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["copeast_spawn_1","Pyrgos HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["copeast_spawn_2","Sofia HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 	};
@@ -37,7 +37,7 @@ switch (_side) do
 		_return = [
 			["civ_spawn_5","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_2","Pirgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_6","Neochori","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 			
@@ -50,7 +50,7 @@ switch (_side) do
 					["reb_v_2","Zona Rebelde 2","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_5","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-					["civ_spawn_2","Pirgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_6","Neochori","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 					
@@ -63,7 +63,7 @@ switch (_side) do
 					["pmc_1","Zona Pmc","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_5","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-					["civ_spawn_2","Pirgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_6","Neochori","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 				];
@@ -83,9 +83,9 @@ switch (_side) do
 	case independent: {
 		_return = [
 			["medic_spawn_1","Kavala 112","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
-			["medic_spawn_2","Agios 112","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
+			["medic_spawn_2","Neochori 112","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
 			["medic_spawn_3","Athira 112","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
-			["medic_spawn_3_1","Pirgos 112","\a3\ui_f\data\map\MapControl\hospital_ca.paa"]
+			["medic_spawn_3_1","Pyrgos 112","\a3\ui_f\data\map\MapControl\hospital_ca.paa"]
 		];
 	};
 };

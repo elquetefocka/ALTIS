@@ -18,6 +18,7 @@ if(player distance (getMarkerPos "zonasegura_neochori") < 60) exitWith {};
 if(player distance (getMarkerPos "zonasegura_pirgos1") < 60) exitWith {};
 if(player distance (getMarkerPos "zonasegura_sofia") < 60) exitWith {};
 
+
 life_knockout = true;
 [[player,"AwopPercMstpSgthWrflDnon_End2"],"life_fnc_animSync",nil,false] spawn life_fnc_MP;
 sleep 0.08;

@@ -5,7 +5,7 @@
 	Description:
 	Sets the player up if he/she used the respawn option.
 */
-
+private["_handle"];
 //Reset our weight and other stuff
 life_use_atm = TRUE;
 life_hunger = 100;
@@ -25,14 +25,19 @@ player setVariable["Reviving",nil,TRUE];
 //Load gear for a 'new life'
 switch(playerSide) do
 {
-	case west: {[] spawn life_fnc_loadGear;};
-	case west: {[] spawn life_fnc_loadGearcopeast;};
+	case west: {
+		_handle = [] spawn life_fnc_copLoadout;
+	};
 	case civilian: {
-		[] call life_fnc_civFetchGear;
+		_handle = [] spawn life_fnc_civLoadout;
 	};
 	case independent: {
-		[] call life_fnc_medicLoadout;
+		_handle = [] spawn life_fnc_medicLoadout;
 	};
+	case east: {
+		_handle = [] spawn life_fnc_copLoadout;
+	};
+	waitUntil {scriptDone _handle};
 };
 
 //Cleanup of weapon containers near the body & hide it.
@@ -73,3 +78,5 @@ if(life_removeWanted) then {
 license_civ_pasaporteesp = false;
 license_civ_pasaportemaroc = false;
 life_is_alive = true;
+
+

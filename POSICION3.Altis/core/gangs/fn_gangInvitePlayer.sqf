@@ -11,7 +11,8 @@ disableSerialization;
 if((lbCurSel 2632) == -1) exitWith {hint "You need to select a person to invite!"};
 _unit = call compile format["%1",getSelData(2632)];
 if(isNull _unit) exitWith {}; //Bad unit?
-if(_unit == player) exitWith {hint "You cannot kick yourself!"};
+if(_unit == player) exitWith {hint localize "No te puedes echar a ti mismo"};
+if(!isNil {(group _unit) getVariable "gang_name"}) exitWith {hint "This player is already in a gang"}; //Added
 
 if(count(grpPlayer getVariable ["gang_members",8]) == (grpPlayer getVariable ["gang_maxMembers",8])) exitWith {hint "Your gang has reached its maximum allowed slots, please upgrade your gangs slot limit."};
 

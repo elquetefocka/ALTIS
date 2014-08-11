@@ -40,15 +40,19 @@ life_is_alive = false;
 life_god = false; //Add this
 life_frozen = false; //And this
 life_markers = false; //Finally this
-
+life_drink = 0;
 
 //Revive constant variables.
 __CONST__(life_revive_cops,TRUE); //Set to false if you don't want cops to be able to revive downed players.
 __CONST__(life_revive_fee,25000);
 __CONST__(life_revive_feepac,5000);
 
+//Persistent Saving
+__CONST__(life_save_civ,TRUE); //Save weapons for civs?
+__CONST__(life_save_yinv,TRUE); //Save Y-Inventory for civs and cops? (Medics excluded for now)
+
 //House Limit
-__CONST__(life_houseLimit,5); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
+__CONST__(life_houseLimit,2); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
 
 //Gang related stuff?
 __CONST__(life_gangPrice,75000); //Price for creating a gang (They're all persistent so keep it high to avoid 345345345 gangs).
@@ -118,7 +122,7 @@ switch (playerSide) do
 	};
 	case civilian: 
 	{
-		life_atmcash = 7000; //Starting Bank Money
+		life_atmcash = 800000; //Starting Bank Money
 		life_paycheck = 850; //Paycheck Amount
 	};
 	
@@ -183,6 +187,7 @@ life_inv_items =
 	"life_inv_spikeStrip",
 	"life_inv_goldbar",
 	"life_inv_blastingcharge",
+	"life_inv_blastingchargecasino",
 	"life_inv_boltcutter",
 	"life_inv_defusekit",
 	"life_inv_storagesmall",
@@ -256,7 +261,6 @@ life_licenses =
 	["license_civ_taxi","civ"],
 	["license_civ_sidra","civ"],
 	["license_civ_cerveza","civ"],
-	["license_civ_processmastery","civ"],
 	["license_civ_aceroinoxidable","civ"],
 	["license_civ_pmc","civ"],
 	["license_copeast_air","copeast"],
@@ -272,9 +276,9 @@ life_licenses =
 //Setup License Variables
 {missionNamespace setVariable[(_x select 0),false];} foreach life_licenses;
 
-life_dp_points = ["dp_1","dp_2","dp_3","dp_4","dp_5","dp_6","dp_7","dp_8","dp_9","dp_10"];
+life_dp_points = ["mrw_1","mrw_2","mrw_3","mrw_4","mrw_5","mrw_6","mrw_7","mrw_8","mrw_9","mrw_10"];
 //[shortVar,reward]
-life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocainep",3500],["marijuana",2000],["turtleturtle",3000],["blastingcharge",10000],["boltcutter",500],["caparazon",15000],["figuradehueso",25000],["kidney",5000],["ranalsd",4800]];
+life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocainep",3500],["marijuana",2000],["turtleturtle",3000],["blastingcharge",10000],["blastingchargecasino",10000],["boltcutter",500],["caparazon",15000],["figuradehueso",25000],["kidney",5000],["ranalsd",4800],["goldbar",250000]];
 
 
 /*
@@ -370,6 +374,7 @@ buy_array =
 	["peach",68],
 	["spikeStrip",2500],
 	["blastingcharge",35000],
+	["blastingchargecasino",35000],
 	["boltcutter",7500],
 	["defusekit",2500],
 	["storagesmall",75000],

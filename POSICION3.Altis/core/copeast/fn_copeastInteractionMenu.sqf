@@ -24,7 +24,7 @@ _curTarget = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _curTarget) exitWith {closeDialog 0;}; //Bad target
 
 if(_curTarget isKindOf "House_F") exitWith {
-	if((nearestObject [[15473.15,15705.463,-0.018241169],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[15473.15,15705.463,-0.018241169],"Land_Research_house_V1_F"]) == _curTarget) then {
+	if((nearestObject [[15474.214,15698.04,0],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[15474.214,15698.04,0],"Land_Research_house_V1_F"]) == _curTarget) then {
 		_display = findDisplay 37400;
 		_Btn1 = _display displayCtrl Btn1;
 		_Btn2 = _display displayCtrl Btn2;

@@ -18,9 +18,15 @@ while {true} do {
 		if(count _containers > 0) then {
 			{deleteVehicle _x;} foreach _containers; //Delete the containers.
 		};
+		removeAllWeapons _x;
+		removeUniform _x;
+		removeVest _x;
+		removeBackpack _x;
+		removeGoggles _x;
+		removeHeadGear _x;
 		deleteVehicle _client; //Get rid of the corpse.
 	};
 	
 	_loops = _loops + 1;
-	sleep 1;
+	sleep 0.1;
 };

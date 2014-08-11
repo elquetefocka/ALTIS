@@ -13,7 +13,7 @@ disableSerialization;
 _tInv = (findDisplay 3500) displayCtrl 3502;
 lbClear _tInv;
 
-_safeInfo = _safe getVariable["safe",-1];
+_safeInfo = _safe getVariable["safecasino",-1];
 if(_safeInfo < 1) exitWith {closeDialog 0; hint "La caja fuerte está vacia!";};
 
 _str = ["life_inv_goldbar"] call life_fnc_varToStr;

@@ -1,5 +1,5 @@
 author = "Tonic";
-onLoadName = "Altis Life RPG v3.1.4";
+onLoadName = "Altis Life RPG v3.1.4.5";
 onLoadMission = "A RPG game mode developed by Tonic";
 loadScreen = "textures\ARMA3PORTADA.jpg";
 joinUnassigned = 1;

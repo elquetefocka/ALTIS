@@ -16,6 +16,7 @@ if(!(call SPY_cfg_enableSys)) exitWith {}; //Don't waste anymore time since it w
 __CONST__(SPY_cfg_runVarCheck,true); //Run the variable checker? set to false if client performance is low.
 __CONST__(SPY_cfg_runPatchCheck,true); //Set to false to disable the patch checking (Not recommended but if you can't figure out how to white-list addons then whatever).
 
+
 /*
 	Compile our list of allowed addon patches, by default this DOES NOT ALLOW ANY ADDONS.
 	

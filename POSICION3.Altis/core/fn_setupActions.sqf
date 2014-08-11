@@ -12,10 +12,10 @@ switch (playerSide) do
 		life_actions = [player addAction["Drop Fishing Net",life_fnc_dropFishingNet,"",0,false,false,"",'
 		(surfaceisWater (getPos vehicle player)) && (vehicle player isKindOf "Ship") && life_carryWeight < life_maxWeight && speed (vehicle player) < 2 && speed (vehicle player) > -1 && !life_net_dropped ']];
 		//Rob person
-		life_actions = life_actions + [player addAction["Rob Person",life_fnc_robAction,"",0,false,false,"",'
-		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget == "Incapacitated" && !(cursorTarget getVariable["robbed",FALSE]) ']];
+		//life_actions = life_actions + [player addAction["Robarle la cartera",life_fnc_robAction,"",0,false,false,"",'
+		//!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget == "Incapacitated" && !(cursorTarget getVariable["robbed",FALSE]) ']];
 		 // take them organs
-		life_actions = life_actions + [player addAction["Quitar Organos",life_fnc_takeOrgans,"",0,false,false,"",'!isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable ["missingOrgan",FALSE]) && !(player getVariable "Escorting") && !(player getVariable "hasOrgan") && !(player getVariable "transporting") && animationState cursorTarget == "Incapacitated" && ((player distance (getMarkerPos "zonasegura_kavala") > 200) OR  (player distance (getMarkerPos "zonasegura_pirgos") > 200)) && !(cursorTarget getVariable["robbed",FALSE])']];
+		life_actions = life_actions + [player addAction["Quitarle un riñon",life_fnc_takeOrgans,"",0,false,false,"",'!isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable ["missingOrgan",FALSE]) && !(player getVariable "Escorting") && !(player getVariable "hasOrgan") && !(player getVariable "transporting") && animationState cursorTarget == "Incapacitated" && ((player distance (getMarkerPos "zonasegura_kavala") > 200) OR  (player distance (getMarkerPos "zonasegura_pirgos") > 200)) && !(cursorTarget getVariable["robbed",FALSE])']];
 	};
 
 

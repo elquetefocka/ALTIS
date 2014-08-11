@@ -20,7 +20,7 @@ if(_num > life_inv_goldbar) exitWith {hint format["No tienes %1 lingote(s)",_num
 
 //Store it.
 if(!([false,_ctrl,_num] call life_fnc_handleInv)) exitWith {hint "No se pudo eliminar el elemento(s) de tu inventario para poner en la caja fuerte.";};
-_safeInfo = life_safeObj getVariable["safe",0];
-life_safeObj setVariable["safe",_safeInfo + _num,true];
+_safeInfo = life_safeObjcasino getVariable["safe",0];
+life_safeObjcasino setVariable["safecasino",_safeInfo + _num,true];
 
-[life_safeObj] call life_fnc_safeInventory;
+[life_safeObjcasino] call life_fnc_safeInventory;

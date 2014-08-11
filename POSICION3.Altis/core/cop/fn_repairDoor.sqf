@@ -69,3 +69,4 @@ if(life_interrupted) exitWith {life_interrupted = false; titleText["Accion cance
 life_action_inUse = false;
 _building animate [format["door_%1_rot",_door],0];
 _building setVariable[format["bis_disabled_Door_%1",_door],1,true]; //Unlock the door.
+deleteMarker "Marker200"; // by ehno delete maker

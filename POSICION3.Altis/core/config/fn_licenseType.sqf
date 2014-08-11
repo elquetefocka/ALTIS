@@ -39,7 +39,6 @@ switch (_mode) do
 			case "avion": {_var = "license_civ_avion"};
 			case "kart": {_var = "license_civ_kart"};
 			case "home": {_var = "license_civ_home"};
-			case "processmastery": {_var = "license_civ_processmastery"};
 			case "mair": {_var = "license_med_air"};
 			case "donador": {_var = "license_civ_donador"};
 			case "donador2": {_var = "license_civ_donador2"};
@@ -85,7 +84,6 @@ switch (_mode) do
 			case "license_civ_avion": {_var = "avion"};
 			case "license_civ_kart": {_var = "kart"};
 			case "license_civ_home": {_var = "home"};
-			case "license_civ_processmastery": {_var = "processmastery"};
 			case "license_med_air": {_var = "mair"};
 			case "license_civ_donador": {_var = "donador"};
 			case "license_civ_donador2": {_var = "donador2"};

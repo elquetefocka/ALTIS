@@ -12,7 +12,7 @@ disableSerialization;
 if((lbCurSel 3502) == -1) exitWith {hint "Seleccionaste un objeto!";};
 _ctrl = ctrlSelData(3502);
 _num = ctrlText 3505;
-_safeInfo = life_safeObj getVariable["safe",0];
+_safeInfo = life_safeObjcasino getVariable["safecasino",0];
 
 //Error checks
 if(!([_num] call fnc_isnumber)) exitWith {hint "Numbero no validot";};
@@ -28,5 +28,5 @@ if(_num == 0) exitWith {hint "Inventario lleno."};
 
 //Take it
 if(!([true,_ctrl,_num] call life_fnc_handleInv)) exitWith {hint "No se puedo añadir a tu inventario.";};
-life_safeObj setVariable["safe",_safeInfo - _num,TRUE];
-[life_safeObj] call life_fnc_safeInventory;
+life_safeObjcasino setVariable["safecasino",_safeInfo - _num,TRUE];
+[life_safeObjcasino] call life_fnc_safeInventory;

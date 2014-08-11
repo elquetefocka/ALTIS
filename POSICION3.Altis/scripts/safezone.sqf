@@ -36,6 +36,7 @@ switch (playerSide) do
 				};
      
 			};
+			sleep 0.1;
 		};
 	
 	};
@@ -52,6 +53,8 @@ switch (playerSide) do
 					_inArea = true;
 					hint "Entraste en Zona Segura";
 					player allowDamage false;
+					player action ["SwitchWeapon", player, player, 100];  	// Arma a la espalda
+					player action ["HandGunOffStand", player]; 		// Pipa enfundada
 				};
 
 				if (((_zone1 distance player > _dis) && (_zone2 distance player > _dis) && (_zone3 distance player > _dis) && (_zone4 distance player > _dis) &&(_zone5 distance player > _dis)) && (_inArea)) then 
@@ -60,9 +63,11 @@ switch (playerSide) do
 					_inArea = false;
 					hint "Abandonaste Zona Segura";
 					player allowDamage true;
+					
 				};
      
 			};
+			sleep 0.1;
 		};
 	
 	};
@@ -90,8 +95,8 @@ switch (playerSide) do
 				};
      
 			};
+			sleep 0.1;
 		};
-	
 	};
 	
 	case east:
@@ -117,6 +122,7 @@ switch (playerSide) do
 				};
      
 			};
+			sleep 0.1;
 		};
 	
 	};

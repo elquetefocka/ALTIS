@@ -651,10 +651,10 @@
 			<Original>Mecanico</Original>
 		</Key>
 		<Key ID="STR_vInAct_Registration">
-			<Original>registrar</Original>
+			<Original>Papeles</Original>
 		</Key>
 		<Key ID="STR_vInAct_SearchVehicle">
-			<Original>Papeles</Original>
+			<Original>Registrar</Original>
 		</Key>
 		<Key ID="STR_vInAct_PullOut">
 			<Original>sacar jugadores</Original>

@@ -26,7 +26,7 @@ _checkThread = {
 			[[profileName,getPlayerUID player,_x],"SPY_fnc_cookieJar",false,false] spawn life_fnc_MP;
 			[[profileName,format["Variable: %1",_x]],"SPY_fnc_notifyAdmins",true,false] spawn life_fnc_MP;
 			sleep 0.5;
-			["SpyGlass",false,false] call BIS_fnc_endMission;
+			//["SpyGlass",false,false] call BIS_fnc_endMission;
 		};
 	} foreach _this;
 };

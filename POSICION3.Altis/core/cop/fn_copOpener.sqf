@@ -13,4 +13,4 @@
 		_x animate ["Door_1_rot", 1];
 	};
 	
-} forEach (nearestObjects [player, ["Land_BarGate_F"], 10]);
+} forEach (nearestObjects [player, ["Land_BarGate_F"], 40]);

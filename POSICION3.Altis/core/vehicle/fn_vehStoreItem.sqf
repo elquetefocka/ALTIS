@@ -27,7 +27,7 @@ _itemWeight = ([_ctrl] call life_fnc_itemWeight) * _num;
 _veh_data = life_trunk_vehicle getVariable ["Trunk",[[],0]];
 _inv = _veh_data select 0;
 
-if(_ctrl == "goldbar" && {!(life_trunk_vehicle isKindOf "LandVehicle" OR life_trunk_vehicle isKindOf "House_F")}) exitWith {hint "No se puede almacenar en el que cualquier cosa menos un vehículo terrestre!"};
+if(_ctrl == "goldbar" && {!(life_trunk_vehicle isKindOf "LandVehicle" OR life_trunk_vehicle isKindOf "Ship" OR life_trunk_vehicle isKindOf "House_F")}) exitWith {hint "No se puede almacenar en el que cualquier cosa menos un vehículo terrestre!"};
 
 if(_ctrl == "money") then
 {

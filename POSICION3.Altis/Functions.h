@@ -133,7 +133,7 @@ class Life_Client_Core
 		class recolectarlupuloAction {}; //LUPULO
 		class recolectarmaderaAction {}; //MADERA
 		class recolectarmaltaAction {}; //MALTA
-		class casino {}; //ROBAR CASINO
+		//class casino {}; //ROBAR CASINO
 		class blackjack {}; //ROBAR BLACKJACK
 		class quemarcarbonAction {}; //QUEMAR CARBON
 		class gathertabaco {};
@@ -157,6 +157,7 @@ class Life_Client_Core
 		class CookFrogAction {};
 		class CookHermitLSD {};
 		class activateNitro {};
+		class CatchFrogAction {}; //COGER RANAS
 	};
 	
 	class Housing
@@ -187,7 +188,6 @@ class Life_Client_Core
 		class eatFood {};
 		class varHandle {};
 		class varToStr {};
-		class copDefault {};
 		class impoundPrice {};
 		class itemWeight {};
 		class taxRate {};
@@ -197,7 +197,7 @@ class Life_Client_Core
 		class weaponShopCfg {};
 		class vehicleWeightCfg {};
 		class houseConfig {};
-		class copeastDefault {}; //<-- ADD JUST THIS AT THE END
+		
 		
 		//Clothing Store Configs
 		class clothing_cop {};
@@ -230,6 +230,7 @@ class Life_Client_Core
 		class updateViewDistance {};
 		class settingsMenu {};
 		class settingsInit {};
+		class salir {};
 	};
 	
 	class Functions
@@ -240,7 +241,6 @@ class Life_Client_Core
 		class handleInv {};
 		class hudSetup {};
 		class hudUpdate {};
-		class fetchGear{};
 		class tazeSound {};
 		class animSync {};
 		class simDisable {};
@@ -273,8 +273,10 @@ class Life_Client_Core
 		class inventoryOpened {};
 		class isUIDActive {};
 		class setUniformTexture {};
-		//*AÑADIDO PARA AUTOSALVAR
-		class autoSave {};
+		class autoSave {}; //*AÑADIDO PARA AUTOSALVAR
+		class saveGear {};
+		class loadGear {};
+		class stripDownPlayer {};
 	};
 	
 	class Network
@@ -298,8 +300,6 @@ class Life_Client_Core
 		class jailMe {};
 		class jail {};
 		class tazed {};
-		class civFetchGear {};
-		class civLoadGear {};
 		class knockedOut {};
 		class knockoutAction {};
 		class robReceive {};
@@ -307,6 +307,8 @@ class Life_Client_Core
 		class removeLicenses {};
 		class zoneCreator {};
 		class demoChargeTimer {};
+		class demoChargeTimercasino {};
+		class civLoadout {};
 		class hasOrgan {};
 		class civInteractionMenu {};
 	};
@@ -332,8 +334,6 @@ class Life_Client_Core
 		file = "core\cop";
 		class copMarkers {};
 		class copLights {};
-		class loadGear {};
-		class saveGear {};
 		class vehInvSearch {};
 		class copSearch {};
 		class bountyReceive {};
@@ -355,13 +355,14 @@ class Life_Client_Core
 		class fedCamDisplay {};
 		class seizeObjects {}; //incautar objetos
 		class copOpener {};
+		class breathalyzer {};
+		class copLoadout {};
 	};
 	
 	class Copeast
 	{
 		file = "core\copeast";
-		class loadGearcopeast {}; //<--- ADD ALL OF THIS IT´S NEW!
-		class saveGearcopeast {};
+		//class saveGearcopeast {};
 		class copeastInteractionMenu {};//OPFOR
 		class copeastSiren {};
 	};
@@ -417,6 +418,7 @@ class Life_Client_Core
 		class flashbang {};
 		class boltcutter {};
 		class blastingCharge {};
+		class blastingChargecasino {};
 		class defuseKit {};
 		class storageBox {};
 		class barrera {};
@@ -454,8 +456,11 @@ class Life_Client_Core
 		class garageLBChange {};
 		class safeInventory {};
 		class safeOpen {};
+		class safeOpencasino {};
 		class safeTake {};
+		class safeTakecasino {};
 		class safeFix {};
+		class safeFixcasino {};
 		class vehicleGarage {};
 		class gangDeposit {};
 	};

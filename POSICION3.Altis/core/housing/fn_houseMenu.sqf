@@ -39,8 +39,8 @@ _Btn6 ctrlShow false;
 _Btn7 ctrlShow false;
 
 life_pInact_curTarget = _curTarget;
-if(_curTarget isKindOf "House_F" && playerSide == west) exitWith {
-if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _curTarget OR	(nearestObject [[5477.9092,15002.27,29.29999],"Land_Dome_Big_F"]) == _curTarget	OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _curTarget OR (nearestObject [[5477.9092,15002.27,29.29999],"Land_Research_house_V1_F"]) == _curTarget) then {		
+if(_curTarget isKindOf "House_F" && playerSide == west OR playerSide == east) exitWith {
+if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _curTarget OR	(nearestObject [[5477.9092,15002.27,29.29999],"Land_Dome_Big_F"]) == _curTarget	OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _curTarget OR (nearestObject [[5477.9092,15002.27,29.29999],"Land_Research_house_V1_F"]) == _curTarget OR (nearestObject [[16640.793,15695.068,5.5576954],"Land_Cargo_Tower_V1_No5_F"]) == _curTarget OR (nearestObject [[16677.453,15715.972,5.1460938],"Land_Cargo_Tower_V1_No5_F"]) == _curTarget) then {		
 		_Btn1 ctrlSetText "Reparar puerta";
 		_Btn1 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_repairDoor; closeDialog 0;";
 		_Btn1 ctrlShow true;

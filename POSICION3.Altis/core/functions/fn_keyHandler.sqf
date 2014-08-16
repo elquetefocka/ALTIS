@@ -108,8 +108,8 @@ switch (_code) do
 	};
 	};
 	
-	//6 Nitro
-	case 7:
+	//9 Nitro
+	case 8:
 	{
 		if(!_alt && !_ctrlKey) then {
 			[] spawn life_fnc_activateNitro;
@@ -214,7 +214,7 @@ switch (_code) do
 		if(_shift && playerSide in [west,east,independent]) then {
 			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F"]) then {
 				if(!isNil {vehicle player getVariable "lights"}) then {
-					if(playerSide == west) || (playerSide == east) then {
+					if(playerSide == west OR playerSide == east) then {
 						[vehicle player] call life_fnc_sirenLights;
 					} else {
 						[vehicle player] call life_fnc_medicSirenLights;
@@ -250,18 +250,18 @@ switch (_code) do
 			if(isNil {_veh getVariable "siren"}) then {_veh setVariable["siren",false,true];};
 			if((_veh getVariable "siren")) then
 			{
-				titleText ["Sirens Off","PLAIN"];
+				titleText ["Sirena Off","PLAIN"];
 				_veh setVariable["siren",false,true];
 			}
 				else
 			{
-				titleText ["Sirens On","PLAIN"];
+				titleText ["Sirena On","PLAIN"];
 				_veh setVariable["siren",true,true];
-				if(playerSide == west) || (playerSide == east)  then {
+				if(playerSide == west OR playerSide == east)  then {
 					[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
 				} else {
 					
-					[[_veh],"life_fnc_copeastSiren",nil,true] spawn life_fnc_MP;
+					[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
 				};
 			};
 		};
@@ -371,18 +371,7 @@ switch (_code) do
 	{
 		if(_alt && !_shift) then
 		{
-			If ({isPlayer _x} count (player nearEntities ["AllVehicles", 5]) < 2) Then {
-			} else {
-			hint format ["Por pulsar esta teclas cerca de otra persona has sido castigado / %1",_testCont];
-			removeUniform player;
-			removeVest player;
-			removeBackpack player;
-			removeGoggles player;
-			removeHeadGear player;
-			removeAllWeapons player;
-			};
-			[[0,format["SERVER MENSAJE: %1 usando ALT+F4 para desconectarse (reporte a los Administradores)",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
-			//[[1,format["SERVER MENSAJE: %1 usando ALT+F4 para desconectarse (reporte a los Administradores)",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+			[[0,format["%1 ALT+F4",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 		
 		};
 	};
@@ -390,55 +379,22 @@ switch (_code) do
 	{
 		if(_ctrlKey && _alt)  then 
 		{
-			If ({isPlayer _x} count (player nearEntities ["AllVehicles", 5]) < 2) Then {
-			} else {
-			hint format ["Por pulsar esta teclas cerca de otra persona has sido castigado / %1",_testCont];
-			removeUniform player;
-			removeVest player;
-			removeBackpack player;
-			removeGoggles player;
-			removeHeadGear player;
-			removeAllWeapons player;
-			};
-			
-			[[0,format["SERVER MENSAJE: %1 usando CTRL + ALT + DEL  posible disconnect (reporte a los Administradores)",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
-			//[[1,format["SERVER MENSAJE: %1 usando CTRL + ALT + DEL  posible disconnect (reporte a los Administradores)",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+			[[0,format["%1 CTRL + ALT + DEL",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 		};
 	};
 	case 15:
 	{
 		if( _alt)  then 
 		{
-			If ({isPlayer _x} count (player nearEntities ["AllVehicles", 5]) < 2) Then {
-			} else {
-			hint format ["Por pulsar esta teclas cerca de otra persona has sido castigado / %1",_testCont];
-			removeUniform player;
-			removeVest player;
-			removeBackpack player;
-			removeGoggles player;
-			removeHeadGear player;
-			removeAllWeapons player;
-			};
-			[[0,format["SERVER MENSAJE: %1 usando ALT + TAB  posible disconnect (reporte a los Administradores)",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
-			//[[1,format["SERVER MENSAJE: %1 usando ALT + TAB  posible disconnect (reporte a los Administradores)",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+			
+			[[0,format["%1 ALT + TAB",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 		};
 	};
 	case 1:
 	{
 		if( _ctrlKey )  then 
 		{
-			If ({isPlayer _x} count (player nearEntities ["AllVehicles", 5]) < 2) Then {
-			} else {
-			hint format ["Por pulsar esta teclas cerca de otra persona has sido castigado / %1",_testCont];
-			removeUniform player;
-			removeVest player;
-			removeBackpack player;
-			removeGoggles player;
-			removeHeadGear player;
-			removeAllWeapons player;
-			};
-			[[0,format["SERVER MENSAJE: %1 usando CTRL + ESC posible disconnect (reporte a los Administradores)",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
-			//[[1,format["SERVER MENSAJE: %1 usando CTRL + ESC posible disconnect (reporte a los Administradores)",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+			[[0,format["%1 CTRL + ESC",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 		};
 	};
 	

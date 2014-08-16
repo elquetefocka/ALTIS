@@ -26,5 +26,16 @@ player setVariable["rank",(__GETC__(life_copeastlevel)),true];
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
-[] call life_fnc_setUniformTexture;
+
+[] spawn
+{
+while {(uniform player) == "U_O_OfficerUniform_ocamo"} do
+    {
+	[[player,0,"textures\gendarmes.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;  
+	if(backpack player != "") then {(unitBackpack player) setObjectTextureGlobal [0,""];};
+    sleep 60;
+    };
+};
+
+
 [] execVM "welcome.sqf";

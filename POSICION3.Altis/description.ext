@@ -52,6 +52,13 @@ class CfgSounds
 		titles[] = {};
 	};
 	
+	class Sirenmedic
+	{
+		name = "SirenLong";
+		sound[] = {"\sounds\Sirenmedic.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	
 	class tazersound
 	{
 		name = "Tazersound";
@@ -118,6 +125,16 @@ class CfgSounds
 
 class CfgDebriefing
 {
+	class End1
+	{
+		title = "Saliste del Juego";
+		subtitle = "";
+		description = "Vuelve Pronto, te esperamos.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
 	class NotWhitelisted
 	{
 		title = "Mission Failed";

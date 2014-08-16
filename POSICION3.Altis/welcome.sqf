@@ -15,7 +15,7 @@ sleep 2; //Wait in seconds before the credits start after player is in-game
 _role1 = "Bienvenido";
 _role1names = ["Todo Por La Pasta"];
 _role2 = "Admins";
-_role2names = ["Metalcry1","Grobadicto,","Nota","Frutiño","David","ElGranAlias"];
+_role2names = ["Metalcry1","Grobadicto","Nota","Frutinho","David","ElGranAlias"];
 _role3 = " Altis Life RPG";
 _role3names = ["Servidor Español"];
 _role4 = "Pagina Web:";

@@ -20,7 +20,7 @@ _escSync = {
 		_timeStamp = time + 10;
 		
 		waitUntil {
-			_abortButton ctrlSetText format[localize "STR_NOTF_AbortESC",[(_timeStamp - time),"SS.MS"] call BIS_fnc_secondsToString];
+			_abortButton ctrlSetText localize "STR_NOTF_AbortESC";
 			_abortButton ctrlCommit 0;
 			round(_timeStamp - time) <= 0 || isNull (findDisplay 49)
 		};
@@ -37,7 +37,7 @@ _escSync = {
 		waitUntil{scriptDone _thread OR isNull (findDisplay 49)};
 		_players = nearestObjects[player,["Man"],12];
 		_players = _players - [player];
-		if(count _players > 0) then { _abortButton ctrlEnable false; } else { _abortButton ctrlEnable true; };
+		if(count _players > 0) then { _abortButton ctrlEnable false; } else { _abortButton ctrlEnable false; };
 	};
 };
 
@@ -66,16 +66,8 @@ while {true} do
 	_usebleCtrl spawn _escSync;
 	if(_usebleCtrl) then {
 		If ({isPlayer _x} count (player nearEntities ["AllVehicles", 5]) < 2) Then {
-			hint format ["Puedes Salir sin problemas / %1",_testCont];
 			_respawnButton ctrlEnable true; //Enable the button.
 		} else {
-			hint format ["Por salir cerca de otra persona has sido castigado / %1",_testCont];
-			removeUniform player;
-			removeVest player;
-			removeBackpack player;
-			removeGoggles player;
-			removeHeadGear player;
-			removeAllWeapons player;
 			_abortButton ctrlEnable false;
 			_respawnButton ctrlEnable false; //Enable the button.
 		};

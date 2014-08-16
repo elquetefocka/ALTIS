@@ -42,5 +42,5 @@ if (_success) then
 {
 	_unit setVariable["nitro",3,true];
 	//life_experience = life_experience + 20;
-	hint "Oxido Nitroso ha sido añadido al vehiculo (3 injections). Presiona nª6 cuando estes conduciendolo para activarlo.";
+	hint "Oxido Nitroso ha sido añadido al vehiculo (3 injections). Presiona nª9 cuando estes conduciendolo para activarlo.";
 };

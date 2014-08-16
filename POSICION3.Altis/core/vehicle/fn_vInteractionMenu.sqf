@@ -13,8 +13,9 @@
 #define Btn6 37455
 #define Btn7 37456
 #define Btn8 37457
-#define Title 37401
-private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8"];
+#define Btn9 37458
+#define Title 37408
+private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8","_Btn9"];
 if(!dialog) then {
 	createDialog "vInteraction_Menu";
 };
@@ -32,6 +33,7 @@ _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
 _Btn7 = _display displayCtrl Btn7;
 _Btn8 = _display displayCtrl Btn8;
+_Btn9 = _display displayCtrl Btn9;
 life_vInact_curTarget = _curTarget;
 
 //Set Repair Action
@@ -119,7 +121,9 @@ if(playerSide == west OR playerSide == east) then {
 
 if(playerSide == independent) then {
 
-		
+	_Btn9 ctrlSetText localize "STR_vInAct_Registration";
+	_Btn9 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_searchVehAction;";	
+	
 	_Btn7 ctrlSetText localize "STR_vInAct_Repairind";
 	_Btn7 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruckind; closeDialog 0;";
 	

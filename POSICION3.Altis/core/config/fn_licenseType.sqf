@@ -97,7 +97,7 @@ switch (_mode) do
 			case "license_civ_pasaportemaroc": {_var = "pasaportemaroc"};
 			case "license_cop_rubiu": {_var = "rubiu"}; 
 			case "license_cop_geos": {_var = "geos"}; 
-			case "license_cop_geoseast": {_var = "geoseast"};
+			case "license_copeast_geos": {_var = "geoseast"};
 			
 			default {_var = ""};
 		};

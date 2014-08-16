@@ -11,10 +11,18 @@ _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 //Load player with default cop gear.
+player addHeadGear "H_Beret_brn_SF";
+
 player addUniform "U_Rangemaster";
 player addVest "V_Rangemaster_belt";
 
-player addWeapon "hgun_P07_snds_F";
+
+//WEAPON MAGAZINES
+player addMagazine "30Rnd_556x45_Stanag";
+player addMagazine "30Rnd_556x45_Stanag";
+player addMagazine "30Rnd_556x45_Stanag";
+
+//PISTOL MAGAZINES
 player addMagazine "16Rnd_9x21_Mag";
 player addMagazine "16Rnd_9x21_Mag";
 player addMagazine "16Rnd_9x21_Mag";
@@ -31,5 +39,12 @@ player addItem "ItemWatch";
 player assignItem "ItemWatch";
 player addItem "ItemGPS";
 player assignItem "ItemGPS";
+
+mybackpack = unitBackpack player;
+mybackpack addItemCargoGlobal ["FirstAidKit",1];
+mybackpack = unitBackpack player;
+mybackpack addItemCargoGlobal ["Medikit",1];
+mybackpack = unitBackpack player;
+mybackpack addItemCargoGlobal ["ToolKit",1];
 
 [] call life_fnc_saveGear;

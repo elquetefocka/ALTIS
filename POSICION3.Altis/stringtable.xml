@@ -511,7 +511,7 @@
 			<Original>%1 ha enviado al garage %2's %3</Original>
 		</Key>
 		<Key ID="STR_NOTF_AbortESC">
-			<Original>Abortar permitido en %1</Original>
+			<Original>Abortar desde menu item</Original>
 		</Key>
 		<Key ID="STR_NOTF_DeviceIsMining">
 			<Original>Este vehiculo esta trabajando</Original>

@@ -13,7 +13,6 @@ while {true} do
 			{	
 				waitUntil {getPos player distance _zone1 < _dis};		
 				     
-					hint "Aqui no se puede saltar";
 					if (animationState player == "AovrPercMstpSrasWrflDf") then {
 					If (Not _Started) Then {
 						_Started = true;

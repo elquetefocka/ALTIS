@@ -20,7 +20,7 @@ if(count _itemArray == 0) exitWith
         };
         
 		case east: {
-            [] call life_fnc_copLoadout;
+            [] call life_fnc_copeastLoadout;
         };
 		
         case civilian: {
@@ -80,3 +80,4 @@ life_maxWeight = 100;
     _item = [_x,1] call life_fnc_varHandle;
     [true,_item,1] call life_fnc_handleInv;
 } foreach (_yItems);
+[] call life_fnc_updateClothing;

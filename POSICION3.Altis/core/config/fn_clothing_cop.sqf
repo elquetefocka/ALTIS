@@ -133,4 +133,3 @@ switch (_filter) do
 };
 
 _ret;
-[] call life_fnc_setUniformTexture;

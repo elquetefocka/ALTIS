@@ -1,12 +1,14 @@
 
-_x = player;
+
 
 if (alive player) then
 {	
 	[] call SOCK_fnc_updateRequest; //call our silent sync.
-	Sleep 2;
-	_x switchMove "AmovPercMstpSsurWnonDnon";//Making a player owner surrender
-	_x allowdamage false;
+	closeDialog 0;
+	player switchMove "AmovPercMstpSsurWnonDnon";//Making a player owner surrender
+	player allowdamage false;
+	sleep 30;
+	hint "Tienes que esperar 30 segundos";
 	removeUniform player;
 	removeVest player;
 	removeBackpack player;
@@ -14,7 +16,5 @@ if (alive player) then
 	removeHeadGear player;
 	removeAllWeapons player;
 	call BIS_fnc_endMission;
-	//deleteVehicle _x;
-	Sleep 10;
 	"[[player],""TON_fnc_cleanupRequest"",false,false] spawn life_fnc_MP";
 };

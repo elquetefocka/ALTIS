@@ -62,7 +62,9 @@ switch (_vehicle) do
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE04_CO.paa","civ"],
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa","civ"],
 			["#(ai,64,64,1)Fresnel(0.3,3)","fed"],
-			["textures\offroad_guardiacivil.jpg","cop"]
+			["textures\offroad_guardiacivil.jpg","cop"],
+			["textures\offroad_gendarme.jpg","copeast"]
+			
 		];
 	};;
 	
@@ -99,7 +101,8 @@ switch (_vehicle) do
 			["textures\ferrari.jpeg","donador_1"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa","civ"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","civ"],
-			["textures\suv_guardia_civil_v2.paa","cop"]
+			["textures\suv_guardia_civil_v2.paa","cop"],
+			["textures\suv_gendarme.jpg","copeast"]
 			
 		];
 	};
@@ -188,7 +191,8 @@ switch (_vehicle) do
 	{
 		_ret = 
 		[
-			["textures\geo_hunter_1.paa","cop", "textures\geo_hunter_2.paa"]		
+			["textures\geo_hunter_1.jpg","cop", "textures\geo_hunter_2.jpg"],
+			["textures\geoeast_hunter_1.jpg","copeast", "textures\geoeast_hunter_2.jpg"]			
 			
 		];
 	};

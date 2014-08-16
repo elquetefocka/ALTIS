@@ -102,9 +102,10 @@ life_cash = 0;
 if (playerSide == civilian) then
 {
     life_is_alive = false;
+	[] call SOCK_fnc_updateRequest;
 };
 
 [] call life_fnc_hudUpdate; //Get our HUD updated.
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
 
-[] call SOCK_fnc_updateRequest;
+

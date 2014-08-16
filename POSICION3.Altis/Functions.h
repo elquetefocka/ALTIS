@@ -12,6 +12,13 @@ class Socket_Reciever
 	};
 };
 
+class UnderwaterExploration 
+	{
+		file = "core\jobs\underwater_exploration";
+		class uwExplorationInit {};
+		class uwExplorationExplore {};
+	};
+
 class SpyGlass
 {
 	tag = "SPY";
@@ -77,7 +84,7 @@ class Life_Client_Core
 		class medicRequest {};
 		class deathScreen {};
 		class medicLoadout {};
-		class medicSirenLights {};
+		class medicSiren {};
 		class medicLights {};
 	};
 	
@@ -133,8 +140,8 @@ class Life_Client_Core
 		class recolectarlupuloAction {}; //LUPULO
 		class recolectarmaderaAction {}; //MADERA
 		class recolectarmaltaAction {}; //MALTA
-		//class casino {}; //ROBAR CASINO
-		class blackjack {}; //ROBAR BLACKJACK
+		class casino {}; //ROBAR CASINO
+		class blackjack {}; // BLACKJACK
 		class quemarcarbonAction {}; //QUEMAR CARBON
 		class gathertabaco {};
 		class packUpbarrera {};
@@ -145,12 +152,11 @@ class Life_Client_Core
 		class procesarcerveza {};
 		class procesarSidra {};
 		class procesaraceroinoxidable {};
+		class procesaracero {};
 		class robarsenal {};
 		class robcepsa {};
 		//class repsol {};
 		class robgalp {};
-		class seizeWeapon {};
-		class seizeWeaponAction {};		
 		class stealKit {};
 		class surrender {};
 		class takeOrgans {};
@@ -197,6 +203,8 @@ class Life_Client_Core
 		class weaponShopCfg {};
 		class vehicleWeightCfg {};
 		class houseConfig {};
+		class seizeCfg {};
+		class updateClothing {};
 		
 		
 		//Clothing Store Configs
@@ -272,7 +280,6 @@ class Life_Client_Core
 		class inventoryClosed {};
 		class inventoryOpened {};
 		class isUIDActive {};
-		class setUniformTexture {};
 		class autoSave {}; //*AÑADIDO PARA AUTOSALVAR
 		class saveGear {};
 		class loadGear {};
@@ -353,7 +360,9 @@ class Life_Client_Core
 		class repairDoor {};
 		class doorAnimate {};
 		class fedCamDisplay {};
-		class seizeObjects {}; //incautar objetos
+		class seizePlayerWeapon {};
+		class seizePlayerWeaponAction {};
+		class seizeObjects {};
 		class copOpener {};
 		class breathalyzer {};
 		class copLoadout {};
@@ -365,6 +374,7 @@ class Life_Client_Core
 		//class saveGearcopeast {};
 		class copeastInteractionMenu {};//OPFOR
 		class copeastSiren {};
+		class copeastLoadout {};
 	};
 	
 	class Gangs

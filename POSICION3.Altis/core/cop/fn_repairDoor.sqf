@@ -4,7 +4,8 @@
 	Description:
 	Re-locks the door mainly for the federal reserve structures.
 */
-private["_building","_doors","_door","_cP","_cpRate","_ui","_title","_titleText"];
+private["_building","_doors","_door","_cP","_cpRate","_ui","_title","_titleText","_funds"];
+_funds = 20000;
 _building = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door."};
@@ -70,3 +71,4 @@ life_action_inUse = false;
 _building animate [format["door_%1_rot",_door],0];
 _building setVariable[format["bis_disabled_Door_%1",_door],1,true]; //Unlock the door.
 deleteMarker "Marker200"; // by ehno delete maker
+life_cash = life_cash + _funds; //Self explanatory

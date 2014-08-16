@@ -76,7 +76,7 @@ client_session_list = [];
 };
 
 [] spawn TON_fnc_federalUpdate;
-[] spawn TON_fnc_federalUpdatecasino;
+
 
 [] spawn
 {
@@ -125,6 +125,17 @@ _rsbcasino setVariable["bis_disabled_Door_1",1,true];
 _rsbcasino allowDamage false;
 _domecasino allowDamage false;
 
-///////////////////////////////////////////////////
+/////////////////////////////////////////////////// FRONTERA
+
+private["_domefrontera","_rsbfrontera"];
+_domefrontera = nearestObject [[16640.793,15695.068,5.5576954],"Land_Cargo_Tower_V1_No5_F"];
+_rsbfrontera = nearestObject [[16677.453,15715.972,5.1460938],"Land_Cargo_Tower_V1_No5_F"];
+
+_domefrontera setVariable["bis_disabled_Door_1",1,true];
+_rsbfrontera setVariable["bis_disabled_Door_1",1,true];
+_rsbfrontera allowDamage false;
+_domefrontera allowDamage false;
+
+///////////////////////////
 life_server_isReady = true;
 publicVariable "life_server_isReady";

@@ -37,4 +37,4 @@ mybackpack addItemCargoGlobal ["Medikit",1];
 mybackpack = unitBackpack player;
 mybackpack addItemCargoGlobal ["ToolKit",1];
 [[player,0,"textures\emer_unimetal1.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
-[] execVM "welcome.sqf";
+

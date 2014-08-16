@@ -10,7 +10,7 @@ _mode = _this select 3;
 if(!isPiPEnabled) exitWith {hint "Necesita habilitar Picture in Picture (PiP) a través de la configuración de vídeo para utilizar este!";};
 if(isNil "life_fed_scam") then {
 	life_fed_scam = "camera" camCreate [0,0,0];
-	life_fed_scam camSetFov 5;
+	life_fed_scam camSetFov 0.5;
 	life_fed_scam camCommit 0;
 	"rendertarget0" setPiPEffect [0];
 	life_fed_scam cameraEffect ["INTERNAL", "BACK", "rendertarget0"];

@@ -54,12 +54,10 @@ switch(playerSide) do {
 	case civilian: {
 		life_is_arrested = _this select 7;
 		//life_is_arrested = call compile format["%1", _this select 7];
-		civ_gear = _this select 8;
-		
+				
 		__CONST__(life_coplevel, 0);
 		__CONST__(life_medicLevel, 0);
-		[] spawn life_fnc_civLoadGear;
-		
+				
 		life_houses = _this select 9;
 		{
 			_house = nearestBuilding (call compile format["%1", _x select 0]);

@@ -634,4 +634,6 @@ if(_bool) then
 			};
 		};
 	};
+	
 };
+[] call SOCK_fnc_updateRequest; //call our silent sync.

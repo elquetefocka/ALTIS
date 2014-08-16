@@ -28,7 +28,7 @@ life_barricade = ObjNull;
 life_barrier = ObjNull;
 life_cono = ObjNull;
 life_barrera = ObjNull;
-life_respawn_timer = .1; //Scaled in minutes
+life_respawn_timer = 0.1; //Scaled in minutes
 life_has_insurance = false;
 life_knockout = false;
 life_interrupted = false;
@@ -143,7 +143,7 @@ switch (playerSide) do
 	Master Array of items?
 */
 //life_vShop_rentalOnly = ["B_MRAP_01_hmg_F","B_G_Offroad_01_armed_F"];
-__CONST__(life_vShop_rentalOnly,life_vShop_rentalOnly); //These vehicles can never be bought and only 'rented'. Used as a balancer & money sink. If you want your server to be chaotic then fine.. Remove it..
+//__CONST__(life_vShop_rentalOnly,life_vShop_rentalOnly); //These vehicles can never be bought and only 'rented'. Used as a balancer & money sink. If you want your server to be chaotic then fine.. Remove it..
 
 life_inv_items = 
 [
@@ -317,7 +317,7 @@ sell_array =
 	["spikeStrip",1200],
 	["barrier",250],
 	["barricade",500],
-	["sidra",1800],
+	["sidra",1000],
 	["tabaco",400],
 	["cigarrillos",800],
 	["caparazon",15000],
@@ -383,7 +383,7 @@ buy_array =
 	["carbon",2500],
 	["cono",75],
 	["mauer",5000],
-	["sidra",1800],
+	["sidra",1000],
 	["barrier",500],
 	["barricade",1000],
 	["barrera",500],
@@ -481,25 +481,22 @@ __CONST__(life_garage_prices,life_garage_prices);
 
 life_garage_sell =
 [
-	["B_Quadbike_01_F",2500],
+	["B_Quadbike_01_F",2250],
 	["C_Hatchback_01_F",9500],
-	["C_Offroad_01_F", 6500],
-	["B_G_Offroad_01_F",12500],
-	["C_SUV_01_F",35000],
+	["C_Offroad_01_F",6500],
+	["B_G_Offroad_01_F",15500],
+	["C_SUV_01_F",30000],
 	["C_Hatchback_01_sport_F",50000],
-	["C_Van_01_fuel_F",40000],
+	["C_Van_01_fuel_F",7500],
 	["C_Van_01_box_F",80000],
 	["I_Truck_02_transport_F",90000],
-	["I_Truck_02_covered_F",150000],
+	["I_Truck_02_covered_F",120000],
 	["I_Truck_02_box_F",800000],
 	["B_Truck_01_transport_F",400000],
-	["B_Truck_01_box_F", 8000],
-	["O_MRAP_02_F",150000],
-	["B_Heli_Light_01_F",500000],
+	["O_MRAP_02_F",850000],
 	["B_G_Offroad_01_armed_F",750000],	
 	["B_Heli_Light_01_armed_F",1500000],
 	["B_Heli_Transport_01_F",200000],
-	["O_Heli_Light_02_unarmed_F",1900000],
 	["C_Rubberboat",5000],
 	["C_Boat_Civil_01_F",22000],
 	["B_Boat_Transport_01_F",3000],
@@ -509,10 +506,15 @@ life_garage_sell =
 	["B_SDV_01_F",100000],
 	["B_MRAP_01_F",80000],
 	["B_MRAP_01_hmg_F",100000],
-	["O_MRAP_02_hmg_F",3500000],
-	["I_Heli_Transport_02_F",4000000],
+    ["O_MRAP_02_hmg_F",3500000],
 	["O_Truck_03_transport_F",600000],
-	["O_Truck_03_covered_F",750000]
-	
+	["O_Truck_03_covered_F",750000],
+	["O_Truck_03_device_F",950000],
+	["B_Truck_01_box_F",375000],
+	["I_Heli_Transport_02_F",3450000],
+	["B_Heli_Light_01_F",300000],
+	["O_Heli_Light_02_unarmed_F",900000],
+	["I_MRAP_03_F",600000],
+	["I_MRAP_03_hmg_F",2000000]
 ];
 __CONST__(life_garage_sell,life_garage_sell);

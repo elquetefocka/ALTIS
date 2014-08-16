@@ -54,7 +54,7 @@
 	waitUntil {!isNull (uiNamespace getVariable "RscDisplayDebugPublic")};
 	closeDialog 0;
 	[[profileName,getPlayerUID player,"MenuBasedHack_RscDisplayDebugPublic"],"SPY_fnc_cookieJar",false,false] spawn life_fnc_MP;
-	[[profileName,"Menu Hack: RscDisplayDebugPublic"],"SPY_fnc_notifyAdmins",true,false] spawn life_fnc_MP;
+	[[profileName,"Menu Hack: DEBUG MENU"],"SPY_fnc_notifyAdmins",true,false] spawn life_fnc_MP;
 	sleep 0.5;
 	//["SpyGlass",false,false] call BIS_fnc_endMission;
 };

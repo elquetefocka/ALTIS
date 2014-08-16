@@ -10,9 +10,9 @@ _shop = _this select 0;
 
 switch (_shop) do
 {
-	case "market": {["Altis Market",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","storagesmall","storagebig","sidra","cerveza","madera","carbon","nitro","pala"]]};
-	case "rebel": {["Rebel Market",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","blastingcharge","blastingchargecasino","spikeStrip","speedbomb"]]};
-	case "gang": {["Gang Market", ["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","blastingcharge","boltcutter","spikeStrip","speedbomb"]]};
+	case "market": {["Altis Market",["water","rabbit","apple","redgull","tbacon","pickaxe","fuelF","peach","storagesmall","storagebig","sidra","cerveza","madera","carbon","pala"]]};
+	case "rebel": {["Rebel Market",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","blastingcharge","spikeStrip","speedbomb","zipties"]]};
+	case "gang": {["Gang Market", ["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","blastingcharge","boltcutter","spikeStrip","speedbomb","zipties"]]};
 	case "wongs": {["Wong's Food Cart",["turtlesoup","turtle"]]};
 	case "coffee": {["Stratis Coffee Club",["coffee","donuts"]]};
 	case "heroin": {["Drug Dealer",["cocainep","heroinp","marijuana","figuradehueso"]]};
@@ -25,8 +25,7 @@ switch (_shop) do
 	case "tabaco": {["Estanco",["cigarrillos","tabaco"]]};
 	case "hospital": {["Kavala Hospital",["water","peach"]]};
 	case "tesoros": {["Comerciante de Tesoros",["pergamino","vasija","doblon","brazalete","catalejo","abrecartas","collar","cetro"]]};
-	case "kiosk": {["Kiosco",["redgull","water"]]};
-	case "tanke": {["Cepsa",["water","rabbit","fuelF","zipties"]]};
+	case "tanke": {["Cepsa",["water","rabbit","fuelF","nitro"]]};
 	case "organ": {["Organ Dealer",["kidney"]]}; 
 	case "rubi": {["Dealer Rubi",["rubip"]]}; 
 };

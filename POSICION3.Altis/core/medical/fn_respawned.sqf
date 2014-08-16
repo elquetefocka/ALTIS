@@ -35,7 +35,7 @@ switch(playerSide) do
 		_handle = [] spawn life_fnc_medicLoadout;
 	};
 	case east: {
-		_handle = [] spawn life_fnc_copLoadout;
+		_handle = [] spawn life_fnc_copeastLoadout;
 	};
 	waitUntil {scriptDone _handle};
 };

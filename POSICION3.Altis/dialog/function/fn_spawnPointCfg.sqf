@@ -46,8 +46,9 @@ switch (_side) do
 		//if have reb license, only spawn here
 		if(license_civ_rebel && playerSide == civilian) then {
 		_return = [
-					["reb_v_1","Zona Rebelde 1","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-					["reb_v_2","Zona Rebelde 2","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["Rebel_spawn1","Zona Rebelde 1","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["Rebel_spawn2","Zona Rebelde 2","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["Rebel_spawn3","Zona Rebelde 3","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_5","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
@@ -61,6 +62,9 @@ switch (_side) do
 		if(license_civ_pmc && playerSide == civilian) then {
 		_return = [
 					["pmc_1","Zona Pmc","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["Rebel_spawn1","Zona Rebelde 1","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["Rebel_spawn2","Zona Rebelde 2","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["Rebel_spawn3","Zona Rebelde 3","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_5","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],

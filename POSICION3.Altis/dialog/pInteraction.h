@@ -188,18 +188,18 @@ class vInteraction_Menu
 	
 	class controls
 	{
-		class ButtonClose : life_RscButtonMenu 
+		/*class ButtonClose : life_RscButtonMenu 
 		{
 			idc = -1;
 			//shortcuts[] = {0x00050000 + 2};
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
 			x = BGX;
-			y = 0.65 - (1 / 52);
+			y = 0.º65 - (1 / 52);
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
-		
+		*/
 		class ButtonOne : life_RscButtonMenu
 		{
 			idc = 37450;
@@ -296,11 +296,10 @@ class vInteraction_Menu
 			h = 0.038;
 		};
 		
-		//button 9 note the idc number, as it corresponds with copInteractionmenu directly
 		class ButtonNine : life_RscButtonMenu
 		{
 			idc = 37458;
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			text = "";
 			sizeEx = 0.025;
 			x = BGX + 0.03;
@@ -308,6 +307,8 @@ class vInteraction_Menu
 			w = 0.24;
 			h = 0.038;
 		};
+		
+		
 		
 	};
 };

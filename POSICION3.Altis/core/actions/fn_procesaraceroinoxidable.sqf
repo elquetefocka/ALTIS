@@ -31,7 +31,7 @@ if(license_civ_aceroinoxidable) then
 	titleText["Acero inoxidable se esta forgando, tomara algo de tiempo...", "PLAIN"];
 	titleFadeOut 7.5;
 	sleep 15;
-	if (([true, "cromo", _amount3] call life_fnc_handleInv)) then 
+	if (([true, "aceroinoxidable", _amount3] call life_fnc_handleInv)) then 
 	{
 	titleText [format ["Hiciste %1 Acero inoxidable", _amount3], "PLAIN"];
 	};

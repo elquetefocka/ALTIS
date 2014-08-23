@@ -12,12 +12,13 @@
 		3: BOOL (True to return a single array, false to return multiple entries mainly for garage).
 */
 waitUntil {!DB_Async_Active};
-private["_queryStmt","_queryResult","_key","_mode","_return"];
+private["_queryStmt","_queryResult","_key","_timestamp","_mode","_return"];
 _queryStmt = [_this,0,"",[""]] call BIS_fnc_param;
 _mode = [_this,1,1,[0]] call BIS_fnc_param;
 _multiarr = [_this,2,false,[false]] call BIS_fnc_param;
 
 if(_queryStmt == "") exitWith {"_INVALID_SQL_STMT"};
+_timestamp = diag_tickTime;
 _return = false;
 DB_Async_Active = true;
 

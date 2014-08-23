@@ -1062,6 +1062,25 @@ switch(_shop) do
 			]
 		];
 	};
+	
+	case "gasolinera":
+	{
+		["Altis General Store",
+			[
+				["ItemGPS",nil,100],
+				["ToolKit",nil,250],
+				["Chemlight_red",nil,300],
+				["Chemlight_yellow",nil,300],
+				["Chemlight_green",nil,300],
+				["Chemlight_blue",nil,300],
+				["ItemWatch",nil,1],
+				["ItemMap",nil,0]
+			]
+		];
+	};
+	
+	
+	
 	// //////////////////////////////////////////////////////////////////////////////// COPEAST/////////////////////////////////
 	
 	case "copeast_basico":

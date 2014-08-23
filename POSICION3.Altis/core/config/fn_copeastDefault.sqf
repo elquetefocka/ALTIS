@@ -34,5 +34,5 @@ player assignItem "ItemCompass";
 player addBackPack 'B_TacticalPack_oli';
 
 
-[] call life_fnc_setUniformTexture;
+
 [] call life_fnc_saveGearcopeast;

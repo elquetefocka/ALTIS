@@ -36,7 +36,8 @@ switch (_vehicle) do
 			["textures\hatch_guardia_civil_v1.paa","cop"],
 			["textures\monster.jpeg","donador_1"],
 			["textures\hatchback_taxi.jpg","taxi_1"],
-			["textures\hatchback_marocaine.jpg","copeast"]
+			["textures\hatchback_marocaine.jpg","copeast"],
+			["textures\peugeot.jpg","civ"]
 		];
 	};
 		
@@ -183,7 +184,8 @@ switch (_vehicle) do
 		_ret = 
 		[
 			["textures\mrap_guardia_civil_verde.paa","cop", "textures\mrap_guardia_civil_adds.paa"],
-			["textures\mechcar.jpg","med"]
+			["textures\mechcar.jpg","med"],
+			["textures\copeast_hunter1.jpg","copeast", "textures\copeast_hunter2.jpg"]
 		];
 	};
 	

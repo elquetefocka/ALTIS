@@ -15,14 +15,6 @@ waitUntil {scriptDone _handle};
 if(count _itemArray == 0) exitWith
 {
     switch(playerSide) do {
-        case west: {
-            [] call life_fnc_copLoadout;
-        };
-        
-		case east: {
-            [] call life_fnc_copeastLoadout;
-        };
-		
         case civilian: {
             [] call life_fnc_civLoadout;
         };

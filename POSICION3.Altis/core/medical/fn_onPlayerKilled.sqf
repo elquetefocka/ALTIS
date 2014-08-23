@@ -44,10 +44,10 @@ _unit spawn
 	
 	_maxTime = time + (life_respawn_timer * 60);
 	_RespawnBtn ctrlEnable false;
-	waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
+	waitUntil {_Timer ctrlSetText format["Respawn Available in: %1",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
 	round(_maxTime - time) <= 0 OR isNull _this};
 	_RespawnBtn ctrlEnable true;
-	_Timer ctrlSetText localize "STR_Medic_Respawn_2";
+	_Timer ctrlSetText "You can now respawn";
 };
 
 [] spawn life_fnc_deathScreen;
@@ -102,10 +102,9 @@ life_cash = 0;
 if (playerSide == civilian) then
 {
     life_is_alive = false;
-	[] call SOCK_fnc_updateRequest;
 };
 
 [] call life_fnc_hudUpdate; //Get our HUD updated.
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
 
-
+[] call SOCK_fnc_updateRequest;

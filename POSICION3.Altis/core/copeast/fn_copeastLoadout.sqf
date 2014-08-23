@@ -10,14 +10,22 @@ private["_handle"];
 _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
+
+//weapon
+player addweapon "hgun_P07_snds_F";
+player addweapon "arifle_TRG20_Holo_F";
+
+	
 //Load player with default cop gear.
 player addUniform "U_O_OfficerUniform_ocamo";
-player addHeadgear "B_Kitbag_cbr";
+player addBackpack "B_Kitbag_cbr";
 player addHeadGear "H_Beret_brn_SF";
 player addVest "V_Rangemaster_belt";
 
 
-
+// WEAPONS
+player addweapon "hgun_P07_snds_F";
+player addweapon "arifle_TRG20_Holo_F";
 
 //WEAPON MAGAZINES
 player addMagazine "30Rnd_556x45_Stanag";

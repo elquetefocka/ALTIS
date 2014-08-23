@@ -41,6 +41,7 @@ life_god = false; //Add this
 life_frozen = false; //And this
 life_markers = false; //Finally this
 life_drink = 0;
+life_fatigue = 0.5; //Set the max fatigue limit (50%)
 
 //Revive constant variables.
 __CONST__(life_revive_cops,TRUE); //Set to false if you don't want cops to be able to revive downed players.
@@ -139,11 +140,7 @@ switch (playerSide) do
 	
 };
 
-/*
-	Master Array of items?
-*/
-//life_vShop_rentalOnly = ["B_MRAP_01_hmg_F","B_G_Offroad_01_armed_F"];
-//__CONST__(life_vShop_rentalOnly,life_vShop_rentalOnly); //These vehicles can never be bought and only 'rented'. Used as a balancer & money sink. If you want your server to be chaotic then fine.. Remove it..
+
 
 life_inv_items = 
 [
@@ -223,7 +220,8 @@ life_inv_items =
 	"life_inv_rubiu",
 	"life_inv_rubip",
 	"life_inv_speedbomb",
-	"life_inv_nitro"
+	"life_inv_nitro",
+	"life_inv_fichas"
 	
 ];
 
@@ -346,7 +344,8 @@ sell_array =
 	["cerveza",1500],
 	["rubip",7000],
 	["speedbomb",500000],
-	["nitro",15000]
+	["nitro",15000],
+	["fichas",20000]
 ];
 __CONST__(sell_array,sell_array);
 

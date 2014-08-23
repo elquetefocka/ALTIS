@@ -11,7 +11,7 @@
 	Triggers are NOT my preferred method so this is considered temporary until a more suitable
 	option is presented.
 */
-private["_appleZones","_peachZones","_heroinZones","_cocaineZones","_weedZones","_frogZones","_woodZones","_hopfenZones","_malzZones","_tabacoZones"];
+private["_appleZones","_peachZones","_heroinZones","_cocaineZones","_weedZones","_frogZones","_woodZones","_hopfenZones","_malzZones","_tabacoZones","_fichasZones"];
 _appleZones = ["apple_1","apple_2","apple_3","apple_4","apple_5","apple_6"];
 _peachZones = ["peaches_1","peaches_2","peaches_3","peaches_4","peaches_5","peaches_6"];
 _heroinZones = ["heroin_1"];
@@ -22,6 +22,7 @@ _woodZones = ["wood_1","wood_2","wood_3","wood_4","wood_5"];
 _malzZones = ["malz_1","malz_2"];
 _hopfenZones = ["hopfen_1","hopfen_2"];
 _tabacoZones = ["tabaco_1","tabaco_2","tabaco_2","tabaco_3","tabaco_4"];
+_fichasZones = ["ficha_1"];
 
 {
 	_zone = createTrigger ["EmptyDetector",(getMarkerPos _x)];
@@ -99,3 +100,12 @@ _tabacoZones = ["tabaco_1","tabaco_2","tabaco_2","tabaco_3","tabaco_4"];
 	_zone setTriggerActivation["CIV","PRESENT",true];
 	_zone setTriggerStatements["player in thislist","LIFE_Action_tabaco = player addAction['Coger hoja tabaco',life_fnc_gathertabaco,'',0,false,false,'','!life_action_gather'];","player removeAction LIFE_Action_tabaco;"];
 } foreach _tabacoZones;
+
+
+//Create fichas zones
+{
+	_zone = createTrigger ["EmptyDetector",(getMarkerPos _x)];
+	_zone setTriggerArea[1,1,0,false];
+	_zone setTriggerActivation["CIV","PRESENT",true];
+	_zone setTriggerStatements["player in thislist","LIFE_Action_fichas = player addAction['Robar fichas casino',life_fnc_gatherfichas,'',0,false,false,'','!life_action_gather'];","player removeAction LIFE_Action_fichas;"];
+} foreach _fichasZones;

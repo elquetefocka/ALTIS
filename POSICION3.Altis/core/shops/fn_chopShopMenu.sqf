@@ -7,7 +7,7 @@
 */
 disableSerialization;
 private["_nearVehicles","_control"];
-_nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck","man"],25];
+_nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck","man","Air"],25];
 
 life_chopShop = (_this select 3);
 //Error check

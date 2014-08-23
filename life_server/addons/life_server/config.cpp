@@ -100,6 +100,7 @@ class CfgFunctions
 			class spikeStrip {};
 			class logIt {};
 			class federalUpdate {};
+			class federalUpdatecasino {};
 			class chopShopSell {};
 			class clientDisconnect {};
 			class cleanupRequest {};

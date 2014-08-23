@@ -17,7 +17,7 @@ switch (_shop) do
 	case "coffee": {["Stratis Coffee Club",["coffee","donuts"]]};
 	case "heroin": {["Drug Dealer",["cocainep","heroinp","marijuana","figuradehueso"]]};
 	case "fishmarket": {["Altis Fish Market",["salema","ornate","mackerel","mullet","tuna","catshark"]]};
-	case "iron": {["Altis Industrial Trader",["iron_r","copper_r"]]};
+	case "iron": {["Altis Industrial Trader",["iron_r","copper_r","acero"]]};
 	case "diamond": {["Diamond Dealer",["diamond","diamondc"]]};
 	case "cop": {["Cop Item Shop",["donuts","coffee","spikeStrip","water","rabbit","apple","redgull","fuelF","defusekit","barricade","barrier","mauer","cono","barrera"]]};
 	case "copeast": {["Cop Item Shop",["donuts","coffee","spikeStrip","water","rabbit","apple","redgull","fuelF","defusekit","barricade","barrier","mauer","cono","barrera"]]};
@@ -28,5 +28,7 @@ switch (_shop) do
 	case "tanke": {["Cepsa",["water","rabbit","fuelF","nitro"]]};
 	case "organ": {["Organ Dealer",["kidney"]]}; 
 	case "rubi": {["Dealer Rubi",["rubip"]]}; 
+	case "fichas": {["fichas",["fichas"]]}; 
+	case "cromo": {["fichas",["aceroinoxidable"]]}; 
 };
 

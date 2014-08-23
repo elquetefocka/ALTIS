@@ -87,6 +87,7 @@ switch (_item) do
 	case "rubip": {4};
 	case "speedbomb": {10};
 	case "nitro": {10};
+	case "fichas": {5};
 	
 	
 	default {1};

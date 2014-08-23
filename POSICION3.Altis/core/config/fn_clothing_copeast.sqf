@@ -16,36 +16,18 @@ ctrlSetText[3103,"Altis Police Department Shop"];
 _ret = [];
 switch (_filter) do
 {
-	//Uniforms
+	//Uniforms  U_O_CombatUniform_oucamo
 	case 0:
 	{
-		_ret set[count _ret,["U_O_OfficerUniform_ocamo","Cop Uniform",0]];
-		if(__GETC__(life_coplevel) > 1) then
+		_ret set[count _ret,["U_O_OfficerUniform_ocamo","Gendarme Uniforme",0]];
+		
+		if(license_copeast_geos) then
 		{
-			_ret set[count _ret,["U_IG_Guerilla2_3",nil,0]];
-			_ret set[count _ret,["U_B_Wetsuit",nil,0]];
-		};
-		if(__GETC__(life_coplevel) > 3) then
-		{
-			_ret set[count _ret,["U_B_CombatUniform_mcam","Geo Uniform",0]];
-			_ret set[count _ret,["U_I_GhillieSuit","Ghillie",0]];
+			_ret set[count _ret,["U_O_CombatUniform_oucamo","Unidad Especial",0]];
+			_ret set[count _ret,["U_O_GhillieSuit","Ghillie",0]];
 			
 		};
-		if(__GETC__(life_coplevel) > 4) then
-		{
-			_ret set[count _ret,["U_I_OfficerUniform",nil,0]];
-		};
-		if(__GETC__(life_coplevel) > 5) then
-		{
-			_ret set[count _ret,["U_I_G_Story_Protagonist_F",nil,0]];
-			_ret set[count _ret,["U_B_CTRG_1",nil,0]];
-		};
-		if(__GETC__(life_coplevel) > 6) then
-		{
-			_ret set[count _ret,["U_B_SpecopsUniform_sgg",nil,0]];
-			_ret set[count _ret,["U_B_GhillieSuit","GhillieComisario",0]];
-		};
-		[] call life_fnc_setUniformTexture;
+		[] call SOCK_fnc_updateRequest;
 	};
 	
 	
@@ -53,16 +35,16 @@ switch (_filter) do
 	case 1:
 	{
 		_ret set[count _ret,["H_Beret_brn_SF","Boina",0]];		
-		if(__GETC__(life_coplevel) > 2) then
+		if(__GETC__(life_copeastlevel) > 2) then
 		{
 			_ret set[count _ret,["H_Booniehat_mcamo",nil,0]];
 		};
-		if(__GETC__(life_coplevel) > 3) then
+		if(__GETC__(life_copeastlevel) > 3) then
 		{
 			_ret set[count _ret,["H_HelmetB_light_black","Casco Geo",0]];
 			_ret set[count _ret,["H_HelmetB",nil,0]];			 
 		};
-		if(__GETC__(life_coplevel) > 5) then
+		if(__GETC__(life_copeastlevel) > 5) then
 		{
 			_ret set[count _ret,["H_MilCap_mcamo",nil,0]];
 			_ret set[count _ret,["H_MilCap_oucamo",nil,0]];
@@ -80,6 +62,16 @@ switch (_filter) do
 	{
 		_ret = 
 		[
+			["G_Balaclava_lowprofile",nil,25],
+			["G_Balaclava_combat",nil,20],
+			["G_Balaclava_oli",nil,20],
+			["G_Bandanna_aviator",nil,20],
+			["G_Bandanna_beast",nil,20],
+			["G_Bandanna_tan",nil,20],
+			["G_Bandanna_sport",nil,75],
+			["G_Bandanna_blk",nil,10],
+			["G_Bandanna_oli",nil,30],
+			["G_Bandanna_shades",nil,55],
 			["G_Shades_Black",nil,25],
 			["G_Shades_Blue",nil,20],
 			["G_Sport_Blackred",nil,20],
@@ -99,14 +91,14 @@ switch (_filter) do
 	{
 		_ret set[count _ret,["V_Rangemaster_belt",nil,0]];
 		//agente
-		if(__GETC__(life_coplevel) > 0) then
+		if(__GETC__(life_copeastlevel) > 0) then
 		{
 			_ret set[count _ret,["V_PlateCarrier1_blk",nil,0]];
 			_ret set[count _ret,["V_RebreatherIR",nil,0]];
 		};	
 		
 		//oficial hasta teniente
-		if(__GETC__(life_coplevel) > 2) then
+		if(__GETC__(life_copeastlevel) > 2) then
 		{
 			_ret set[count _ret,["V_PlateCarrier3_rgr",nil,0]];
 			_ret set[count _ret,["V_Chestrig_blk",nil,0]];

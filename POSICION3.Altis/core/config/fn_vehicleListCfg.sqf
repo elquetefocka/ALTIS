@@ -418,19 +418,19 @@ switch (_shop) do
 		["C_Offroad_01_F",5000]];
 		_return set[count _return,
 		["C_SUV_01_F",20000]];
-		if(__GETC__(life_coplevel) > 2) then
+		if(__GETC__(life_coplevel) > 1) then
 		{
 			_return set[count _return,
 			["C_Hatchback_01_sport_F",35000]];
 		};
-		if(__GETC__(life_coplevel) > 4) then
+		if(__GETC__(life_coplevel) > 3) then
 		{	
 			_return set[count _return,
 			["B_MRAP_01_F",80000]];
 			
 		};
 		
-		if(__GETC__(life_coplevel) > 6) then
+		if(license_cop_geos) then
 		{
 		
 			_return set[count _return,
@@ -438,7 +438,7 @@ switch (_shop) do
 			
 		};
 		
-		if(__GETC__(life_coplevel) > 7) then
+		if(__GETC__(life_coplevel) > 6) then
 		{
 			_return set[count _return,
 			["O_Heli_Attack_02_black_F",0]];
@@ -457,19 +457,19 @@ switch (_shop) do
 		["C_Offroad_01_F",5000]];
 		_return set[count _return,
 		["C_SUV_01_F",20000]];
-		if(__GETC__(life_copeastlevel) > 2) then
+		if(__GETC__(life_copeastlevel) > 1) then
 		{
 			_return set[count _return,
 			["C_Hatchback_01_sport_F",35000]];
 		};
-		if(__GETC__(life_copeastlevel) > 4) then
+		if(__GETC__(life_copeastlevel) > 3) then
 		{	
 			_return set[count _return,
 			["B_MRAP_01_F",80000]];
 			
 		};
 		
-		if(__GETC__(life_copeastlevel) > 6) then
+		if(license_cop_geos) then
 		{
 		
 			_return set[count _return,
@@ -477,7 +477,7 @@ switch (_shop) do
 			
 		};
 		
-		if(__GETC__(life_copeastlevel) > 7) then
+		if(__GETC__(life_copeastlevel) > 6) then
 		{
 			_return set[count _return,
 			["O_Heli_Attack_02_black_F",0]];
@@ -498,19 +498,19 @@ switch (_shop) do
 		["C_Offroad_01_F",5000]];
 		_return set[count _return,
 		["C_SUV_01_F",20000]];
-		if(__GETC__(life_coplevel) > 2) then
+		if(__GETC__(life_coplevel) > 1) then
 		{
 			_return set[count _return,
 			["C_Hatchback_01_sport_F",35000]];
 		};
-		if(__GETC__(life_coplevel) > 4) then
+		if(__GETC__(life_coplevel) > 3) then
 		{	
 			_return set[count _return,
 			["B_MRAP_01_F",80000]];
 			
 		};
 		
-		if(__GETC__(life_coplevel) > 6) then
+		if(license_cop_geos) then
 		{
 		
 			_return set[count _return,
@@ -518,7 +518,7 @@ switch (_shop) do
 			
 		};
 		
-		if(__GETC__(life_coplevel) > 7) then
+		if(__GETC__(life_coplevel) > 6) then
 		{
 			_return set[count _return,
 			["O_Heli_Attack_02_black_F",0]];
@@ -538,19 +538,19 @@ switch (_shop) do
 		["C_Offroad_01_F",5000]];
 		_return set[count _return,
 		["C_SUV_01_F",20000]];
-		if(__GETC__(life_copeastlevel) > 2) then
+		if(__GETC__(life_copeastlevel) > 1) then
 		{
 			_return set[count _return,
 			["C_Hatchback_01_sport_F",35000]];
 		};
-		if(__GETC__(life_copeastlevel) > 4) then
+		if(__GETC__(life_copeastlevel) > 3) then
 		{	
 			_return set[count _return,
 			["B_MRAP_01_F",80000]];
 			
 		};
 		
-		if(__GETC__(life_copeastlevel) > 6) then
+		if(license_cop_geos) then
 		{
 		
 			_return set[count _return,
@@ -558,7 +558,7 @@ switch (_shop) do
 			
 		};
 		
-		if(__GETC__(life_copeastlevel) > 7) then
+		if(__GETC__(life_copeastlevel) > 6) then
 		{
 			_return set[count _return,
 			["O_Heli_Attack_02_black_F",0]];
@@ -577,19 +577,19 @@ switch (_shop) do
 		["C_Offroad_01_F",5000]];
 		_return set[count _return,
 		["C_SUV_01_F",20000]];
-		if(__GETC__(life_coplevel) > 2) then
+		if(__GETC__(life_coplevel) > 1) then
 		{
 			_return set[count _return,
 			["C_Hatchback_01_sport_F",35000]];
 		};
-		if(__GETC__(life_coplevel) > 4) then
+		if(__GETC__(life_coplevel) > 3) then
 		{	
 			_return set[count _return,
 			["B_MRAP_01_F",80000]];
 			
 		};
 		
-		if(__GETC__(life_coplevel) > 6) then
+		if(license_cop_geos) then
 		{
 		
 			_return set[count _return,
@@ -597,7 +597,7 @@ switch (_shop) do
 			
 		};
 		
-		if(__GETC__(life_coplevel) > 7) then
+		if(__GETC__(life_coplevel) > 6) then
 		{
 			_return set[count _return,
 			["O_Heli_Attack_02_black_F",0]];
@@ -616,19 +616,19 @@ switch (_shop) do
 		["C_Offroad_01_F",5000]];
 		_return set[count _return,
 		["C_SUV_01_F",20000]];
-		if(__GETC__(life_copeastlevel) > 2) then
+		if(__GETC__(life_copeastlevel) > 1) then
 		{
 			_return set[count _return,
 			["C_Hatchback_01_sport_F",35000]];
 		};
-		if(__GETC__(life_copeastlevel) > 4) then
+		if(__GETC__(life_copeastlevel) > 3) then
 		{	
 			_return set[count _return,
 			["B_MRAP_01_F",80000]];
 			
 		};
 		
-		if(__GETC__(life_copeastlevel) > 6) then
+		if(license_cop_geos) then
 		{
 		
 			_return set[count _return,
@@ -636,7 +636,7 @@ switch (_shop) do
 			
 		};
 		
-		if(__GETC__(life_copeastlevel) > 7) then
+		if(__GETC__(life_copeastlevel) > 6) then
 		{
 			_return set[count _return,
 			["O_Heli_Attack_02_black_F",0]];

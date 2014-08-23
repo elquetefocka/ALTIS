@@ -19,10 +19,10 @@ class Header
 
 wreckLimit = 3;
 wreckRemovalMinTime = 60;
-wreckRemovalMaxTime = 320;
-corpseLimit = 25;
-corpseRemovalMinTime = 420;
-corpseRemovalMaxTime = 421;
+wreckRemovalMaxTime = 61;
+corpseLimit = 5;
+corpseRemovalMinTime = 60;
+corpseRemovalMaxTime = 61;
 
 #include "dialog\MasterHandler.h"
 #include "addons\R3F_ARTY_AND_LOG\desc_include.h"
@@ -84,20 +84,6 @@ class CfgSounds
 	{
 		name = "unlock";
 		sound[] = {"\sounds\unlock.ogg", 1.0, 1};
-		titles[] = {};
-	};
-	
-	class door_lock
-	{
-		name = "car_lock";
-		sound[] = {"\sounds\door_lock.ogg", 1.0, 1};
-		titles[] = {};
-	};
-	
-	class door_unlock
-	{
-		name = "unlock";
-		sound[] = {"\sounds\door_unlock.ogg", 1.0, 1};
 		titles[] = {};
 	};
 	

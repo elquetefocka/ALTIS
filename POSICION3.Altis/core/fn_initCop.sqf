@@ -27,33 +27,6 @@ player setVariable["rank",(__GETC__(life_coplevel)),true];
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 
-[] spawn
-{
-while {(uniform player) == "U_Rangemaster"} do
-    {
-	[[player,0,"textures\guardia_civil_uniforme_ver.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;  
-	if(backpack player != "") then {(unitBackpack player) setObjectTextureGlobal [0,""];};
-	sleep 60;
-    };
-};
-/*
-
-[] spawn
-{
-while {(uniform player) == "U_B_CombatUniform_mcam"} do
-    {
-	switch (__GETC__(life_coplevel)) do 
-		{
-			case 2: {
-			[[player,0,"textures\guardia_civil_uniforme_ver.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;  
-			};
-			
-		};
-    if(backpack player != "") then {(unitBackpack player) setObjectTextureGlobal [0,""];};
-    sleep 30;
-    };
-};
-*/
-
-
 [] execVM "welcome.sqf";
+[] call life_fnc_updateClothing;
+

@@ -275,9 +275,9 @@ compileFinal "
 		{
 			private[""_message""];
 			_message = format["">>>MENSAJE DE %1: %2"",_from,_msg];
-			hint parseText format [""<t color='#FFCC00'><t size='2'><t align='center'>Nuevo Mensaje<br/><br/><t color='#33CC33'><t align='left'><t size='1'>A: <t color='#ffffff'>Tu<br/><t color='#33CC33'>De: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%2"",_from,_msg];
+			hint parseText format [""<t color='#FFCC00'><t size='2'><t align='center'>Nuevo Mensaje<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>Tu<br/><t color='#33CC33'>De: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%2"",_from,_msg];
 
-			[""TextMessage"",[format[""Recibiste un mensaje privado de %1"",_from]]] call bis_fnc_showNotification;
+			[""TextMessage"",[format[""You Received A New Private Message From %1"",_from]]] call bis_fnc_showNotification;
 			systemChat _message;
 		};
 
@@ -285,10 +285,10 @@ compileFinal "
 		{
 			if(side player != west) exitWith {};
 			private[""_message""];
-			_message = format[""---091---  %1: %2"",_from,_msg];
-			hint parseText format [""<t color='#316dff'><t size='2'><t align='center'>Solicita admin<br/><br/><t color='#33CC33'><t align='left'><t size='1'>A: <t color='#ffffff'>Todos los Oficiales<br/><t color='#33CC33'>De: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%2"",_from,_msg];
+			_message = format[""---091 DISPATCH FROM %1: %2"",_from,_msg];
+			hint parseText format [""<t color='#316dff'><t size='2'><t align='center'>Nueva Solicitud<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>Todos los Oficiales<br/><t color='#33CC33'>De: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%2"",_from,_msg];
 
-			[""PoliceDispatch"",[format[""Recibiste un mensaje: %1"",_from]]] call bis_fnc_showNotification;
+			[""PoliceDispatch"",[format[""A New Police Report From: %1"",_from]]] call bis_fnc_showNotification;
 			systemChat _message;
 		};
 
@@ -297,9 +297,9 @@ compileFinal "
 			if((call life_adminlevel) < 1) exitWith {};
 			private[""_message""];
 			_message = format[""???ADMIN SOLICITUD DE %1: %2"",_from,_msg];
-			hint parseText format [""<t color='#ffcefe'><t size='2'><t align='center'>Admin Solicitud<br/><br/><t color='#33CC33'><t align='left'><t size='1'>A: <t color='#ffffff'>Admins<br/><t color='#33CC33'>De: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%2"",_from,_msg];
+			hint parseText format [""<t color='#ffcefe'><t size='2'><t align='center'>Admin Solicitud<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>Admins<br/><t color='#33CC33'>De: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%2"",_from,_msg];
 
-			[""AdminDispatch"",[format[""%1 Recibiste un mensaje de un Admin!"",_from]]] call bis_fnc_showNotification;
+			[""AdminDispatch"",[format[""%1 Has Requested un Admin!"",_from]]] call bis_fnc_showNotification;
 			systemChat _message;
 		};
 
@@ -307,8 +307,8 @@ compileFinal "
 		{
 			private[""_message""];
 			_message = format[""!!!ADMIN MENSAJE: %1"",_msg];
-			_admin = format[""Enviaste por admin: %1"", _from];
-			hint parseText format [""<t color='#FF0000'><t size='2'><t align='center'>Admin Mensaje<br/><br/><t color='#33CC33'><t align='left'><t size='1'>A: <t color='#ffffff'>Tu<br/><t color='#33CC33'>De: <t color='#ffffff'>An Admin<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%1"",_msg];
+			_admin = format[""Enviaste by admin: %1"", _from];
+			hint parseText format [""<t color='#FF0000'><t size='2'><t align='center'>Admin Mensaje<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>Tu<br/><t color='#33CC33'>De: <t color='#ffffff'>An Admin<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%1"",_msg];
 
 			[""AdminMessage"",[""Recibiste un mensaje de un Admin!""]] call bis_fnc_showNotification;
 			systemChat _message;
@@ -320,7 +320,7 @@ compileFinal "
 			private[""_message"",""_admin""];
 			_message = format[""!!!ADMIN MENSAJE: %1"",_msg];
 			_admin = format[""Enviaste by admin: %1"", _from];
-			hint parseText format [""<t color='#FF0000'><t size='2'><t align='center'>Admin Mensaje<br/><br/><t color='#33CC33'><t align='left'><t size='1'>A: <t color='#ffffff'>Todos los Jugadores<br/><t color='#33CC33'>De: <t color='#ffffff'>Los Admins<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%1"",_msg];
+			hint parseText format [""<t color='#FF0000'><t size='2'><t align='center'>Admin Mensaje<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>Todos los Jugadores<br/><t color='#33CC33'>De: <t color='#ffffff'>Los Admins<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%1"",_msg];
 
 			[""AdminMessage"",[""Recibiste un mensaje de un Admin!""]] call bis_fnc_showNotification;
 			systemChat _message;
@@ -330,7 +330,7 @@ compileFinal "
 		case 5: {
 			private[""_message""];
 			_message = format[""!!!EMS SOLICITUD: %1"",_msg];
-			hint parseText format [""<t color='#FFCC00'><t size='2'><t align='center'>EMS SOLICITUD<br/><br/><t color='#33CC33'><t align='left'><t size='1'>A: <t color='#ffffff'>Tu<br/><t color='#33CC33'>De: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%2"",_from,_msg];
+			hint parseText format [""<t color='#FFCC00'><t size='2'><t align='center'>EMS SOLICITUD<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>Tu<br/><t color='#33CC33'>De: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%2"",_from,_msg];
 
 			[""TextMessage"",[format[""EMS Solicitud de %1"",_from]]] call bis_fnc_showNotification;
 		};
@@ -339,11 +339,11 @@ compileFinal "
 		{
 			if(side player != east) exitWith {};
 			private[""_message""];
-			_message = format[""---091 DISPATCH FROM %1: %2"",_from,_msg];
-			hint parseText format [""<t color='#316dff'><t size='2'><t align='center'>Solicita Gendarme Marroqui<br/><br/><t color='#33CC33'><t align='left'><t size='1'>A: <t color='#ffffff'>Todos los Oficiales<br/><t color='#33CC33'>De: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%2"",_from,_msg];
+			_message = format[""---091 EAST SOLICITUD DE %1: %2"",_from,_msg];
+			hint parseText format [""<t color='#316dff'><t size='2'><t align='center'>Nueva Solicitud<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>Todos los Officers<br/><t color='#33CC33'>De: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%2"",_from,_msg];
 
-			[""PoliceDispatch"",[format[""Recibiste un mensaje: %1"",_from]]] call bis_fnc_showNotification;
-			systemChat _message
+			[""PoliceDispatch"",[format[""Un nuevo Un nuevo informe de la policía en: %1"",_from]]] call bis_fnc_showNotification;
+			systemChat _message;
 		};
 		
 		case 7 :
@@ -351,12 +351,11 @@ compileFinal "
 			if(side player != civilian) exitWith {};
 			private[""_message""];
 			_message = format[""---ATT CIUDADANOS DE %1: %2"",_from,_msg];
-			hint parseText format [""<t color='#316dff'><t size='2'><t align='center'>Nueva Solicitud<br/><br/><t color='#33CC33'><t align='left'><t size='1'>A: <t color='#ffffff'>Todos los Civiles<br/><t color='#33CC33'>De: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%2"",_from,_msg];
+			hint parseText format [""<t color='#316dff'><t size='2'><t align='center'>Nueva Solicitud<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>Todos los Civiles<br/><t color='#33CC33'>De: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%2"",_from,_msg];
 
-			[""TextMessage"",[format[""Recibiste un mensaje : %1"",_from]]] call bis_fnc_showNotification;
+			[""PoliceDispatch"",[format[""Nuevo mensaje a Civiles en: %1"",_from]]] call bis_fnc_showNotification;
 			systemChat _message;
 		};
-				
 		
 	};
 ";

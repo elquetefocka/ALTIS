@@ -11,11 +11,11 @@ _control = ((findDisplay 39400) displayCtrl 39402);
 _price = _control lbValue (lbCurSel _control);
 _vehicle = _control lbData (lbCurSel _control);
 _vehicle = call compile format["%1", _vehicle];
-_nearVehicles = nearestObjects [getMarkerPos life_chopShop,["Car","Truck"],25];
+_nearVehicles = nearestObjects [getMarkerPos life_chopShop,["Car","Truck","Air"],25];
 _vehicle = _nearVehicles select _vehicle;
 if(isNull _vehicle) exitWith {};
 if(isNil "life_cshop_inUse") then {life_cshop_inUse = time-301;};
-if(life_cshop_inUse+(300) >= time) exitWith {closeDialog 0; hint format["You can only sell vehicles every 5 minutes, you can sell another vehicle in %1:%2",4 - floor ((time - life_cshop_inUse) / 60),59 - round (time - life_cshop_inUse - (floor ((time - life_cshop_inUse) / 60)) * 60)];};
+if(life_cshop_inUse +(300) >= time) exitWith {closeDialog 0; hint format["Sólo puede vender vehículos cada 5 minutos, se puede vender a otro vehículo en %1:%2",4 - floor ((time - life_cshop_inUse) / 60),59 - round (time - life_cshop_inUse - (floor ((time - life_cshop_inUse) / 60)) * 60)];};
 
 hint localize "STR_Shop_ChopShopSelling";
 

@@ -16,5 +16,5 @@ if (alive player) then
 	removeHeadGear player;
 	removeAllWeapons player;
 	call BIS_fnc_endMission;
-	"[[player],""TON_fnc_cleanupRequest"",false,false] spawn life_fnc_MP";
+	player setdamage 0;
 };

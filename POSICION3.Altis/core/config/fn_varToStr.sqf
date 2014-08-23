@@ -89,7 +89,7 @@ switch (_var) do
 	case "life_inv_rubip": {"Rubi Pulido"};
 	case "life_inv_speedbomb": {"Bomba Lapa"};
 	case "life_inv_nitro": {"Nitro"};
-	
+	case "life_inv_fichas": {"fichas"};
 	
 	
 	//License Block
@@ -128,5 +128,5 @@ switch (_var) do
 	case "license_civ_pasaportemaroc": {"Pasaporte Marruecos"};
 	case "license_civ_rubiu": {"Licencia Rubies"};
 	case "license_cop_geos": {"Licencia G.E.O"};
-	case "license_cop_geoseast": {"Licencia G.E.O"};
+	case "license_copeast_geos": {"Licencia G.E.O"};
 };

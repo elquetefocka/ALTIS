@@ -66,6 +66,7 @@ switch (_vehicle) do
 			case 7: {_color = "Monster"};
 			case 8: {_color = "Taxi"};
 			case 9: {_color = "Gendarmes"};
+			case 10: {_color = "Liantada"};
 		};
 	};
 	
@@ -78,8 +79,7 @@ switch (_vehicle) do
 			case 2: {_color = "Silver";};
 			case 3: {_color = "Orange";};
 			case 4: {_color = "Guardia Civil";};
-			case 5: {_color = "Admin";};
-			case 6: {_color = "Gendarme";};
+			case 5: {_color = "Gendarme";};
 			
 		};
 	};
@@ -169,6 +169,7 @@ switch (_vehicle) do
 		{
 			case 0: {_color = "Guardia Civil"};
 			case 1: {_color = "Mecanico"};
+			case 2: {_color = "Gendarme"};
 			
 			
 		};

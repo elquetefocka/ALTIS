@@ -18,8 +18,9 @@ while {true} do {
 		if(count _containers > 0) then {
 			{deleteVehicle _x;} foreach _containers; //Delete the containers.
 		};
+		deleteVehicle _client; //Get rid of the corpse.
 	};
 	
 	_loops = _loops + 1;
-	sleep 0.1;
+	sleep 1;
 };

@@ -17,7 +17,7 @@ _colorIndex = lbValue[2304,(lbCurSel 2304)];
 //Series of checks (YAY!)
 if(_basePrice < 0) exitWith {}; //Bad price entry
 if(life_cash < _basePrice) exitWith {hint format["No tienes tanto efectivo para comprar este vehiculo.\n\nCantidad Restante: $%1",[_basePrice - life_cash] call life_fnc_numberText];};
-if(!([_className] call life_fnc_vehShopLicenses) && _className != "B_MRAP_01_hmg_F") exitWith {hint "No tienes la licencia requerida!"};
+if(!([_className] call life_fnc_vehShopLicenses) && _className != "") exitWith {hint "No tienes la licencia requerida!"};
 
 _spawnPoints = life_veh_shop select 1;
 _spawnPoint = "";
@@ -87,12 +87,15 @@ switch(playerSide) do {
 
 _vehicle allowDamage true;
 
+
+
 life_vehicles set[count life_vehicles,_vehicle]; //Add err to the chain.
 if(_mode) then {
-	if(!(_className in ["B_G_Offroad_01_armed_F","B_MRAP_01_hmg_F"])) then {
+	if(!(_className in ["B_G_Offroad_01_armed_F"])) then {
 		[[(getPlayerUID player),playerSide,_vehicle,_colorIndex],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
 	};
 };
+
 
 [] call SOCK_fnc_updateRequest; //Sync silently because it's obviously silently..
 closeDialog 0; //Exit the menu.

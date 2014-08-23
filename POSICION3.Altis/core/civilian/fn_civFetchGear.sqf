@@ -137,10 +137,8 @@ if(count (handGunItems player) > 0) then
             _yItems = _yItems + [_name];
         };
     };
-} forEach 
-   [
-	
-	["life_inv_heroinu",life_inv_heroinu],
+} forEach [
+    ["life_inv_heroinu",life_inv_heroinu],
 	["life_inv_heroinp",life_inv_heroinp],
 	["life_inv_cannabis",life_inv_cannabis],
 	["life_inv_marijuana",life_inv_marijuana],
@@ -178,6 +176,7 @@ if(count (handGunItems player) > 0) then
 	["life_inv_diamondr",life_inv_diamondr],
 	["life_inv_spikeStrip",life_inv_spikeStrip],
 	["life_inv_blastingcharge",life_inv_blastingcharge],
+	["life_inv_blastingchargecasino",life_inv_blastingcharge],
 	["life_inv_boltcutter",life_inv_boltcutter],
 	["life_inv_defusekit",life_inv_defusekit],
 	["life_inv_storagesmall",life_inv_storagesmall],
@@ -215,6 +214,7 @@ if(count (handGunItems player) > 0) then
 	["life_inv_speedbomb",life_inv_speedbomb],
 	["life_inv_nitro",life_inv_nitro]
 ];
+
 
 _ret set[count _ret,_uItems];
 _ret set[count _ret,_uMags];

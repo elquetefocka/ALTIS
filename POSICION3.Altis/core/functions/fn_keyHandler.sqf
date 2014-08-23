@@ -122,7 +122,9 @@ switch (_code) do
 		switch (playerSide) do 
 		{
 			case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
+			case east: {if(!visibleMap) then {[] spawn life_fnc_copeastMarkers;}};
 			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
+			case east: {if(!visibleMap) then {[] spawn life_fnc_copeastMarkers;}};
 		};
 	};
 	
@@ -276,6 +278,7 @@ switch (_code) do
 		};
 	};	
 	
+			
 	//shift+2
     case 3:
     {    
@@ -352,15 +355,13 @@ switch (_code) do
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};
 						systemChat "Vehiculo Abierto.";
-						player say3D "car_lock";
-					} else {
+						} else {
 						if(local _veh) then {
 							_veh lock 2;
 						} else {
 							[[_veh,2],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};	
 						systemChat "Vehiculo Cerrado.";
-						player say3D "unlock";
 					};
 				};
 			};
@@ -371,7 +372,7 @@ switch (_code) do
 	{
 		if(_alt && !_shift) then
 		{
-			[[0,format["%1 ALT+F4",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+			[[0,format["%1 Alt+F4",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 		
 		};
 	};
@@ -379,7 +380,7 @@ switch (_code) do
 	{
 		if(_ctrlKey && _alt)  then 
 		{
-			[[0,format["%1 CTRL + ALT + DEL",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+			[[0,format["%1 CTRL + Alt + DEL",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 		};
 	};
 	case 15:
@@ -387,7 +388,7 @@ switch (_code) do
 		if( _alt)  then 
 		{
 			
-			[[0,format["%1 ALT + TAB",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+			[[0,format["%1 Alt + TAB",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 		};
 	};
 	case 1:

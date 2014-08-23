@@ -105,6 +105,7 @@ class Life_Client_Core
 		class dpFinish {};
 		class dropFishingNet {};
 		class gatherApples {};
+		class gatherfichas {};
 		class gatherCannabis {};
 		class gatherHeroin {};
 		class getDPMission {};
@@ -164,6 +165,8 @@ class Life_Client_Core
 		class CookHermitLSD {};
 		class activateNitro {};
 		class CatchFrogAction {}; //COGER RANAS
+		class seizeWeapon {};
+		class seizeWeaponAction {};
 	};
 	
 	class Housing
@@ -205,6 +208,8 @@ class Life_Client_Core
 		class houseConfig {};
 		class seizeCfg {};
 		class updateClothing {};
+		class copDefault {};
+		class copeastDefault {}; //<-- ADD JUST THIS AT THE END
 		
 		
 		//Clothing Store Configs
@@ -249,6 +254,7 @@ class Life_Client_Core
 		class handleInv {};
 		class hudSetup {};
 		class hudUpdate {};
+		class fetchGear{};
 		class tazeSound {};
 		class animSync {};
 		class simDisable {};
@@ -280,10 +286,8 @@ class Life_Client_Core
 		class inventoryClosed {};
 		class inventoryOpened {};
 		class isUIDActive {};
-		class autoSave {}; //*AÑADIDO PARA AUTOSALVAR
-		class saveGear {};
-		class loadGear {};
-		class stripDownPlayer {};
+		class fatigueReset {}; //Add this line
+		class autoSave {};
 	};
 	
 	class Network
@@ -307,6 +311,8 @@ class Life_Client_Core
 		class jailMe {};
 		class jail {};
 		class tazed {};
+		class civFetchGear {};
+		class civLoadGear {};
 		class knockedOut {};
 		class knockoutAction {};
 		class robReceive {};
@@ -314,8 +320,6 @@ class Life_Client_Core
 		class removeLicenses {};
 		class zoneCreator {};
 		class demoChargeTimer {};
-		class demoChargeTimercasino {};
-		class civLoadout {};
 		class hasOrgan {};
 		class civInteractionMenu {};
 	};
@@ -341,6 +345,8 @@ class Life_Client_Core
 		file = "core\cop";
 		class copMarkers {};
 		class copLights {};
+		class loadGear {};
+		class saveGear {};
 		class vehInvSearch {};
 		class copSearch {};
 		class bountyReceive {};
@@ -360,21 +366,17 @@ class Life_Client_Core
 		class repairDoor {};
 		class doorAnimate {};
 		class fedCamDisplay {};
-		class seizePlayerWeapon {};
-		class seizePlayerWeaponAction {};
-		class seizeObjects {};
-		class copOpener {};
-		class breathalyzer {};
-		class copLoadout {};
+		class seizeObjects {}; //incautar objetos
 	};
 	
 	class Copeast
 	{
 		file = "core\copeast";
-		//class saveGearcopeast {};
+		class loadGearcopeast {}; //<--- ADD ALL OF THIS IT´S NEW!
+		class saveGearcopeast {};
 		class copeastInteractionMenu {};//OPFOR
 		class copeastSiren {};
-		class copeastLoadout {};
+		class copeastmarkers {};
 	};
 	
 	class Gangs
@@ -466,11 +468,8 @@ class Life_Client_Core
 		class garageLBChange {};
 		class safeInventory {};
 		class safeOpen {};
-		class safeOpencasino {};
 		class safeTake {};
-		class safeTakecasino {};
 		class safeFix {};
-		class safeFixcasino {};
 		class vehicleGarage {};
 		class gangDeposit {};
 	};

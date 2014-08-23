@@ -21,8 +21,9 @@ switch (playerSide) do
 
 	case west:
     {
-		//Seize PlayerWeapons
-    life_actions = life_actions + [player addAction["Incautar armas",life_fnc_seizePlayerWeapon,cursorTarget,0,false,false,"",'!isNull cursorTarget && (player distance cursorTarget) < 6 && speed cursorTarget < 2 && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget == civilian) && (cursorTarget getVariable "restrained")']];
+		//Seize Weapon/Objekt_BETA -> new system
+		life_actions = life_actions + [player addAction["Requisar Arma",life_fnc_seizeWeapon,cursorTarget,0,false,false,"",'!isNull cursorTarget && (player distance cursorTarget) < 6 && speed cursorTarget < 2 && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget == civilian) && (cursorTarget getVariable "restrained")']];
+		life_actions = life_actions + [player addAction["Requisar Objeto",life_fnc_seizeObjects,cursorTarget,0,false,false,"",'count(nearestObjects [player,["TapeSign_F","RoadBarrier_F","WeaponHolderSimulated","weaponholder","GroundWeaponHolder","Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F", "Land_Can_V3_F","Land_Money_F","Land_Suitcase_F"],3])>0']];
     };
 	
 	case independent: 

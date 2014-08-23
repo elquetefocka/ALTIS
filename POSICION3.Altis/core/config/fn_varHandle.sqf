@@ -92,6 +92,7 @@ switch (_mode) do
 			case "rubip": {"life_inv_rubip"};
 			case "speedbomb": {"life_inv_speedbomb"};
 			case "nitro": {"life_inv_nitro"};
+			case "fichas": {"life_inv_fichas"};
 		};
 	};
 	
@@ -175,6 +176,7 @@ switch (_mode) do
 			case "life_inv_rubip": {"rubip"};
 			case "life_inv_speedbomb": {"speedbomb"};
 			case "life_inv_nitro": {"nitro"};
+			case "life_inv_fichas": {"fichas"};
 		};
 	};
 };

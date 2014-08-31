@@ -48,4 +48,5 @@ switch (_type) do
 	case "rubiu": {20000};
 	case "geos": {20000};
 	case "geoseast": {20000};
+	case "bountyh":{5500000};
 };

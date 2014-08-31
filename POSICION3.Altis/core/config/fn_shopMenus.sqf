@@ -73,6 +73,14 @@ switch (_shop) do
 		ctrlShow[2513,false];
 	};
 	
+	case "bountyh":
+	{
+		ctrlSetText[2505,"bountyh Clothing Shop"];
+		ctrlShow[2503,false];
+		ctrlShow[2510,false];
+		ctrlShow[2511,false];
+		ctrlShow[2513,false];
+	};
 	
 	case "gun":
 	{

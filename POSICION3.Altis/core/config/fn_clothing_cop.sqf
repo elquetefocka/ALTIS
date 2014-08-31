@@ -20,11 +20,14 @@ switch (_filter) do
 	case 0:
 	{
 		_ret set[count _ret,["U_Rangemaster","G.C Uniforme",0]];
+		_ret set[count _ret,["U_O_Wetsuit","Traje de buzo",0]];
 		
 		if(license_cop_geos) then
 		{
 			_ret set[count _ret,["U_B_CombatUniform_mcam_worn","Geo Uniform",0]];
+			_ret set[count _ret,["U_B_PilotCoveralls","Piloto",0]];
 			_ret set[count _ret,["U_I_GhillieSuit","Ghillie",0]];
+			_ret set[count _ret,["U_B_survival_uniform","Traje de buzo Geo",0]];
 			
 		};
 		[] call SOCK_fnc_updateRequest;
@@ -35,25 +38,16 @@ switch (_filter) do
 	case 1:
 	{
 		_ret set[count _ret,["H_Beret_brn_SF","Boina",0]];		
-		if(__GETC__(life_coplevel) > 2) then
-		{
+		if(license_cop_geos) then
+		{	
+		
 			_ret set[count _ret,["H_Booniehat_mcamo",nil,0]];
-		};
-		if(__GETC__(life_coplevel) > 3) then
-		{
 			_ret set[count _ret,["H_HelmetB_light_black","Casco Geo",0]];
-			_ret set[count _ret,["H_HelmetB",nil,0]];			 
-		};
-		if(__GETC__(life_coplevel) > 5) then
-		{
+			_ret set[count _ret,["H_HelmetB",nil,0]];	
+            _ret set[count _ret,["H_HelmetB_black","Casco para gays",0]];			
 			_ret set[count _ret,["H_MilCap_mcamo",nil,0]];
 			_ret set[count _ret,["H_MilCap_oucamo",nil,0]];
-			
-		};
-		if(__GETC__(life_coplevel) > 6) then
-		{
-			
-			
+		
 		};
 	};
 	
@@ -62,16 +56,7 @@ switch (_filter) do
 	{
 		_ret = 
 		[
-			["G_Balaclava_lowprofile",nil,25],
-			["G_Balaclava_combat",nil,20],
-			["G_Balaclava_oli",nil,20],
-			["G_Bandanna_aviator",nil,20],
-			["G_Bandanna_beast",nil,20],
-			["G_Bandanna_tan",nil,20],
-			["G_Bandanna_sport",nil,75],
-			["G_Bandanna_blk",nil,10],
-			["G_Bandanna_oli",nil,30],
-			["G_Bandanna_shades",nil,55],
+			
 			["G_Shades_Black",nil,25],
 			["G_Shades_Blue",nil,20],
 			["G_Sport_Blackred",nil,20],
@@ -83,9 +68,32 @@ switch (_filter) do
 			["G_Lowprofile",nil,30],
 			["G_Combat",nil,55],
 			["G_Diving",nil,100]
-			
-			
 		];
+		if(license_cop_geos) then
+		{
+			_ret set[count _ret,
+			["G_Balaclava_lowprofile",nil,0]];
+			_ret set[count _ret,
+			["G_Balaclava_combat",nil,0]];
+			_ret set[count _ret,
+			["G_Balaclava_oli",nil,0]];
+			_ret set[count _ret,
+			["G_Bandanna_aviator",nil,0]];
+			_ret set[count _ret,
+			["G_Bandanna_beast",nil,0]];
+			_ret set[count _ret,
+			["G_Bandanna_tan",nil,0]];
+			_ret set[count _ret,
+			["G_Bandanna_sport",nil,0]];
+			_ret set[count _ret,
+			["G_Bandanna_blk",nil,0]];
+			_ret set[count _ret,
+			["G_Bandanna_oli",nil,0]];
+			_ret set[count _ret,
+			["G_Bandanna_shades",nil,0]];
+		
+		};
+		
 	};
 	
 	//Vest
@@ -115,14 +123,24 @@ switch (_filter) do
 	{
 		_ret =
 		[
+		
 			["B_Kitbag_cbr",nil,0],
 			["B_FieldPack_cbr",nil,0],
 			["B_AssaultPack_cbr",nil,0],
 			["B_Bergen_sgg",nil,0],
-			["B_Parachute",nil,0],
-			["B_Carryall_cbr",nil,0],
-			["B_UAV_01_backpack_F","UAV MUST BE IN SWAT",50000]
+			["B_Parachute",nil,0]
+			
+					
 		];
+		
+		if(license_copeast_geos) then
+		{			
+			_ret set[count _ret,
+			["B_Carryall_oucamo",nil,0]];
+			_ret set[count _ret,
+			["B_UAV_01_backpack_F","UAV",50000]];
+		};
+		
 	};
 };
 

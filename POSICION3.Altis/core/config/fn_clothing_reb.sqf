@@ -24,7 +24,11 @@ switch (_filter) do
 			["U_O_SpecopsUniform_ocamo",nil,17500],
 			["U_O_PilotCoveralls",nil,15610],
 			["U_IG_leader","Guerilla Leader",15340],
-			["U_O_GhillieSuit",nil,50000]
+			["U_O_GhillieSuit",nil,50000],
+		    ["U_I_CombatUniform",nil,12000],
+		    ["U_I_OfficerUniform",nil,12000],
+		    ["U_BG_Guerrilla_6_1",nil,12000]
+
 		];
 	};
 	
@@ -34,9 +38,12 @@ switch (_filter) do
 		[
 			["H_ShemagOpen_tan",nil,850],
 			["H_Shemag_olive",nil,850],
+			["H_Shemag_olive_hs",nil,850],
+			["H_ShemagOpen_tan",nil,850],
 			["H_ShemagOpen_khk",nil,800],
 			["H_HelmetO_ocamo",nil,2500],
 			["H_MilCap_oucamo",nil,1200],
+			["H_Beret_Colonel",nil,1200],
 			["H_Bandanna_camo",nil,650]
 		];
 	};
@@ -63,7 +70,9 @@ switch (_filter) do
 		[
 			["V_TacVest_khk",nil,12500],
 			["V_BandollierB_cbr",nil,4500],
-			["V_HarnessO_brn",nil,7500]
+			["V_BandollierB_blk",nil,4500],
+			["V_HarnessO_brn",nil,7500],
+			["V_TacVest_camo",nil,12500]
 		];
 	};
 	

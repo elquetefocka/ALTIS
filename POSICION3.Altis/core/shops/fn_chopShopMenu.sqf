@@ -5,15 +5,18 @@
 	Description:
 	Opens & initializes the chop shop menu.
 */
+if(life_action_inUse) exitWith {hint localize "STR_NOTF_ActionInProc"};
 disableSerialization;
 private["_nearVehicles","_control"];
-_nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck","man","Air"],25];
+_nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck","Air"],25];
+_units = player nearEntities ["Man", 15];
 
 life_chopShop = (_this select 3);
 //Error check
-if(count _nearVehicles == 0) exitWith {titleText["No hay ningun vehiculo cerca","PLAIN"];};
-if(count _nearVehicles > 1) exitWith {titleText["Hay mas de un persona/vehiculo en 25 metros de rango","PLAIN"];};
-if(!(createDialog "Chop_Shop")) exitWith {hint "STR_Shop_ChopShopError"};
+if(count _nearVehicles == 0) exitWith {titleText["no hay ningun vehiculo cerca","PLAIN"];};
+if(count _nearVehicles == 2) exitWith {titleText["hay dos vehiculos cerca","PLAIN"];};
+if(count _units > 2) exitWith {titleText["Solo puede haber una pesona y un vehiculo en 15 metros de rango, si no funciona","PLAIN"];};
+if(!(createDialog "Chop_Shop")) exitWith {hint localize "STR_Shop_ChopShopError"};
 
 _control = ((findDisplay 39400) displayCtrl 39402);
 {

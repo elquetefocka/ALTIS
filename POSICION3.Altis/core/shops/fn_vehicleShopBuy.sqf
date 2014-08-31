@@ -96,7 +96,6 @@ if(_mode) then {
 	};
 };
 
-
 [] call SOCK_fnc_updateRequest; //Sync silently because it's obviously silently..
 closeDialog 0; //Exit the menu.
 true;

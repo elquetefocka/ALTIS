@@ -107,4 +107,10 @@ if (playerSide == civilian) then
 [] call life_fnc_hudUpdate; //Get our HUD updated.
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
 
-[] call SOCK_fnc_updateRequest;
+if (playerSide == civilian) then
+{
+    [] call SOCK_fnc_updateRequest;
+};
+
+license_civ_pasaporteesp = false;
+license_civ_pasaportemaroc = false;

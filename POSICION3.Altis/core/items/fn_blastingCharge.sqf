@@ -12,11 +12,18 @@ if(_vault getVariable["chargeplaced",false]) exitWith {hint "Ya existe una carga
 if(_vault getVariable["safe_open",false]) exitWith {hint "La cajafuerte ya está abierta."};
 if(!([false,"blastingcharge",1] call life_fnc_handleInv)) exitWith {}; //Error?
 
+/*
+_cops = { (isPlayer _x) && (side (group _x) == west) } count playableUnits;
+if (_cops < 3) exitWith {
+hint format ["La caja fuerte del Banco no puede ser abierta por que solo hay %1 policia(s) online.", _cops];};
+*/
+
 _vault setVariable["chargeplaced",true,true];
 [[1,"Un carga explosiva se ha colocado en la caja fuerte del banco central, tiene hasta que la cuenta atras termine para desactivarla!"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 hint "El tiempo esta corriendo¡ Mantenga a los policias lejos de esta caja fuerte¡";
 _handle = [] spawn life_fnc_demoChargeTimer;
 [[],"life_fnc_demoChargeTimer",west,false] spawn life_fnc_MP;
+[[],"life_fnc_demoChargeTimer",east,false] spawn life_fnc_MP;
 
 waitUntil {scriptDone _handle};
 sleep 0.9;

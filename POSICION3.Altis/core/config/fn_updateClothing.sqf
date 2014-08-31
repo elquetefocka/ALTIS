@@ -13,6 +13,10 @@ if(playerSide == west) then
 		player setObjectTextureGlobal[0,"textures\uei.jpg"];
 	};
 	
+	if ((backpack player) == "B_Carryall_oucamo") then {
+		(unitbackpack player) setObjectTextureGlobal[0,"textures\uei_mochila.jpg"];
+	};
+	
 };
 
 if(playerSide == east) then 
@@ -26,20 +30,24 @@ if(playerSide == east) then
 		player setObjectTextureGlobal[0,"textures\geoeast.jpg"];
 	};
 	
-};
-
-/*
-if(playerSide == independent) then
-{
-	if (uniform player == "U_Rangemaster") then {
-		player setObjectTextureGlobal[0,"textures\medics\medic_uniform.jpg"];
+	if ((backpack player) == "B_Carryall_oucamo") then {
+		(unitbackpack player) setObjectTextureGlobal[0,"textures\uei_mochila.jpg"];
 	};
 	
-	if((backpack player) == "B_Bergen_blk") then {
-		(unitbackpack player) setObjectTextureGlobal[0,"textures\medics\bergen_medic.jpg"];
+};
+
+
+if(playerSide == independent) then
+{
+	if (uniform player == "U_I_HeliPilotCoveralls") then {
+		player setObjectTextureGlobal[0,"textures\emer_unimetal1.jpg"];
+	};
+	
+	if ((backpack player) == "B_Carryall_oucamo") then {
+		(unitbackpack player) setObjectTextureGlobal[0,"textures\medic_mochila.jpg"];
 	};
 };
-*/
+
 
 ///backpack
 ////////////////

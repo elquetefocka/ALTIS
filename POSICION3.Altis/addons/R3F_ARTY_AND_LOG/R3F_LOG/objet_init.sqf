@@ -53,7 +53,7 @@ _objet addEventHandler ["GetIn",
 	};
 }];
 //BD
-if ({_objet isKindOf _x && (player isKindOf "U_I_HeliPilotCoveralls" || {side player == independent})} count R3F_LOG_CFG_objets_deplacables > 0) then
+if ({_objet isKindOf _x && (player isKindOf "U_I_HeliPilotCoveralls" || {side player != civilian})} count R3F_LOG_CFG_objets_deplacables > 0) then
 {
 	_objet addAction [("<img image=""client\icons\r3f_lift.paa""/> <t color=""#ffff00"">" + STR_R3F_LOG_action_deplacer_objet + "</t>"), "addons\R3F_ARTY_AND_LOG\R3F_LOG\objet_deplacable\deplacer.sqf", nil, 5, false, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_deplacer_objet_valide && !(_target getVariable ['objectLocked', false])"];
 	_objet addAction [("<img image=""client\icons\r3f_lock.paa""/> <t color=""#ff0000"">" + STR_LOCK_OBJECT + "</t>"), "addons\R3F_ARTY_AND_LOG\R3F_LOG\objet_deplacable\objectLockStateMachine.sqf", _doLock, -5, false, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_deplacer_objet_valide && Object_canLock"];
@@ -72,24 +72,8 @@ if ({_objet isKindOf _x && (player isKindOf "U_I_HeliPilotCoveralls" || player i
 	_objet addAction [("<img image=""client\icons\r3f_untow.paa""/> <t color=""#06ef00"">" + STR_R3F_LOG_action_detacher + "</t>"), "addons\R3F_ARTY_AND_LOG\R3F_LOG\remorqueur\detacher.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_detacher_valide"];
 };
 
-if ({_objet isKindOf _x && (player isKindOf "U_I_HeliPilotCoveralls" || {side player == west})} count R3F_LOG_CFG_objets_deplacables > 0) then
-{
-	_objet addAction [("<img image=""client\icons\r3f_lift.paa""/> <t color=""#ffff00"">" + STR_R3F_LOG_action_deplacer_objet + "</t>"), "addons\R3F_ARTY_AND_LOG\R3F_LOG\objet_deplacable\deplacer.sqf", nil, 5, false, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_deplacer_objet_valide && !(_target getVariable ['objectLocked', false])"];
-	_objet addAction [("<img image=""client\icons\r3f_lock.paa""/> <t color=""#ff0000"">" + STR_LOCK_OBJECT + "</t>"), "addons\R3F_ARTY_AND_LOG\R3F_LOG\objet_deplacable\objectLockStateMachine.sqf", _doLock, -5, false, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_deplacer_objet_valide && Object_canLock"];
-	_objet addAction [("<img image=""client\icons\r3f_unlock.paa""/> <t color=""#06ef00"">" + STR_UNLOCK_OBJECT + "</t>"), "addons\R3F_ARTY_AND_LOG\R3F_LOG\objet_deplacable\objectLockStateMachine.sqf", _doUnlock, -5, false, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_deplacer_objet_valide && !Object_canLock"];
-};
-//BD
-if ({_objet isKindOf _x && (player isKindOf "U_I_HeliPilotCoveralls" || player isKindOf "I_medic_F" || side player == west)} count R3F_LOG_CFG_objets_remorquables > 0) then
-{
-	if ({_objet isKindOf _x} count R3F_LOG_CFG_objets_deplacables > 0) then
-	{
-		_objet addAction [("<img image=""client\icons\r3f_tow.paa""/> <t color=""#ffff00"">" + STR_R3F_LOG_action_remorquer_deplace + "</t>"), "addons\R3F_ARTY_AND_LOG\R3F_LOG\remorqueur\remorquer_deplace.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_remorquer_deplace_valide"];
-	};
-	
-	_objet addAction [("<img image=""client\icons\r3f_tow.paa""/> <t color=""#ffff00"">" + STR_R3F_LOG_action_selectionner_objet_remorque + "</t>"), "addons\R3F_ARTY_AND_LOG\R3F_LOG\remorqueur\selectionner_objet.sqf", nil, 5, false, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_selectionner_objet_remorque_valide && Object_canLock"];
-	
-	_objet addAction [("<img image=""client\icons\r3f_untow.paa""/> <t color=""#06ef00"">" + STR_R3F_LOG_action_detacher + "</t>"), "addons\R3F_ARTY_AND_LOG\R3F_LOG\remorqueur\detacher.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_detacher_valide"];
-};
+
+/////////
 
 if ({_objet isKindOf _x} count R3F_LOG_classes_objets_transportables > 0) then
 {

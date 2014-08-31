@@ -12,12 +12,7 @@ class Socket_Reciever
 	};
 };
 
-class UnderwaterExploration 
-	{
-		file = "core\jobs\underwater_exploration";
-		class uwExplorationInit {};
-		class uwExplorationExplore {};
-	};
+
 
 class SpyGlass
 {
@@ -154,9 +149,7 @@ class Life_Client_Core
 		class procesarSidra {};
 		class procesaraceroinoxidable {};
 		class procesaracero {};
-		class robarsenal {};
-		class robcepsa {};
-		//class repsol {};
+		class robrepsol {};
 		class robgalp {};
 		class stealKit {};
 		class surrender {};
@@ -192,6 +185,8 @@ class Life_Client_Core
 		class licensePrice {};
 		class vehicleColorCfg {};
 		class vehicleColorStr {};
+		class vehiclerepaintCfg {};
+		class vehiclerepaintStr {};
 		class vehicleListCfg {};
 		class licenseType {};
 		class eatFood {};
@@ -206,7 +201,6 @@ class Life_Client_Core
 		class weaponShopCfg {};
 		class vehicleWeightCfg {};
 		class houseConfig {};
-		class seizeCfg {};
 		class updateClothing {};
 		class copDefault {};
 		class copeastDefault {}; //<-- ADD JUST THIS AT THE END
@@ -220,6 +214,9 @@ class Life_Client_Core
 		class clothing_dive {};
 		class clothing_kart {};
 		class clothing_pmc {};
+		class clothing_donador {};
+		class clothing_bountyh {};
+		
 	};
 
 	class Player_Menu
@@ -286,8 +283,9 @@ class Life_Client_Core
 		class inventoryClosed {};
 		class inventoryOpened {};
 		class isUIDActive {};
-		class fatigueReset {}; //Add this line
+		class fatigueReset {}; //Add this
 		class autoSave {};
+		class handleDowned {};
 	};
 	
 	class Network
@@ -322,12 +320,14 @@ class Life_Client_Core
 		class demoChargeTimer {};
 		class hasOrgan {};
 		class civInteractionMenu {};
+		class restrainciv {};
 	};
 	
 	class Vehicle
 	{
 		file = "core\vehicle";
 		class colorVehicle {};
+		class colorVehiclerepaint {};
 		class openInventory {};
 		class lockVehicle {};
 		class vehicleOwners {};
@@ -430,7 +430,6 @@ class Life_Client_Core
 		class flashbang {};
 		class boltcutter {};
 		class blastingCharge {};
-		class blastingChargecasino {};
 		class defuseKit {};
 		class storageBox {};
 		class barrera {};
@@ -447,6 +446,22 @@ class Life_Client_Core
 		class bancocentralalarma {};
 		class alarmacoche {};
 		
+	};
+	
+	class anstrich
+	{
+		file = "core\repaint";
+		
+		class RepaintMenu;
+		class Repaintcolor;
+		class RepaintVehicle;		
+	};
+
+	class UnderwaterExploration 
+	{
+		file = "core\jobs\underwater_exploration";
+		class uwExplorationInit {};
+		class uwExplorationExplore {};
 	};
 	
 	class Dialog_Controls
@@ -473,4 +488,6 @@ class Life_Client_Core
 		class vehicleGarage {};
 		class gangDeposit {};
 	};
+	
+	
 };

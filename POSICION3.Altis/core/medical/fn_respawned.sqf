@@ -26,7 +26,7 @@ player setVariable["Reviving",nil,TRUE];
 switch(playerSide) do
 {
 	case west: {[] spawn life_fnc_loadGear;};
-	case west: {[] spawn life_fnc_loadGearcopeast;};
+	case east: {[] spawn life_fnc_loadGearcopeast;};
 	case civilian: {
 		[] call life_fnc_civFetchGear;
 	};
@@ -70,6 +70,5 @@ if(life_removeWanted) then {
 [] call SOCK_fnc_updateRequest;
 [] call life_fnc_hudUpdate; //Request update of hud.
 [] call life_fnc_updateClothing;
-license_civ_pasaporteesp = false;
-license_civ_pasaportemaroc = false;
+
 life_is_alive = true;

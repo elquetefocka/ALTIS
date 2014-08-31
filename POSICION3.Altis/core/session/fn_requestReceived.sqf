@@ -50,7 +50,7 @@ switch(playerSide) do {
 		__CONST__(life_copeastlevel,parseNumber(_this select 7));
 		copeast_gear = _this select 8;
 		[] spawn life_fnc_loadGearcopeast;
-		life_blacklisted = call compile format["%1",_this select 9];
+		life_blacklisted = _this select 9;
 		__CONST__(life_medicLevel,0);
 	};
 

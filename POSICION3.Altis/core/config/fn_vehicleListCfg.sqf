@@ -469,7 +469,7 @@ switch (_shop) do
 			
 		};
 		
-		if(license_cop_geos) then
+		if(license_copeast_geos) then
 		{
 		
 			_return set[count _return,
@@ -550,7 +550,7 @@ switch (_shop) do
 			
 		};
 		
-		if(license_cop_geos) then
+		if(license_copeast_geos) then
 		{
 		
 			_return set[count _return,
@@ -628,7 +628,7 @@ switch (_shop) do
 			
 		};
 		
-		if(license_cop_geos) then
+		if(license_copeast_geos) then
 		{
 		
 			_return set[count _return,
@@ -681,7 +681,7 @@ switch (_shop) do
 	{
 		_return set[count _return,
 		["B_Heli_Light_01_F",200000]];
-		if(__GETC__(life_coplevel) > 2) then
+		if(__GETC__(life_coplevel) > 1) then
 		{
 			_return set[count _return,
 			["O_Heli_Light_02_unarmed_F",150000]];
@@ -697,7 +697,7 @@ switch (_shop) do
 	{
 		_return set[count _return,
 		["B_Heli_Light_01_F",200000]];
-		if(__GETC__(life_copeastlevel) > 2) then
+		if(__GETC__(life_copeastlevel) > 1) then
 		{
 			_return set[count _return,
 			["O_Heli_Light_02_unarmed_F",150000]];
@@ -712,7 +712,7 @@ switch (_shop) do
 	{
 		_return set[count _return,
 		["B_Heli_Light_01_F",200000]];
-		if(__GETC__(life_coplevel) > 2) then
+		if(__GETC__(life_coplevel) > 1) then
 		{
 		
 			_return set[count _return,
@@ -729,7 +729,7 @@ switch (_shop) do
 	{
 		_return set[count _return,
 		["B_Heli_Light_01_F",200000]];
-		if(__GETC__(life_coplevel) > 2) then
+		if(__GETC__(life_coplevel) > 1) then
 		{
 			_return set[count _return,
 			["O_Heli_Light_02_unarmed_F",150000]];
@@ -744,7 +744,7 @@ switch (_shop) do
 	{
 		_return set[count _return,
 		["B_Heli_Light_01_F",200000]];
-		if(__GETC__(life_copeastlevel) > 2) then
+		if(__GETC__(life_copeastlevel) > 1) then
 		{
 			_return set[count _return,
 			["O_Heli_Light_02_unarmed_F",150000]];
@@ -820,10 +820,19 @@ switch (_shop) do
 		[
 			["B_Boat_Transport_01_F",3000],
 			["C_Boat_Civil_01_police_F",20000],
-			["B_Boat_Armed_01_minigun_F",75000],
 			["B_SDV_01_F",100000],
 			["O_SDV_01_F",20000]
+		
 		];
+		
+		if(license_cop_geos) then
+		{
+			_return set[count _return,
+			["B_Boat_Armed_01_minigun_F",75000]];
+			
+		};	
+		
+		
 	};
 	
 	case "copeast_ship_1":
@@ -832,10 +841,17 @@ switch (_shop) do
 		[
 			["B_Boat_Transport_01_F",3000],
 			["C_Boat_Civil_01_police_F",20000],
-			["B_Boat_Armed_01_minigun_F",75000],
 			["B_SDV_01_F",100000],
 			["O_SDV_01_F",20000]
+			
 		];
+		
+		if(license_copeast_geos) then
+		{
+			_return set[count _return,
+			["B_Boat_Armed_01_minigun_F",75000]];
+		
+		};	
 	};
 	
 	

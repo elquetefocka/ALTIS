@@ -31,7 +31,6 @@ switch(_shop) do
 			{
 				["Hideout Armament",
 					[
-						["hgun_Rook40_F",nil,1500],
 						["hgun_Pistol_heavy_02_F",nil,2500],
 						["hgun_ACPC2_F",nil,4500],
 						["hgun_PDW2000_F",nil,9500],
@@ -66,6 +65,9 @@ switch(_shop) do
 						["hgun_P07_F",nil,7500],
 						["hgun_PDW2000_F",nil,20000],
 						["30Rnd_9x21_Mag",nil,250],
+						["arifle_SDAR_F",nil,20000],
+						["20Rnd_556x45_UW_mag",nil,20000],
+                        ["30Rnd_556x45_Stanag",nil,20000],
 						["SMG_02_F",nil,20000],
 						["arifle_TRG20_Holo_F",nil,25000],
 						["30Rnd_556x45_Stanag",nil,250],
@@ -111,6 +113,9 @@ switch(_shop) do
 						["hgun_P07_F",nil,7500],
 						["hgun_PDW2000_F",nil,20000],
 						["30Rnd_9x21_Mag",nil,250],
+						["arifle_SDAR_F",nil,20000],
+						["20Rnd_556x45_UW_mag",nil,20000],
+                        ["30Rnd_556x45_Stanag",nil,20000],
 						["SMG_02_F",nil,20000],
 						["arifle_TRG20_Holo_F",nil,25000],
 						["30Rnd_556x45_Stanag",nil,250],
@@ -383,7 +388,6 @@ switch(_shop) do
 						["acc_flashlight",nil,1000],
 						["acc_pointer_IR",nil,1000],
 						["SmokeShellPurple",nil,500],
-						["Chemlight_purple",nil,300],
 						["ItemWatch",nil,450],
 						["ItemMap",nil,250],
 						["ItemGPS",nil,1000],
@@ -610,6 +614,9 @@ switch(_shop) do
 						["11Rnd_45ACP_Mag",nil,0],
 						["SMG_02_F",nil,0],
 						["30Rnd_9x21_Mag",nil,0],
+						["arifle_SDAR_F",nil,20000],
+						["20Rnd_556x45_UW_mag",nil,20000],
+                        ["30Rnd_556x45_Stanag",nil,20000],
 						["arifle_MX_F",nil,0],
 						["30Rnd_65x39_caseless_mag",nil,0],
 						["arifle_MXC_F",nil,0],
@@ -698,7 +705,6 @@ switch(_shop) do
 			{
 				["Mohammed's Jihadi Shop",
 					[       
-                        ["hgun_Rook40_F",nil,6500],
 						["hgun_Pistol_heavy_02_F",nil,9850],
 						["hgun_ACPC2_F",nil,11500],
 						["hgun_Pistol_heavy_02_Yorris_F",nil,15000],
@@ -869,7 +875,6 @@ switch(_shop) do
 			{
 				["Billy Joe's Firearms",
 					[
-						["hgun_Rook40_F",nil,6500],
 						["hgun_Pistol_heavy_02_F",nil,9850],
 						["hgun_ACPC2_F",nil,11500],
 						["hgun_Pistol_heavy_02_Yorris_F",nil,15000],
@@ -900,7 +905,6 @@ switch(_shop) do
 			{
 				["Donador LVL1",
 					[
-	                    ["hgun_Rook40_F",nil,3500],
 						["hgun_ACPC2_F",nil,5500],
 						["hgun_PDW2000_F",nil,10000],
 						["SMG_02_ACO_F",nil,12000],
@@ -925,7 +929,7 @@ switch(_shop) do
 						["itemgps",nil,0],
 						["Rangefinder",nil,100],
 						["16Rnd_9x21_Mag",nil,25],
-						["30Rnd_9x21_Mag",nil,75]
+						["30Rnd_9x21_Mag",nil,25]
 						]
 				];
 			};		
@@ -942,7 +946,6 @@ switch(_shop) do
 			{
 				["Donador LVL2",
 					[
-						["hgun_Rook40_F",nil,3500],
 						["hgun_ACPC2_F",nil,5500],
 						["hgun_PDW2000_F",nil,10000],
 						["hgun_Pistol_heavy_01_MRD_F",nil,10000],
@@ -977,7 +980,7 @@ switch(_shop) do
 						["itemgps",nil,0],
 						["Rangefinder",nil,100],
 						["16Rnd_9x21_Mag",nil,25],
-						["30Rnd_9x21_Mag",nil,75]
+						["30Rnd_9x21_Mag",nil,25]
 					]
 				];
 		
@@ -995,7 +998,6 @@ switch(_shop) do
 			{
 				["Donador LVL3",
 					[
-						["hgun_Rook40_F",nil,3500],
 						["hgun_ACPC2_F",nil,5500],
 						["hgun_PDW2000_F",nil,10000],
 						["hgun_Pistol_heavy_01_MRD_F",nil,10000],
@@ -1037,7 +1039,7 @@ switch(_shop) do
 						["itemgps",nil,0],
 						["Rangefinder",nil,100],
 						["16Rnd_9x21_Mag",nil,25],
-						["30Rnd_9x21_Mag",nil,75]
+						["30Rnd_9x21_Mag",nil,25]
 					]
 				];
 			};
@@ -1097,6 +1099,9 @@ switch(_shop) do
 						["hgun_PDW2000_F",nil,20000],
 						["30Rnd_9x21_Mag",nil,250],
 						["SMG_02_F",nil,20000],
+						["arifle_SDAR_F",nil,20000],
+						["20Rnd_556x45_UW_mag",nil,20000],
+                        ["30Rnd_556x45_Stanag",nil,20000],
 						["arifle_TRG20_Holo_F",nil,25000],
 						["30Rnd_556x45_Stanag",nil,250],
 						["arifle_TRG21_F",nil,25000],
@@ -1142,6 +1147,9 @@ switch(_shop) do
 						["hgun_PDW2000_F",nil,20000],
 						["30Rnd_9x21_Mag",nil,250],
 						["SMG_02_F",nil,20000],
+						["arifle_SDAR_F",nil,20000],
+						["20Rnd_556x45_UW_mag",nil,20000],
+                        ["30Rnd_556x45_Stanag",nil,20000],
 						["arifle_TRG20_Holo_F",nil,25000],
 						["30Rnd_556x45_Stanag",nil,250],
 						["arifle_TRG21_F",nil,25000],
@@ -1413,7 +1421,6 @@ switch(_shop) do
 						["acc_flashlight",nil,1000],
 						["acc_pointer_IR",nil,1000],
 						["SmokeShellPurple",nil,500],
-						["Chemlight_purple",nil,300],
 						["ItemWatch",nil,450],
 						["ItemMap",nil,250],
 						["ItemGPS",nil,1000],
@@ -1640,6 +1647,9 @@ switch(_shop) do
 						["11Rnd_45ACP_Mag",nil,0],
 						["SMG_02_F",nil,0],
 						["30Rnd_9x21_Mag",nil,0],
+						["arifle_SDAR_F",nil,20000],
+						["20Rnd_556x45_UW_mag",nil,20000],
+                        ["30Rnd_556x45_Stanag",nil,20000],
 						["arifle_MX_F",nil,0],
 						["30Rnd_65x39_caseless_mag",nil,0],
 						["arifle_MXC_F",nil,0],
@@ -1719,7 +1729,40 @@ switch(_shop) do
 		};
 	};
 	
-	
+	case "bhws":
+   {
+       switch(true) do
+        {
+             case (playerSide != civilian): {"....."};
+             case (!license_civ_bountyh): {"No tienes la licencia de cazarrecompensas requerida para comprar aqui"};
+             default
+            {
+                ["Tienda de Cazarrecompensas",
+                    [
+                        ["hgun_Rook40_snds_F","La rebientaculos",20000],
+                        ["30Rnd_9x21_Mag","Balas de goma",500],
+						["arifle_Katiba_F",nil,30000],
+						["30Rnd_65x39_caseless_green",nil,250],
+						["optic_Arco",nil,5000],
+						["optic_MRCO",nil,5000],
+						["optic_Hamr",nil,5000],
+						["optic_Aco",nil,5000],
+                        ["I_UavTerminal","Remote Control",25000],
+                        ["Smokeshell","Smoke Grenade",50],
+                        ["ItemWatch",nil,15000],
+						["ItemMap",nil,250],
+						["ItemGPS",nil,1000],
+						["ToolKit",nil,250],
+						["FirstAidKit",nil,350],
+						["Binocular",nil,450],
+						["Rangefinder",nil,450],
+						["NVGoggles",nil,2000]
+					]
+				];
+			};
+		};
+
+	};
 	
 	
 	

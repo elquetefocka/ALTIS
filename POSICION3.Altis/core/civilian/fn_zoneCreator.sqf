@@ -21,7 +21,7 @@ _frogZones = ["frog_swamp1"];
 _woodZones = ["wood_1","wood_2","wood_3","wood_4","wood_5"];
 _malzZones = ["malz_1","malz_2"];
 _hopfenZones = ["hopfen_1","hopfen_2"];
-_tabacoZones = ["tabaco_1","tabaco_2","tabaco_2","tabaco_3","tabaco_4"];
+_tabacoZones = ["tabaco_1","tabaco_2","tabaco_3","tabaco_4"];
 _fichasZones = ["ficha_1"];
 
 {

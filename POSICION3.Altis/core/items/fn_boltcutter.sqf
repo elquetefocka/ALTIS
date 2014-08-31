@@ -10,9 +10,10 @@ if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "No estas mirando la puerta."};
 if(isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
 if((nearestObject [[15473.15,15705.463,-0.018241169],"Land_Dome_Big_F"]) == _building OR (nearestObject [[5477.9092,15002.27,29.29999],"Land_Dome_Big_F"]) == _building OR (nearestObject [[15473.15,15705.463,-0.018241169],"Land_Research_house_V1_F"]) == _building OR (nearestObject [[5477.9092,15002.27,29.29999],"Land_Research_house_V1_F"]) == _building OR (nearestObject [[16640.793,15695.068,5.5576954],"Land_Cargo_Tower_V1_No5_F"]) == _building OR (nearestObject [[16677.453,15715.972,5.1460938],"Land_Cargo_Tower_V1_No5_F"]) == _building) then {
-	[[[1,2],"!!!!! AVISO DE ALLANAMIENTO VER MAPA PARA CONFIRMAR POSICION !!!!!!"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+	[[[1,2],"!!!!! AVISO DE ALLANAMIENTO VER MAPA PARA CONFIRMAR POSICION !!!!!!"],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 } else {
 	[[0,format["%1 fue visto intentando entrar en una casa.",profileName]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+	[[0,format["%1 fue visto intentando entrar en una casa.",profileName]],"life_fnc_broadcast",east,false] spawn life_fnc_MP;
 };
 
 _Pos = position player; // by ehno: get player pos

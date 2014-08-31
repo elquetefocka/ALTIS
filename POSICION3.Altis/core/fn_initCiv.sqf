@@ -5,6 +5,20 @@
 	Description:
 	Initializes the civilian.
 */
+switch (license_civ_donador) do 
+{
+	default {life_paycheck = life_paycheck + 1150;};
+};
+switch (license_civ_donador2) do 
+{
+	default {life_paycheck = life_paycheck + 1500;};
+};
+switch (license_civ_donador3) do 
+{
+	default {life_paycheck = life_paycheck + 1500;};
+};
+
+
 private["_spawnPos"];
 civ_spawn_1 = nearestObjects[getMarkerPos  "civ_spawn_1", ["Land_i_Shop_01_V1_F","Land_i_Shop_02_V1_F","Land_i_Shop_03_V1_F","Land_i_Stone_HouseBig_V1_F"],250];
 civ_spawn_2 = nearestObjects[getMarkerPos  "civ_spawn_2", ["Land_i_Shop_01_V1_F","Land_i_Shop_02_V1_F","Land_i_Shop_03_V1_F","Land_i_Stone_HouseBig_V1_F"],250];

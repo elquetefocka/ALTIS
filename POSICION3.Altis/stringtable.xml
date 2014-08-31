@@ -665,6 +665,9 @@
 		<Key ID="STR_vInAct_Impound112">
 			<Original>embargar</Original>
 		</Key>
+        <Key ID="STR_NOTF_NoLootingPerson">
+        <Original>No esta permitido lootear de cuepos muertos</Original>
+        </Key>
 		<Key ID="STR_vInAct_DeviceMine">
 			<Original>Recolectar con maquina</Original>
 		</Key>

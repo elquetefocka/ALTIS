@@ -7,10 +7,6 @@
 private["_sum"];
 _sum = ["fichas",10,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 _displayName = "casino";
-_cops = { (isPlayer _x) && (side (group _x) == west) } count playableUnits;
-
-//if (_cops < 4) exitWith {
-//hint format ["El casino no puede ser robado por que debe haber 4 policias y hay %1 policia(s) online.", _cops];};
 
 
 
@@ -20,6 +16,7 @@ if(_sum > 0) then
 		life_action_gather = true;
 		_upp = format["Robando fichas %1",_displayName];
 		[[[1,2],"!!!!! AVISO SE ESTAN ROBANDO LOS FONDOS DEL CASINO !!!!!!"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+		[[[1,2],"!!!!! AVISO SE ESTAN ROBANDO LOS FONDOS DEL CASINO !!!!!!"],"life_fnc_broadcast",east,false] spawn life_fnc_MP;
 		//Setup our progress bar.
 		disableSerialization;
 		5 cutRsc ["life_progress","PLAIN"];

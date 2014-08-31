@@ -46,7 +46,7 @@ life_fatigue = 0.5; //Set the max fatigue limit (50%)
 //Revive constant variables.
 __CONST__(life_revive_cops,TRUE); //Set to false if you don't want cops to be able to revive downed players.
 __CONST__(life_revive_fee,25000);
-__CONST__(life_revive_feepac,5000);
+//__CONST__(life_revive_feepac,5000);
 
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
@@ -56,8 +56,8 @@ __CONST__(life_save_yinv,TRUE); //Save Y-Inventory for civs and cops? (Medics ex
 __CONST__(life_houseLimit,2); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
 
 //Gang related stuff?
-__CONST__(life_gangPrice,75000); //Price for creating a gang (They're all persistent so keep it high to avoid 345345345 gangs).
-__CONST__(life_gangUpgradeBase,10000); //MASDASDASD
+__CONST__(life_gangPrice,1); //Price for creating a gang (They're all persistent so keep it high to avoid 345345345 gangs).
+__CONST__(life_gangUpgradeBase,1); //MASDASDASD
 __CONST__(life_gangUpgradeMultipler,2.5); //BLAH
  
 
@@ -93,6 +93,7 @@ life_eat_donuts = 30;
 ****** Life Variables *******
 *****************************
 */
+life_isDowned = false;
 life_net_dropped = false;
 life_hit_explosive = false;
 life_siren_active = false;
@@ -266,7 +267,8 @@ life_licenses =
 	["license_civ_pasaportemaroc","civ"],
 	["license_cop_geos","cop"],
 	["license_copeast_geos","copeast"],
-	["license_civ_rubiu","civ"]
+	["license_civ_rubiu","civ"],
+	["license_civ_bountyh", "civ"]
 	
 	
 ];
@@ -286,7 +288,7 @@ sell_array =
 [
 	["apple",50],
 	["heroinu",1850],
-	["heroinp",7000],
+	["heroinp",9000],
 	["salema",45],
 	["ornate",40],
 	["mackerel",175],
@@ -299,14 +301,14 @@ sell_array =
 	["coffee",5],
 	["turtlesoup",1000],
 	["donuts",60],
-	["marijuana",6500],
+	["marijuana",7500],
 	["tbacon",25],
 	["lockpick",75],
 	["pickaxe",750],
 	["redgull",200],
 	["peach",55],
 	["cocaine",3000],
-	["cocainep",7800],
+	["cocainep",9800],
 	["diamond",750],
 	["diamondc",3800],
 	["iron_r",3200],
@@ -337,12 +339,12 @@ sell_array =
 	["patasderana",1000],
 	["ranalsd",4800],
 	["rana",600],
-	["aceroinoxidable",8450],
+	["aceroinoxidable",10450],
 	["zipties",500],
 	["madera",500],
 	["carbon",500],
 	["cerveza",1500],
-	["rubip",7000],
+	["rubip",4800],
 	["speedbomb",500000],
 	["nitro",15000],
 	["fichas",20000]
@@ -457,7 +459,7 @@ life_garage_prices =
 	["B_Truck_01_transport_F",25650],
 	["B_Truck_01_box_F", 35000],
 	["O_MRAP_02_F",45000],
-	["B_Heli_Light_01_F",45000],
+	["B_Heli_Light_01_F",15000],
 	["B_G_Offroad_01_armed_F",45000],	
 	["B_Heli_Light_01_armed_F",45000],
 	["B_Heli_Transport_01_F",45000],
@@ -474,7 +476,12 @@ life_garage_prices =
 	["O_MRAP_02_hmg_F",45000],
 	["I_Heli_Transport_02_F",45000],
 	["O_Truck_03_transport_F",45000],
-	["O_Truck_03_covered_F",45000]
+	["O_Truck_03_covered_F",45000],
+	["O_Truck_03_device_F",45000],
+	["C_Kart_01_Blu_F",15000],
+	["C_Kart_01_Fuel_F",15000],
+	["C_Kart_01_Red_F",15000],
+    ["C_Kart_01_Vrana_F",15000]
 ];
 __CONST__(life_garage_prices,life_garage_prices);
 

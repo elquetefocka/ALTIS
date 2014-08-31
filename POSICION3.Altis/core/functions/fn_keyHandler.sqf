@@ -65,7 +65,7 @@ switch (_code) do
 	// O, police gate opener
     case 7:
 	{
-		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) || (playerSide == east) && (vehicle player != player)) then {
+		if (!_shift && !_alt && !_ctrlKey && (playerSide == west OR playerSide == east) && (vehicle player != player)) then {
 			[] call life_fnc_copOpener;
 		};
 	};
@@ -214,7 +214,7 @@ switch (_code) do
 	{
 		//If cop run checks for turning lights on.
 		if(_shift && playerSide in [west,east,independent]) then {
-			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F"]) then {
+			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F", "B_MRAP_01_F", "C_SUV_01_F", "C_Hatchback_01_sport_F",	"C_Hatchback_01_F","B_Heli_Light_01_F", "B_Heli_Transport_01_F", "I_Heli_light_03_unarmed_F","I_MRAP_03_hmg_F", "I_MRAP_03_F","B_APC_Wheeled_01_cannon_F", "B_MRAP_01_hmg_F","C_Offroad_01_repair_f"]) then {
 				if(!isNil {vehicle player getVariable "lights"}) then {
 					if(playerSide == west OR playerSide == east) then {
 						[vehicle player] call life_fnc_sirenLights;
@@ -272,7 +272,7 @@ switch (_code) do
 	//1 Key
 	case 2:
 	{
-		if(side player == west) || (playerSide == east) then
+		if(side player == west OR playerSide == east) then
 		{
 			[] call life_fnc_wantedMenu;
 		};
@@ -337,12 +337,12 @@ switch (_code) do
 						_veh setVariable[format["bis_disabled_Door_%1",_door],1,true];
 						_veh animate [format["door_%1_rot",_door],0];
 						systemChat "Has cerrado el pestillo.";
-						player say3D "door_lock";
+						
 					} else {
 						_veh setVariable[format["bis_disabled_Door_%1",_door],0,true];
 						_veh animate [format["door_%1_rot",_door],1];
 						systemChat "Has abierto el pestillo.";
-						player say3D "door_unlock";
+						
 					};
 				};
 			} else {
@@ -355,13 +355,15 @@ switch (_code) do
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};
 						systemChat "Vehiculo Abierto.";
-						} else {
+						player say3D "car_lock";
+					} else {
 						if(local _veh) then {
 							_veh lock 2;
 						} else {
 							[[_veh,2],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};	
 						systemChat "Vehiculo Cerrado.";
+						player say3D "unlock";
 					};
 				};
 			};
@@ -383,14 +385,7 @@ switch (_code) do
 			[[0,format["%1 CTRL + Alt + DEL",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 		};
 	};
-	case 15:
-	{
-		if( _alt)  then 
-		{
-			
-			[[0,format["%1 Alt + TAB",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
-		};
-	};
+	
 	case 1:
 	{
 		if( _ctrlKey )  then 

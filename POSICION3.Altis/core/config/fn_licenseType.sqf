@@ -53,6 +53,7 @@ switch (_mode) do
 			case "rubiu": {_var = "license_civ_rubiu"}; 
 			case "geos": {_var = "license_cop_geos"}; 
 			case "geoseast": {_var = "license_copeast_geos"}; 
+			case "bountyh": {_var = "license_civ_bountyh"};
 			default {_var = ""};
 		};
 	};
@@ -98,7 +99,7 @@ switch (_mode) do
 			case "license_cop_rubiu": {_var = "rubiu"}; 
 			case "license_cop_geos": {_var = "geos"}; 
 			case "license_copeast_geos": {_var = "geoseast"};
-			
+			case "bountyh": {_var = "license_civ_bountyh"};
 			default {_var = ""};
 		};
 	};

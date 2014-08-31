@@ -22,7 +22,7 @@ if(isNull _curTarget) exitWith {
 	};
 };
 
-if(_curTarget isKindOf "House_F" && {player distance _curTarget < 40} OR ((nearestObject [[15473.15,15705.463,-0.018241169],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[5477.9092,15002.27,29.29999],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[15473.15,15705.463,-0.018241169],"Land_Research_house_V1_F"]) == _curTarget OR (nearestObject [[5477.9092,15002.27,29.29999],"Land_Research_house_V1_F"]) == _curTarget OR (nearestObject [[16640.793,15695.068,5.5576954],"Land_Cargo_Tower_V1_No5_F"]) == _curTarget OR (nearestObject [[16677.453,15715.972,5.1460938],"Land_Cargo_Tower_V1_No5_F"]) == _curTarget)) exitWith {
+if(_curTarget isKindOf "House_F" && {player distance _curTarget < 40} OR ((nearestObject [[5477.9092,15002.27,29.29999],"Land_Research_house_V1_F"]) == _curTarget OR (nearestObject [[15481.608,15675.839,4],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[15474.226,15725.228,4],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[15474.214,15698.04,0],"Land_Research_house_V1_F"]) == _curTarget OR (nearestObject [[16640.793,15695.068,5.5576954],"Land_Cargo_Tower_V1_No5_F"]) == _curTarget OR (nearestObject [[16677.453,15715.972,10.5],"Land_Cargo_Tower_V1_No5_F"]) == _curTarget)) exitWith {
 	[_curTarget] call life_fnc_houseMenu;
 };
 

@@ -16,6 +16,8 @@ if((_this select 3) == "reb" && !license_civ_rebel) exitWith {hint "No tienes el
 if((_this select 3) in ["cop"] && playerSide != west) exitWith {hint "Necesitas ser policia para usar esta tienda!"; closeDialog 0;};
 if((_this select 3) in ["copeast"] && playerSide != east) exitWith {hint "Necesitas ser policia para usar esta tienda!"; closeDialog 0;};
 if((_this select 3) == "pmc" && !license_civ_pmc) exitWith {hint "No tiene la formación pmc aún!"; closeDialog 0;};
+if((_this select 3) == "donador" && !license_civ_donador) exitWith {hint "No eres donador!"; closeDialog 0;};
+if((_this select 3) == "bountyh" && !license_civ_bountyh) exitWith {hint "No eres bountyh!"; closeDialog 0;};
 if((_this select 3) in ["dive"] && !license_civ_dive) exitWith { hint "Necesitas la licencia de buceo para usar esta tienda!"; closeDialog 0;};
 
 life_clothing_store = _this select 3;

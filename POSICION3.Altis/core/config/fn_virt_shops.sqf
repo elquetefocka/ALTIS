@@ -30,5 +30,6 @@ switch (_shop) do
 	case "rubi": {["Dealer Rubi",["rubip"]]}; 
 	case "fichas": {["fichas",["fichas"]]}; 
 	case "cromo": {["fichas",["aceroinoxidable"]]}; 
+	case "caza": {["caza",["water","rabbit","redgull","lockpick","zipties"]]}; 
 };
 

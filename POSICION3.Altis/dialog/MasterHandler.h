@@ -26,3 +26,4 @@
 #include "settings.h"
 #include "federalReserve.h"
 #include "compensate.hpp"
+#include "veh_repaint.hpp"

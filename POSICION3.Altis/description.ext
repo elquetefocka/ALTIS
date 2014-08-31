@@ -107,6 +107,14 @@ class CfgSounds
 		sound[] = {"\sounds\bancocentral.ogg", 1, 1};
 		titles[] = {};
 	};
+	
+	class spraycan
+	{
+		name = "spraycan";	
+		sound[] = {"\sounds\spraycan.ogg", db-20, 1};
+		titles[] = {};
+	};
+	
 };
 
 class CfgDebriefing

@@ -80,7 +80,7 @@ switch (_item) do
 	case "acero": {1};
 	case "aceroinoxidable": {1};
 	case "kidney": {15};//15 is the weight
-	case "zipties": {5};//15 is the weight
+	case "zipties": {1};//15 is the weight
 	case "madera": {2};
 	case "carbon": {2};
 	case "rubiu": {4};

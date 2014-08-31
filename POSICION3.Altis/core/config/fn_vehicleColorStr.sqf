@@ -24,18 +24,14 @@ switch (_vehicle) do
 			case 5: {_color = "Blue / White"};
 			case 6: {_color = "Black"};
 			case 7: {_color = "Guardia Civil"};
-			case 8: {_color = "Gendarme"};
+			case 8: {_color = "Monster"};
+			case 9: {_color = "Rebelde Verde"};
+			case 10: {_color = "Rebelde Rojo"};
+			case 11: {_color = "Gendarme"};
+			case 12: {_color = "Playboy Sports"};
+			
 		};
 	};
-	
-	case "C_Offroad_01_repair_f" :
-	{
-		switch (_index) do
-		{
-			case 0: {_color = "Emergencias";};
-		};
-	};
-	
 	
 	case "C_Hatchback_01_F":
 	{
@@ -48,7 +44,7 @@ switch (_vehicle) do
 			case 4: {_color = "Yellow";};
 			case 5: {_color = "White"};
 			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			
 		};
 	};
 	
@@ -56,17 +52,21 @@ switch (_vehicle) do
 	{
 		switch(_index) do
 		{
-			case 0: {_color = "Red Bull"};
-			case 1: {_color = "G.T.A"};
-			case 2: {_color = "Orange"};
-			case 3: {_color = "Black / White"};
-			case 4: {_color = "Tan"};
-			case 5: {_color = "Green"};
-			case 6: {_color = "Guardia Civil"};
-			case 7: {_color = "Monster"};
-			case 8: {_color = "Taxi"};
-			case 9: {_color = "Gendarmes"};
-			case 10: {_color = "Liantada"};
+			
+			case 0: {_color = "Orange"};
+			case 1: {_color = "Black / White"};
+			case 2: {_color = "Tan"};
+			case 3: {_color = "Green"};
+			case 4: {_color = "Guardia Civil"};
+			case 5: {_color = "Taxi"};
+			case 6: {_color = "Monster"};
+			case 7: {_color = "Red Bull"};
+			case 8: {_color = "G.T.A"};
+			case 9: {_color = "Racing"};
+			case 10: {_color = "Peugeot Sport"};
+			case 11: {_color = "Lancia Martini"};
+			case 12: {_color = "Mercedes GT"};
+			case 13: {_color = "Gendarme"};
 		};
 	};
 	
@@ -75,11 +75,12 @@ switch (_vehicle) do
 		switch (_index) do
 		{
 			case 0: {_color = "112";};
-			case 1: {_color = "Ferrari";};
-			case 2: {_color = "Silver";};
-			case 3: {_color = "Orange";};
-			case 4: {_color = "Guardia Civil";};
-			case 5: {_color = "Gendarme";};
+			case 1: {_color = "Silver";};
+			case 2: {_color = "Orange";};
+			case 3: {_color = "Guardia Civil";};
+			case 4: {_color = "Ferrari";};
+			case 5: {_color = "Ghost Rider";};
+			case 6: {_color = "Gendarme";};
 			
 		};
 	};
@@ -101,6 +102,16 @@ switch (_vehicle) do
 			case 1: {_color = "Red"};
 		};
 	};
+	
+	
+	case "B_Truck_01_mover_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Mecanico"};			
+		};
+	};
+	
 	
 	case "C_Van_01_fuel_F":
 	{
@@ -145,7 +156,6 @@ switch (_vehicle) do
 			case 11: {_color = "Vrana"};
 			case 12: {_color = "Waves Blue"};
 			case 13: {_color = "Rebel Digital"};
-			case 14: {_color = "Gendarmes"};
 		};
 	};
 	
@@ -157,9 +167,7 @@ switch (_vehicle) do
 			case 1: {_color = "White / Blue"};
 			case 2: {_color = "Digi Green"};
 			case 3: {_color = "Desert Digi"};
-			case 4: {_color = "EMS White"};
-			case 5: {_color = "Orca Policia"};
-			case 6: {_color = "Rebel Orca"};
+			case 4: {_color = "Rebel Orca"};
 		};
 	};
 	
@@ -169,7 +177,7 @@ switch (_vehicle) do
 		{
 			case 0: {_color = "Guardia Civil"};
 			case 1: {_color = "Mecanico"};
-			case 2: {_color = "Gendarme"};
+			case 2: {_color = "Gendarme."};
 			
 			
 		};
@@ -181,10 +189,11 @@ switch (_vehicle) do
 		{
 			
 			case 0: {_color = "U.E.I."};
-			case 1: {_color = "Gendar O.P."};
+			case 1: {_color = "Fuerzas Esp."};
 			
 		};
 	};
+	
 	
 	case "I_Truck_02_covered_F":
 	{
@@ -204,7 +213,13 @@ switch (_vehicle) do
 		};
 	};
 	
-	
+	case "B_APC_Wheeled_01_cannon_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Black"};
+		};
+	};
 	
 	case "O_Heli_Attack_02_black_F":
 	{
@@ -223,13 +238,6 @@ switch (_vehicle) do
 		};
 	};
 	
-	case "B_APC_Wheeled_01_cannon_F":
-	{
-		switch (_index) do
-		{
-			case 0: {_color = "Black"};
-		};
-	};
 };
 
 _color;

@@ -127,6 +127,7 @@ switch (_var) do
 	case "license_civ_pasaporteesp": {"Pasaporte España"};
 	case "license_civ_pasaportemaroc": {"Pasaporte Marruecos"};
 	case "license_civ_rubiu": {"Licencia Rubies"};
-	case "license_cop_geos": {"Licencia G.E.O"};
-	case "license_copeast_geos": {"Licencia G.E.O"};
+	case "license_cop_geos": {"Licencia Fuerzas Especiales Esp"};
+	case "license_copeast_geos": {"Licencia Fuerzas Especiales Mar"};
+	case "license_civ_bountyh": {"Cazarrecompensas"};
 };

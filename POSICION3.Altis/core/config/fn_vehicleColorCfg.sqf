@@ -20,36 +20,66 @@ switch (_vehicle) do
 			[_path + "heli_transport_02_1_ion_co.paa","civ",_path + "heli_transport_02_2_ion_co.paa",_path + "heli_transport_02_3_ion_co.paa"],
 			[_path + "heli_transport_02_1_dahoman_co.paa","civ",_path + "heli_transport_02_2_dahoman_co.paa",_path + "heli_transport_02_3_dahoman_co.paa"]
 		];
-	
 	};
+	
+	case "C_Hatchback_01_F":
+	{
+		_ret =
+		[
+			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base01_co.paa","civ"],
+			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base02_co.paa","civ"],
+			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base03_co.paa","civ"],
+			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base04_co.paa","civ"],
+			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06_co.paa","civ"],
+			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07_co.paa","civ"],
+			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa","civ"]
+			
+			
+		];
+	};
+	
 	case "C_Hatchback_01_sport_F":
 	{
 		_path = "\a3\soft_f_gamma\Hatchback_01\data\";
 		_ret =
 		[
-			["textures\hatchback_redbull.paa","donador_1"],
-			["textures\hatchback_rockstar.paa","civ"],
+			
 			[_path + "hatchback_01_ext_sport03_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport04_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport05_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport06_co.paa","civ"],
 			["textures\hatch_guardia_civil_v1.paa","cop"],
-			["textures\monster.jpeg","donador_1"],
 			["textures\hatchback_taxi.jpg","taxi_1"],
-			["textures\hatchback_marocaine.jpg","copeast"],
-			["textures\peugeot.jpg","civ"]
+			["textures\monster.jpeg","donador_1"],
+			["textures\hatchback_redbull.paa","donador_1"],
+			["textures\hatchback_rockstar.paa","donador_1"],
+			["textures\civ_hatchback_racing.jpg","donador_1"],
+			["textures\peugeot.jpg","donador_1"],
+			["textures\lancia-martini.jpg","donador_1"],
+			["textures\mercedesgt.jpg","donador_1"],
+			["textures\hatchback_marocaine.jpg","copeast"]
+			
+			
+			
 		];
 	};
-		
-		
-	case "B_Truck_01_mover_F":
+	
+	case "C_SUV_01_F":
 	{
-	
-		_ret = 
+		_ret =
 		[
-			["textures\hemtt.jpg","med", "textures\hemtt_back.jpg"]
+			["textures\112_suv.jpg","med", "textures\112_suv.jpg"],
+			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa","civ"],
+			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","civ"],
+			["textures\suv_guardia_civil_v2.paa","cop"],
+			["textures\ferrari.jpeg","donador_1"],
+			["textures\suv_Ghostrider.jpg","donador_1"],
+			["textures\suv_gendarme.jpg","copeast"]
+			
+			
+			
+			
 		];
-	
 	};
 	
 	case "C_Offroad_01_F":
@@ -64,46 +94,11 @@ switch (_vehicle) do
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa","civ"],
 			["#(ai,64,64,1)Fresnel(0.3,3)","fed"],
 			["textures\offroad_guardiacivil.jpg","cop"],
-			["textures\offroad_gendarme.jpg","copeast"]
-			
-		];
-	};;
-	
-	
-	case "C_Offroad_01_repair_f":
-	{
-		_ret = 
-		[
-			["textures\mechcar.jpg","med"]
-		];
-	};
-	
-	
-	case "C_Hatchback_01_F":
-	{
-		_ret =
-		[
-			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base01_co.paa","civ"],
-			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base02_co.paa","civ"],
-			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base03_co.paa","civ"],
-			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base04_co.paa","civ"],
-			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06_co.paa","civ"],
-			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07_co.paa","civ"],
-			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa","civ"],
-			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa","civ"]
-		];
-	};
-	
-	case "C_SUV_01_F":
-	{
-		_ret =
-		[
-			["textures\112_suv.jpg","med", "textures\112_suv.jpg"],
-			["textures\ferrari.jpeg","donador_1"],
-			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa","civ"],
-			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","civ"],
-			["textures\suv_guardia_civil_v2.paa","cop"],
-			["textures\suv_gendarme.jpg","copeast"]
+			["textures\offroad_monster.jpg","donador_1"],
+			["textures\offroad_reb_green.jpg","donador_1"],
+			["textures\offroad_reb_red.jpg","donador_1"],
+			["textures\offroad_gendarme.jpg","copeast"],
+		    ["textures\offroadplayboy_co.jpg","donador_1"]
 			
 		];
 	};
@@ -124,6 +119,16 @@ switch (_vehicle) do
 			["\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa","civ"],
 			["\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa","civ"]
 		];
+	};
+	
+	case "B_Truck_01_mover_F":
+	{
+	
+		_ret = 
+		[
+			["textures\hemtt.jpg","med", "textures\hemtt_back.jpg"]
+		];
+	
 	};
 	
 	case "B_Quadbike_01_F":
@@ -162,6 +167,7 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa","reb"],
 			["textures\gendarmes_HUMBER.jpg","copeast"]
 			
+			
 		];
 	};
 	
@@ -173,9 +179,7 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa","civ"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa","donate"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa","reb"],
-			["#(argb,8,8,3)color(1,1,1,0.8)","med"],
-			["textures\copeast_orca.jpg","copeast"],
-			["textures\rebel_orca.jpg","civ"]
+			["textures\rebel_orca.jpg","donador_1"]
 		];
 	};
 	
@@ -194,7 +198,7 @@ switch (_vehicle) do
 		_ret = 
 		[
 			["textures\geo_hunter_1.jpg","cop", "textures\geo_hunter_2.jpg"],
-			["textures\geoeast_hunter_1.jpg","copeast", "textures\geoeast_hunter_2.jpg"]			
+			["textures\geoeast_hunter_1.jpg","copeast", "textures\geoeast_hunter_2.jpg"]
 			
 		];
 	};
